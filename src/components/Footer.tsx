@@ -64,10 +64,18 @@ export default function Footer() {
           <div className="font-sans text-xs text-white/40">
             © 2026 BAZ Mühendislik ve Yapı A.Ş. Tüm hakları saklıdır.
           </div>
-          <div className="flex gap-6 font-sans text-xs text-white/40">
+          <div className="flex flex-wrap items-center gap-6 font-sans text-xs text-white/40">
             <a href="#">KVKK Aydınlatma Metni</a>
             <a href="#">Çerez Politikası</a>
             <a href="#">Gizlilik</a>
+            <a
+              href="https://kadirozbek.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/55 hover:text-white"
+            >
+              Kadir Özbek tarafından geliştirildi
+            </a>
           </div>
         </div>
       </div>

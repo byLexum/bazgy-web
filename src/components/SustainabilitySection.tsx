@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 const items = [
   {
@@ -30,13 +31,18 @@ export default function SustainabilitySection() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-black/70" />
       <div className="relative mx-auto max-w-[1280px]">
-        <div className="mb-5 font-mono text-xs font-semibold tracking-[0.12em] text-white/70">
-          SÜRDÜRÜLEBİLİRLİK
-        </div>
-        <h2 className="mb-12 max-w-[640px] font-sans text-3xl font-extrabold leading-tight text-[#F5F4F0] md:mb-14 md:text-[38px]">
-          Kalıcı yapılar, ölçülebilir bir gelecek.
-        </h2>
-        <div className="grid max-w-[900px] grid-cols-1 gap-8 sm:grid-cols-3 md:gap-10">
+        <Reveal>
+          <div className="mb-5 font-mono text-xs font-semibold tracking-[0.12em] text-white/70">
+            SÜRDÜRÜLEBİLİRLİK
+          </div>
+          <h2 className="mb-12 max-w-[640px] font-sans text-3xl font-extrabold leading-tight text-[#F5F4F0] md:mb-14 md:text-[38px]">
+            Kalıcı yapılar, ölçülebilir bir gelecek.
+          </h2>
+        </Reveal>
+        <Reveal
+          delay={0.1}
+          className="grid max-w-[900px] grid-cols-1 gap-8 sm:grid-cols-3 md:gap-10"
+        >
           {items.map((item) => (
             <div key={item.title}>
               <div className="mb-2.5 font-sans text-base font-bold text-[#F5F4F0]">
@@ -47,7 +53,7 @@ export default function SustainabilitySection() {
               </div>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

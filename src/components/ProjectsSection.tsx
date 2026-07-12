@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { smallProjects } from "@/data/content";
 import PlaceholderPhoto from "./PlaceholderPhoto";
+import Reveal from "./Reveal";
 
 export default function ProjectsSection() {
   return (
@@ -8,7 +12,7 @@ export default function ProjectsSection() {
       id="projeler"
       className="mx-auto max-w-[1280px] px-6 pb-24 md:px-12 md:pb-[140px]"
     >
-      <div className="mb-12 flex flex-wrap items-end justify-between gap-6 md:mb-14">
+      <Reveal className="mb-12 flex flex-wrap items-end justify-between gap-6 md:mb-14">
         <div>
           <div className="mb-5 font-mono text-xs font-semibold tracking-[0.12em] text-neutral-500">
             SEÇİLİ PROJELER
@@ -23,9 +27,9 @@ export default function ProjectsSection() {
         >
           Tüm Projeleri Keşfet →
         </a>
-      </div>
+      </Reveal>
 
-      <div className="relative mb-6 h-72 overflow-hidden md:h-[520px]">
+      <Reveal className="relative mb-6 h-72 overflow-hidden md:h-[520px]">
         <Image
           src="/images/karlitepe-project.png"
           alt="Beykoz Karlıtepe"
@@ -48,11 +52,21 @@ export default function ProjectsSection() {
           </div>
           <div className="font-sans text-2xl font-bold text-[#F5F4F0]">→</div>
         </div>
-      </div>
+      </Reveal>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {smallProjects.map((proj) => (
-          <div key={proj.title}>
+        {smallProjects.map((proj, i) => (
+          <motion.div
+            key={proj.title}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{
+              duration: 0.6,
+              delay: (i % 3) * 0.08,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+          >
             <div className="relative mb-3.5 h-56 overflow-hidden">
               <PlaceholderPhoto label={proj.title} />
               <div className="absolute left-3 top-3 bg-black px-2.5 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-wide text-[#F5F4F0]">
@@ -68,7 +82,7 @@ export default function ProjectsSection() {
             <div className="mt-1 font-sans text-[13px] text-[#666666]">
               {proj.location}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

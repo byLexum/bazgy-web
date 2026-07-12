@@ -104,28 +104,29 @@ export default function HeroSlider() {
           )}
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/45 to-black/15" />
 
-          <div className="absolute inset-x-0 top-24 mx-auto max-w-[1280px] px-6 md:top-36 md:px-12">
-            <div className="mb-3.5 font-mono text-xs font-semibold tracking-[0.12em] text-white/90 md:mb-4">
+          <div className="absolute inset-x-6 bottom-24 mx-auto max-w-[1280px] md:inset-x-12 md:bottom-28">
+            <div className="mb-3 font-mono text-xs font-semibold tracking-[0.12em] text-white/70">
               {slide.eyebrow} · {slide.city}
             </div>
-            <h1 className="mb-4 max-w-[780px] font-sans text-4xl font-extrabold leading-[1.1] text-[#F5F4F0] md:mb-[18px] md:text-[50px]">
-              {slide.title}
-            </h1>
-            <p className="mb-6 max-w-[620px] font-sans text-base leading-relaxed text-white/80 md:mb-[30px] md:text-[17px]">
-              {slide.copy}
-            </p>
-            <div className="flex flex-wrap items-center gap-5">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="h-2 w-2 shrink-0 bg-white" />
+              <h1 className="max-w-[780px] font-sans text-2xl font-bold leading-[1.15] text-[#F5F4F0] md:text-[32px]">
+                {slide.title}
+              </h1>
+            </div>
+            <div className="mb-5 h-px w-full bg-white/25" />
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <p className="max-w-[560px] font-sans text-sm leading-relaxed text-white/70 md:text-[15px]">
+                {slide.copy}
+              </p>
               <a
                 href="#projeler"
-                className="inline-block bg-white px-7 py-[15px] font-sans text-sm font-semibold text-black"
+                className="group inline-flex shrink-0 items-center gap-2 border-b border-white/50 pb-1 font-sans text-sm font-semibold text-[#F5F4F0] transition-colors hover:border-white"
               >
-                Projeyi İncele
-              </a>
-              <a
-                href="#projeler"
-                className="inline-block border-b border-white/50 py-[15px] font-sans text-sm font-semibold text-[#F5F4F0]"
-              >
-                Tüm Projeler
+                Daha Fazla
+                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
               </a>
             </div>
           </div>
