@@ -1,22 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Reveal from "./Reveal";
-
-const items = [
-  {
-    title: "Su Kapasitesi",
-    desc: "Arıtma tesislerimizde şehirlerin uzun vadeli su ihtiyacını gözeten kapasite planlaması.",
-  },
-  {
-    title: "İş Güvenliği",
-    desc: "Sahada sıfır kaza hedefiyle yürütülen düzenli denetim ve eğitim süreçleri.",
-  },
-  {
-    title: "Yerel Etki",
-    desc: "Bölge halkı ve yerel istihdamı gözeten proje planlama yaklaşımı.",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function SustainabilitySection() {
+  const { t } = useLanguage();
+  const c = t.sustainability;
   return (
     <section
       id="surdurulebilirlik"
@@ -33,17 +23,17 @@ export default function SustainabilitySection() {
       <div className="relative mx-auto max-w-[1280px]">
         <Reveal>
           <div className="mb-5 font-mono text-xs font-semibold tracking-[0.12em] text-white/70">
-            SÜRDÜRÜLEBİLİRLİK
+            {c.eyebrow}
           </div>
           <h2 className="mb-12 max-w-[640px] font-sans text-3xl font-extrabold leading-tight text-[#F5F4F0] md:mb-14 md:text-[38px]">
-            Kalıcı yapılar, ölçülebilir bir gelecek.
+            {c.heading}
           </h2>
         </Reveal>
         <Reveal
           delay={0.1}
           className="grid max-w-[900px] grid-cols-1 gap-8 sm:grid-cols-3 md:gap-10"
         >
-          {items.map((item) => (
+          {c.items.map((item) => (
             <div key={item.title}>
               <div className="mb-2.5 font-sans text-base font-bold text-[#F5F4F0]">
                 {item.title}

@@ -1,6 +1,12 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+  const c = t.footer;
+  const services = t.services.items;
   return (
     <footer className="relative overflow-hidden px-6 pb-8 pt-16 md:px-12 md:pt-20">
       <Image
@@ -23,58 +29,58 @@ export default function Footer() {
               className="mb-5 block h-9 w-auto"
             />
             <div className="max-w-[280px] font-sans text-sm leading-relaxed text-white/55">
-              Altyapı, üstyapı ve kamu projelerinde güvenilir mühendislik
-              çözümleri.
+              {c.tagline}
             </div>
           </div>
           <div>
             <div className="mb-4 font-mono text-[11px] font-semibold tracking-[0.1em] text-white/40">
-              KURUMSAL
+              {c.kurumsalLabel}
             </div>
             <div className="flex flex-col gap-3 font-sans text-sm text-white/75">
-              <a href="#kurumsal">Hakkımızda</a>
-              <a href="#surdurulebilirlik">Sürdürülebilirlik</a>
-              <a href="#kariyer">Kariyer</a>
-              <a href="#iletisim">İletişim</a>
+              <a href="#kurumsal">{c.links.hakkimizda}</a>
+              <a href="#surdurulebilirlik">{c.links.surdurulebilirlik}</a>
+              <a href="/career">{c.links.kariyer}</a>
+              <a href="/contact">{c.links.iletisim}</a>
             </div>
           </div>
           <div>
             <div className="mb-4 font-mono text-[11px] font-semibold tracking-[0.1em] text-white/40">
-              FAALİYET ALANLARI
+              {c.faaliyetLabel}
             </div>
             <div className="flex flex-col gap-3 font-sans text-sm text-white/75">
-              <a href="#hizmetler">Atık Su / Su Arıtma</a>
-              <a href="#hizmetler">Üstyapı İnşaatları</a>
-              <a href="#hizmetler">Kamu Binaları</a>
-              <a href="#hizmetler">Altyapı</a>
+              {services.map((svc) => (
+                <a key={svc.name} href="#hizmetler">
+                  {svc.name}
+                </a>
+              ))}
             </div>
           </div>
           <div>
             <div className="mb-4 font-mono text-[11px] font-semibold tracking-[0.1em] text-white/40">
-              İLETİŞİM
+              {c.iletisimLabel}
             </div>
             <div className="flex flex-col gap-3 font-sans text-sm text-white/75">
-              <span>Adres bilgisi eklenecek</span>
-              <span>+90 (___) ___ __ __</span>
+              <span>{c.addressPlaceholder}</span>
+              <span>{c.phonePlaceholder}</span>
               <a href="mailto:info@bazgy.com">info@bazgy.com</a>
             </div>
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-7">
           <div className="font-sans text-xs text-white/40">
-            © 2026 BAZ Mühendislik ve Yapı A.Ş. Tüm hakları saklıdır.
+            {c.copyright}
           </div>
           <div className="flex flex-wrap items-center gap-6 font-sans text-xs text-white/40">
-            <a href="#">KVKK Aydınlatma Metni</a>
-            <a href="#">Çerez Politikası</a>
-            <a href="#">Gizlilik</a>
+            <a href="#">{c.legal.kvkk}</a>
+            <a href="#">{c.legal.cerez}</a>
+            <a href="#">{c.legal.gizlilik}</a>
             <a
               href="https://kadirozbek.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/55 hover:text-white"
             >
-              Kadir Özbek tarafından geliştirildi
+              {c.credit}
             </a>
           </div>
         </div>

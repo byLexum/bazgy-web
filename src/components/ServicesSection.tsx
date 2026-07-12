@@ -1,10 +1,10 @@
 "use client";
 
-import { services } from "@/data/content";
 import PlaceholderPhoto from "./PlaceholderPhoto";
 import { BuildingIcon, DropletIcon, MosqueIcon, RoadIcon } from "./icons";
 import Reveal from "./Reveal";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const iconMap = {
   droplet: DropletIcon,
@@ -14,6 +14,8 @@ const iconMap = {
 };
 
 export default function ServicesSection() {
+  const { t } = useLanguage();
+  const c = t.services;
   return (
     <section
       id="hizmetler"
@@ -24,19 +26,19 @@ export default function ServicesSection() {
         <Reveal>
           <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-2.5 font-mono text-[11px] font-semibold tracking-[0.1em] text-white/75">
             <span className="h-1.5 w-1.5 rounded-full bg-white" />
-            FAALİYET ALANLARIMIZ
+            {c.eyebrow}
           </div>
           <h2 className="mb-4 font-sans text-3xl font-extrabold leading-tight text-[#F5F4F0] md:text-4xl">
-            Farklı Faaliyet Alanlarında
+            {c.heading1}
             <br />
-            <span className="text-white/70">Aynı Kusursuzluk Hedefi</span>
+            <span className="text-white/70">{c.heading2}</span>
           </h2>
           <p className="mb-14 font-sans text-[15px] text-white/55 md:mb-16">
-            Bir projenin her aşamasında, tek ve güvenilir çözüm ortağı.
+            {c.subtext}
           </p>
         </Reveal>
         <div className="grid grid-cols-1 gap-5 text-left sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((svc, i) => {
+          {c.items.map((svc, i) => {
             const Icon = iconMap[svc.icon];
             return (
               <motion.div
@@ -51,7 +53,7 @@ export default function ServicesSection() {
                 }}
                 className="relative h-[340px] overflow-hidden rounded-[10px] md:h-[400px]"
               >
-                <PlaceholderPhoto label={`${svc.name} — proje fotoğrafı`} />
+                <PlaceholderPhoto label={svc.name} />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/5 to-black/85" />
                 <div className="absolute left-[22px] top-[22px] flex h-[52px] w-[52px] items-center justify-center rounded-[10px] bg-white/15 backdrop-blur-sm">
                   <Icon className="h-[22px] w-[22px] text-white" />

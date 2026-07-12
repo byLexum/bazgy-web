@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { smallProjects } from "@/data/content";
 import PlaceholderPhoto from "./PlaceholderPhoto";
 import Reveal from "./Reveal";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function ProjectsSection() {
+  const { t } = useLanguage();
+  const c = t.projects;
   return (
     <section
       id="projeler"
@@ -15,24 +17,24 @@ export default function ProjectsSection() {
       <Reveal className="mb-12 flex flex-wrap items-end justify-between gap-6 md:mb-14">
         <div>
           <div className="mb-5 font-mono text-xs font-semibold tracking-[0.12em] text-neutral-500">
-            SEÇİLİ PROJELER
+            {c.eyebrow}
           </div>
           <h2 className="max-w-[600px] font-sans text-[28px] font-extrabold leading-tight text-[#111111] md:text-[34px]">
-            İmzamızı taşıyan yapılar.
+            {c.heading}
           </h2>
         </div>
         <a
           href="#projeler"
           className="whitespace-nowrap border-b border-[#111111] font-sans text-sm font-semibold text-[#111111]"
         >
-          Tüm Projeleri Keşfet →
+          {c.exploreLink}
         </a>
       </Reveal>
 
       <Reveal className="relative mb-6 h-72 overflow-hidden md:h-[520px]">
         <Image
           src="/images/karlitepe-project.png"
-          alt="Beykoz Karlıtepe"
+          alt={c.flagship.title}
           fill
           sizes="100vw"
           className="photo-bw object-cover"
@@ -41,13 +43,13 @@ export default function ProjectsSection() {
         <div className="absolute inset-x-6 bottom-6 flex items-end justify-between md:inset-x-9 md:bottom-8">
           <div>
             <div className="mb-2 font-mono text-[11px] font-semibold tracking-[0.1em] text-white/80">
-              ÜSTYAPI / KONUT · DEVAM EDİYOR
+              {c.flagship.eyebrow}
             </div>
             <div className="font-sans text-2xl font-bold text-[#F5F4F0] md:text-[30px]">
-              Beykoz Karlıtepe
+              {c.flagship.title}
             </div>
             <div className="mt-1 font-sans text-sm text-white/65">
-              İstanbul, Beykoz
+              {c.flagship.location}
             </div>
           </div>
           <div className="font-sans text-2xl font-bold text-[#F5F4F0]">→</div>
@@ -55,7 +57,7 @@ export default function ProjectsSection() {
       </Reveal>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {smallProjects.map((proj, i) => (
+        {c.items.map((proj, i) => (
           <motion.div
             key={proj.title}
             initial={{ opacity: 0, y: 24 }}

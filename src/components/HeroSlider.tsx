@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { slides } from "@/data/content";
-import PlaceholderPhoto from "./PlaceholderPhoto";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function HeroSlider() {
+  const { t } = useLanguage();
+  const slides = t.hero.slides;
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   const touchX = useRef<number | null>(null);
@@ -68,7 +69,7 @@ export default function HeroSlider() {
     <section
       role="region"
       aria-roledescription="carousel"
-      aria-label="Öne çıkan projeler"
+      aria-label={t.hero.ariaLabel}
       tabIndex={0}
       onKeyDown={onKeyDown}
       onMouseEnter={() => setPaused(true)}
@@ -90,18 +91,14 @@ export default function HeroSlider() {
             zIndex: i === active ? 2 : 1,
           }}
         >
-          {slide.image ? (
-            <Image
-              src={slide.image}
-              alt={slide.title}
-              fill
-              priority={i === 0}
-              sizes="100vw"
-              className="photo-bw scale-[1.03] object-cover"
-            />
-          ) : (
-            <PlaceholderPhoto label={`${slide.title} — proje fotoğrafı`} />
-          )}
+          <Image
+            src={slide.image}
+            alt={slide.title}
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            className="photo-bw scale-[1.03] object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/45 to-black/15" />
 
           <div className="absolute inset-x-6 bottom-24 mx-auto max-w-[1280px] md:inset-x-12 md:bottom-28">
@@ -123,7 +120,7 @@ export default function HeroSlider() {
                 href="#projeler"
                 className="group inline-flex shrink-0 items-center gap-2 border-b border-white/50 pb-1 font-sans text-sm font-semibold text-[#F5F4F0] transition-colors hover:border-white"
               >
-                Daha Fazla
+                {t.hero.daha}
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>

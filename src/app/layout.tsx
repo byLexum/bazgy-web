@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, IBM_Plex_Mono } from "next/font/google";
+import { LanguageProvider } from "@/i18n/LanguageContext";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="tr" className={`${manrope.variable} ${plexMono.variable}`}>
       <body className="antialiased bg-[#F5F5F5] text-[#111111]">
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

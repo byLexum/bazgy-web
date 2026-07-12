@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { stats } from "@/data/content";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function StatsBand() {
+  const { t } = useLanguage();
+  const stats = t.stats;
   const ref = useRef<HTMLDivElement | null>(null);
   const [progress, setProgress] = useState(0);
   const startedRef = useRef(false);
