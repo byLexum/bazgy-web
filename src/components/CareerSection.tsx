@@ -1,4 +1,5 @@
 import PlaceholderPhoto from "./PlaceholderPhoto";
+import CtaButton from "./CtaButton";
 
 export default function CareerSection() {
   return (
@@ -14,12 +15,9 @@ export default function CareerSection() {
           BAZ ekibine katılın, Türkiye&apos;nin büyük mühendislik
           projelerinde yer alın.
         </p>
-        <a
-          href="#iletisim"
-          className="inline-block w-fit bg-[#111111] px-7 py-[15px] font-sans text-sm font-semibold text-[#F5F4F0]"
-        >
+        <CtaButton href="#iletisim" variant="dark" className="w-fit">
           Açık Pozisyonları Gör
-        </a>
+        </CtaButton>
       </div>
     </section>
   );

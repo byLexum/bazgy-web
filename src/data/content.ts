@@ -14,7 +14,7 @@ export const slides: Slide[] = [
     city: "İzmir, Dikili",
     title: "Şehirlerin geleceğine akan mühendislik",
     copy: "İzmir Dikili Atık Su Arıtma Tesisi, bölgeye sürdürülebilir bir arıtma altyapısı kazandırıyor.",
-    image: null,
+    image: "/images/renders/karlitepe-render-30.png",
   },
   {
     id: "karlitepe",
@@ -30,7 +30,7 @@ export const slides: Slide[] = [
     city: "İstanbul",
     title: "Kurumsal yapılarda kalıcı değer",
     copy: "İstanbul İTO Merkez Binası, kurumsal kimliği güçlü, uzun ömürlü bir hizmet binasına dönüşüyor.",
-    image: null,
+    image: "/images/renders/karlitepe-render-41.png",
   },
   {
     id: "cami",
@@ -38,7 +38,7 @@ export const slides: Slide[] = [
     city: "Erzincan",
     title: "İbadete adanan bir eser",
     copy: "Erzincan Ulu Camii inşaatında, geleneksel form çağdaş mühendislikle bir araya geliyor.",
-    image: null,
+    image: "/images/renders/karlitepe-render-32.png",
   },
 ];
 

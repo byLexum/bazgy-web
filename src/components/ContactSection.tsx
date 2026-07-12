@@ -1,3 +1,5 @@
+import CtaButton from "./CtaButton";
+
 export default function ContactSection() {
   return (
     <section
@@ -7,12 +9,9 @@ export default function ContactSection() {
       <h2 className="mx-auto mb-6 max-w-[700px] font-sans text-3xl font-extrabold leading-tight text-[#F5F4F0] md:text-[40px]">
         Bir sonraki büyük proje için konuşalım.
       </h2>
-      <a
-        href="mailto:info@bazgy.com"
-        className="inline-block bg-white px-8 py-[17px] font-sans text-[15px] font-semibold text-black"
-      >
+      <CtaButton href="mailto:info@bazgy.com" variant="light">
         İletişime Geç — info@bazgy.com
-      </a>
+      </CtaButton>
     </section>
   );
 }

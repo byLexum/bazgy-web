@@ -18,9 +18,9 @@ export default function Footer() {
             <Image
               src="/images/baz-logo.svg"
               alt="BAZ"
-              height={20}
-              width={84}
-              className="mb-4.5 block h-5 w-auto"
+              height={36}
+              width={151}
+              className="mb-5 block h-9 w-auto"
             />
             <div className="max-w-[280px] font-sans text-sm leading-relaxed text-white/55">
               Altyapı, üstyapı ve kamu projelerinde güvenilir mühendislik
