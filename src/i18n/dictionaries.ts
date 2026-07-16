@@ -11,6 +11,7 @@ interface ServiceItem {
 export const dictionaries = {
   tr: {
     comingSoon: {
+      badge: "Yapım Aşamasında",
       heading: "BAZ Çok Yakında Burada!",
       p1: "Web sitemiz şu anda yapım aşamasındadır.",
       p2: "Siz değerli iş ortaklarımıza daha modern, hızlı ve kusursuz bir deneyim sunabilmek için çalışmalarımızı özenle sürdürüyoruz.",
@@ -228,6 +229,7 @@ export const dictionaries = {
   },
   en: {
     comingSoon: {
+      badge: "Under Construction",
       heading: "BAZ Coming Soon!",
       p1: "Our website is currently under construction.",
       p2: "We're carefully working to offer our valued partners a more modern, fast and flawless experience.",
