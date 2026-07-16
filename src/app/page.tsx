@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import HeroSlider from "@/components/HeroSlider";
-import StatsBand from "@/components/StatsBand";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -15,7 +14,6 @@ export default function Home() {
     <div className="overflow-x-hidden bg-[#F5F5F5] text-[#111111]">
       <Header />
       <HeroSlider />
-      <StatsBand />
       <AboutSection />
       <ServicesSection />
       <ProjectsSection />

@@ -1,6 +1,6 @@
 "use client";
 
-import PlaceholderPhoto from "./PlaceholderPhoto";
+import Image from "next/image";
 import { BuildingIcon, DropletIcon, MosqueIcon, RoadIcon } from "./icons";
 import Reveal from "./Reveal";
 import { motion } from "framer-motion";
@@ -11,6 +11,13 @@ const iconMap = {
   building: BuildingIcon,
   mosque: MosqueIcon,
   road: RoadIcon,
+};
+
+const imageMap = {
+  droplet: "/images/services/atik-su-su-aritma.png",
+  building: "/images/services/ustyapi-insaatlari.png",
+  mosque: "/images/services/kamu-binalari.png",
+  road: "/images/services/altyapi.png",
 };
 
 export default function ServicesSection() {
@@ -53,7 +60,13 @@ export default function ServicesSection() {
                 }}
                 className="relative h-[340px] overflow-hidden rounded-[10px] md:h-[400px]"
               >
-                <PlaceholderPhoto label={svc.name} />
+                <Image
+                  src={imageMap[svc.icon]}
+                  alt={svc.name}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className="photo-bw object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/5 to-black/85" />
                 <div className="absolute left-[22px] top-[22px] flex h-[52px] w-[52px] items-center justify-center rounded-[10px] bg-white/15 backdrop-blur-sm">
                   <Icon className="h-[22px] w-[22px] text-white" />

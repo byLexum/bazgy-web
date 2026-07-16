@@ -10,6 +10,14 @@ interface ServiceItem {
 
 export const dictionaries = {
   tr: {
+    comingSoon: {
+      heading: "BAZ Çok Yakında Burada!",
+      p1: "Web sitemiz şu anda yapım aşamasındadır.",
+      p2: "Siz değerli iş ortaklarımıza daha modern, hızlı ve kusursuz bir deneyim sunabilmek için çalışmalarımızı özenle sürdürüyoruz.",
+      p3: "Yenilenen yüzümüzle çok yakında karşınızda olacağız.",
+      signature: "BAZ — Birlikte daha iyisini inşa ediyoruz.",
+      close: "Devam Et",
+    },
     nav: {
       kurumsal: "Kurumsal",
       hizmetler: "Faaliyet Alanları",
@@ -51,17 +59,11 @@ export const dictionaries = {
           eyebrow: "ÜSTYAPI VE KAMU",
           city: "Erzincan",
           title: "İbadete adanan bir eser",
-          copy: "Erzincan Ulu Camii inşaatında, geleneksel form çağdaş mühendislikle bir araya geliyor.",
+          copy: "Erzincan Camii Kebir inşaatında, geleneksel form çağdaş mühendislikle bir araya geliyor.",
           image: "/images/renders/karlitepe-render-32.png",
         },
       ],
     },
-    stats: [
-      { target: 25, suffix: "+", label: "Yıllık Deneyim" },
-      { target: 50, suffix: "+", label: "Tamamlanan Proje" },
-      { target: 4, suffix: "+", label: "Sektörde Uzmanlık" },
-      { target: 100, suffix: "%", label: "Zamanında Teslim" },
-    ],
     about: {
       eyebrow: "BAZ HAKKINDA",
       heading: "Yarının altyapısını bugünden inşa ediyoruz.",
@@ -107,11 +109,11 @@ export const dictionaries = {
         location: "İstanbul, Beykoz",
       },
       items: [
-        { title: "İzmir Dikili AAT", location: "İzmir, Dikili", category: "Atık Su", status: "Tamamlandı" },
-        { title: "Aliağa Sakran AAT", location: "İzmir, Aliağa", category: "Atık Su", status: "Tamamlandı" },
-        { title: "Erzincan Ulu Camii", location: "Erzincan", category: "Kamu Binası", status: "Devam Ediyor" },
-        { title: "İTO Merkez Binası", location: "İstanbul", category: "Kurumsal", status: "Tamamlandı" },
-        { title: "İTO Maltepe Hizmet Binası", location: "İstanbul, Maltepe", category: "Kurumsal", status: "Tamamlandı" },
+        { title: "İzmir Dikili AAT", location: "İzmir, Dikili", category: "Atık Su", status: "Devam Ediyor" },
+        { title: "Aliağa Sakran AAT", location: "İzmir, Aliağa", category: "Atık Su", status: "Devam Ediyor" },
+        { title: "Erzincan Camii Kebir", location: "Erzincan", category: "Kamu Binası", status: "Devam Ediyor" },
+        { title: "İTO Merkez Binası", location: "İstanbul", category: "Kurumsal", status: "Devam Ediyor" },
+        { title: "İTO Maltepe Hizmet Binası", location: "İstanbul, Maltepe", category: "Kurumsal", status: "Devam Ediyor" },
       ],
     },
     geography: {
@@ -212,6 +214,14 @@ export const dictionaries = {
     },
   },
   en: {
+    comingSoon: {
+      heading: "BAZ Coming Soon!",
+      p1: "Our website is currently under construction.",
+      p2: "We're carefully working to offer our valued partners a more modern, fast and flawless experience.",
+      p3: "We'll be here very soon with our renewed look.",
+      signature: "BAZ — Building better, together.",
+      close: "Continue",
+    },
     nav: {
       kurumsal: "About",
       hizmetler: "Fields of Activity",
@@ -253,17 +263,11 @@ export const dictionaries = {
           eyebrow: "SUPERSTRUCTURE & PUBLIC",
           city: "Erzincan",
           title: "A work devoted to worship",
-          copy: "In the construction of the Erzincan Grand Mosque, traditional form meets contemporary engineering.",
+          copy: "In the construction of the Erzincan Camii Kebir, traditional form meets contemporary engineering.",
           image: "/images/renders/karlitepe-render-32.png",
         },
       ],
     },
-    stats: [
-      { target: 25, suffix: "+", label: "Years of Experience" },
-      { target: 50, suffix: "+", label: "Completed Projects" },
-      { target: 4, suffix: "+", label: "Sector Expertise" },
-      { target: 100, suffix: "%", label: "On-Time Delivery" },
-    ],
     about: {
       eyebrow: "ABOUT BAZ",
       heading: "Building tomorrow's infrastructure today.",
@@ -309,11 +313,11 @@ export const dictionaries = {
         location: "İstanbul, Beykoz",
       },
       items: [
-        { title: "İzmir Dikili WWTP", location: "İzmir, Dikili", category: "Wastewater", status: "Completed" },
-        { title: "Aliağa Sakran WWTP", location: "İzmir, Aliağa", category: "Wastewater", status: "Completed" },
-        { title: "Erzincan Grand Mosque", location: "Erzincan", category: "Public Building", status: "Ongoing" },
-        { title: "İTO Head Office", location: "İstanbul", category: "Corporate", status: "Completed" },
-        { title: "İTO Maltepe Service Building", location: "İstanbul, Maltepe", category: "Corporate", status: "Completed" },
+        { title: "İzmir Dikili WWTP", location: "İzmir, Dikili", category: "Wastewater", status: "Ongoing" },
+        { title: "Aliağa Sakran WWTP", location: "İzmir, Aliağa", category: "Wastewater", status: "Ongoing" },
+        { title: "Erzincan Camii Kebir", location: "Erzincan", category: "Public Building", status: "Ongoing" },
+        { title: "İTO Head Office", location: "İstanbul", category: "Corporate", status: "Ongoing" },
+        { title: "İTO Maltepe Service Building", location: "İstanbul, Maltepe", category: "Corporate", status: "Ongoing" },
       ],
     },
     geography: {
