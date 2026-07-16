@@ -46,7 +46,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projeler"
-      className="mx-auto max-w-[1280px] px-6 pb-24 md:px-12 md:pb-[140px]"
+      className="mx-auto max-w-[1280px] px-6 py-24 md:px-12 md:py-[140px]"
     >
       <Reveal className="mb-12 flex flex-wrap items-end justify-between gap-6 md:mb-14">
         <div>
