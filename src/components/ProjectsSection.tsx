@@ -2,9 +2,43 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import PlaceholderPhoto from "./PlaceholderPhoto";
 import Reveal from "./Reveal";
 import { useLanguage } from "@/i18n/LanguageContext";
+
+function ProjectPhoto({ title, images }: { title: string; images?: string[] }) {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    if (!images || images.length < 2) return;
+    const timer = setInterval(
+      () => setActive((a) => (a + 1) % images.length),
+      2800
+    );
+    return () => clearInterval(timer);
+  }, [images]);
+
+  if (!images || images.length === 0) {
+    return <PlaceholderPhoto label={title} />;
+  }
+
+  return (
+    <>
+      {images.map((src, i) => (
+        <Image
+          key={src}
+          src={src}
+          alt={title}
+          fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          className="photo-bw object-cover transition-opacity duration-700 ease-in-out"
+          style={{ opacity: i === active ? 1 : 0 }}
+        />
+      ))}
+    </>
+  );
+}
 
 export default function ProjectsSection() {
   const { t } = useLanguage();
@@ -70,7 +104,7 @@ export default function ProjectsSection() {
             }}
           >
             <div className="relative mb-3.5 h-56 overflow-hidden">
-              <PlaceholderPhoto label={proj.title} />
+              <ProjectPhoto title={proj.title} images={proj.images} />
               <div className="absolute left-3 top-3 bg-black px-2.5 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-wide text-[#F5F4F0]">
                 {proj.status}
               </div>
