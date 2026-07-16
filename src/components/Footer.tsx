@@ -75,7 +75,7 @@ export default function Footer() {
             <a href="#">{c.legal.cerez}</a>
             <a href="#">{c.legal.gizlilik}</a>
             <a
-              href="https://kadirozbek.com"
+              href="https://www.zt1projects.com/tr/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/55 hover:text-white"

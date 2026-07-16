@@ -177,7 +177,7 @@ export const dictionaries = {
         cerez: "Çerez Politikası",
         gizlilik: "Gizlilik",
       },
-      credit: "Kadir Özbek tarafından geliştirildi",
+      credit: "ZT-1 Projects tarafından geliştirildi",
     },
     contactPage: {
       eyebrow: "İLETİŞİM",
@@ -395,7 +395,7 @@ export const dictionaries = {
         cerez: "Cookie Policy",
         gizlilik: "Privacy",
       },
-      credit: "Developed by Kadir Özbek",
+      credit: "Developed by ZT-1 Projects",
     },
     contactPage: {
       eyebrow: "CONTACT",
