@@ -2,13 +2,18 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import ProjectDetailModal from "./ProjectDetailModal";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function HeroSlider() {
   const { t } = useLanguage();
   const slides = t.hero.slides;
+  const projectItems = t.projects.items;
+  const detailLabels = t.projects.detailLabels;
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [openProjectIndex, setOpenProjectIndex] = useState<number | null>(null);
   const touchX = useRef<number | null>(null);
   const count = slides.length;
 
@@ -116,15 +121,19 @@ export default function HeroSlider() {
               <p className="max-w-[560px] font-sans text-sm leading-relaxed text-white/70 md:text-[15px]">
                 {slide.copy}
               </p>
-              <a
-                href="#projeler"
+              <button
+                type="button"
+                onClick={() => {
+                  setOpenProjectIndex(slide.projectIndex);
+                  setPaused(true);
+                }}
                 className="group inline-flex shrink-0 items-center gap-2 border-b border-white/50 pb-1 font-sans text-sm font-semibold text-[#F5F4F0] transition-colors hover:border-white"
               >
                 {t.hero.daha}
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -170,6 +179,16 @@ export default function HeroSlider() {
       >
         →
       </button>
+
+      <AnimatePresence>
+        {openProjectIndex !== null && (
+          <ProjectDetailModal
+            project={projectItems[openProjectIndex]}
+            labels={detailLabels}
+            onClose={() => setOpenProjectIndex(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }

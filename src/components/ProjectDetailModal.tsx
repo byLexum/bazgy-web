@@ -95,7 +95,7 @@ export default function ProjectDetailModal({
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 12, scale: 0.98 }}
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className="relative flex w-full max-w-[1040px] flex-col overflow-hidden rounded-[18px] border border-white/10 bg-black text-[#F5F4F0] shadow-[0_30px_90px_-20px_rgba(0,0,0,0.8)] md:max-h-[88vh] md:flex-row"
+        className="relative flex w-full max-w-[860px] max-h-[92vh] flex-col overflow-hidden rounded-[18px] border border-white/10 bg-black text-[#F5F4F0] shadow-[0_30px_90px_-20px_rgba(0,0,0,0.8)]"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -107,7 +107,7 @@ export default function ProjectDetailModal({
           ✕
         </button>
 
-        <div className="relative h-64 shrink-0 bg-neutral-900 md:h-auto md:w-[46%]">
+        <div className="relative aspect-video w-full shrink-0 bg-neutral-900">
           {images.length > 0 ? (
             <>
               {images.map((src, i) => (
@@ -116,7 +116,7 @@ export default function ProjectDetailModal({
                   src={src}
                   alt={project.title}
                   fill
-                  sizes="(min-width: 768px) 46vw, 100vw"
+                  sizes="(min-width: 860px) 860px, 100vw"
                   className="photo-bw object-cover transition-opacity duration-500 ease-in-out"
                   style={{ opacity: i === active ? 1 : 0 }}
                   priority={i === 0}
