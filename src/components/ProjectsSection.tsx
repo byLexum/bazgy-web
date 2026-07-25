@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import PlaceholderPhoto from "./PlaceholderPhoto";
+import ProjectDetailModal from "./ProjectDetailModal";
 import Reveal from "./Reveal";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -43,6 +44,9 @@ function ProjectPhoto({ title, images }: { title: string; images?: string[] }) {
 export default function ProjectsSection() {
   const { t } = useLanguage();
   const c = t.projects;
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const openProject = openIndex !== null ? c.items[openIndex] : null;
+
   return (
     <section
       id="projeler"
@@ -92,8 +96,10 @@ export default function ProjectsSection() {
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {c.items.map((proj, i) => (
-          <motion.div
+          <motion.button
             key={proj.title}
+            type="button"
+            onClick={() => setOpenIndex(i)}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
@@ -102,25 +108,40 @@ export default function ProjectsSection() {
               delay: (i % 3) * 0.08,
               ease: [0.16, 1, 0.3, 1],
             }}
+            className="group text-left"
           >
             <div className="relative mb-3.5 h-56 overflow-hidden">
               <ProjectPhoto title={proj.title} images={proj.images} />
+              <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/20" />
               <div className="absolute left-3 top-3 bg-black px-2.5 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-wide text-[#F5F4F0]">
                 {proj.status}
+              </div>
+              <div className="absolute bottom-3 right-3 flex h-8 w-8 translate-y-1 items-center justify-center rounded-full bg-white text-[#111111] opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                →
               </div>
             </div>
             <div className="mb-1.5 font-mono text-[11px] font-medium uppercase tracking-wide text-neutral-500">
               {proj.category}
             </div>
-            <div className="font-sans text-[17px] font-semibold text-[#111111]">
+            <div className="font-sans text-[17px] font-semibold text-[#111111] transition-colors group-hover:text-neutral-600">
               {proj.title}
             </div>
             <div className="mt-1 font-sans text-[13px] text-[#666666]">
               {proj.location}
             </div>
-          </motion.div>
+          </motion.button>
         ))}
       </div>
+
+      <AnimatePresence>
+        {openProject && (
+          <ProjectDetailModal
+            project={openProject}
+            labels={c.detailLabels}
+            onClose={() => setOpenIndex(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }
