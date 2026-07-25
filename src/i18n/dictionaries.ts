@@ -110,8 +110,29 @@ export const dictionaries = {
         location: "İstanbul, Beykoz",
       },
       items: [
-        { title: "İzmir Dikili AAT", location: "İzmir, Dikili", category: "Atık Su", status: "Devam Ediyor" },
-        { title: "Aliağa Sakran AAT", location: "İzmir, Aliağa", category: "Atık Su", status: "Devam Ediyor" },
+        {
+          title: "İzmir Dikili AAT",
+          location: "İzmir, Dikili",
+          category: "Atık Su",
+          status: "Devam Ediyor",
+          images: [
+            "/images/projects/izmir-dikili-aat/3d-tasarim.jpg",
+            "/images/projects/izmir-dikili-aat/saha-1.jpg",
+            "/images/projects/izmir-dikili-aat/saha-2.jpg",
+            "/images/projects/izmir-dikili-aat/saha-3.jpg",
+          ],
+        },
+        {
+          title: "Aliağa Sakran AAT",
+          location: "İzmir, Aliağa",
+          category: "Atık Su",
+          status: "Devam Ediyor",
+          images: [
+            "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.png",
+            "/images/projects/aliaga-yenisakran-aat/3d-tasarim-2.png",
+            "/images/projects/aliaga-yenisakran-aat/saha-1.png",
+          ],
+        },
         {
           title: "Erzincan Camii Kebir",
           location: "Erzincan",
@@ -126,8 +147,66 @@ export const dictionaries = {
             "/images/projects/erzincan-cami-kebir/konferans-salonu.jpg",
           ],
         },
-        { title: "İTO Merkez Binası", location: "İstanbul", category: "Kurumsal", status: "Devam Ediyor" },
-        { title: "İTO Maltepe Hizmet Binası", location: "İstanbul, Maltepe", category: "Kurumsal", status: "Devam Ediyor" },
+        {
+          title: "İTO Merkez Binası",
+          location: "İstanbul, Eminönü",
+          category: "Kurumsal",
+          status: "Devam Ediyor",
+          images: [
+            "/images/projects/ito-eminonu/3d-tasarim-1.png",
+            "/images/projects/ito-eminonu/3d-tasarim-2.png",
+            "/images/projects/ito-eminonu/saha-1.jpg",
+            "/images/projects/ito-eminonu/saha-2.jpg",
+          ],
+        },
+        {
+          title: "İTO Maltepe Hizmet Binası",
+          location: "İstanbul, Maltepe",
+          category: "Kurumsal",
+          status: "Devam Ediyor",
+          images: [
+            "/images/projects/ito-maltepe/3d-tasarim-1.png",
+            "/images/projects/ito-maltepe/3d-tasarim-2.png",
+            "/images/projects/ito-maltepe/3d-tasarim-3.png",
+            "/images/projects/ito-maltepe/3d-tasarim-4.png",
+          ],
+        },
+        {
+          title: "Beykoz Gümüşsuyu Lüks Konut",
+          location: "İstanbul, Beykoz",
+          category: "Üstyapı / Konut",
+          status: "Başlayacak",
+          images: [
+            "/images/projects/beykoz-gumussuyu/gorsel-1.png",
+            "/images/projects/beykoz-gumussuyu/gorsel-2.png",
+            "/images/projects/beykoz-gumussuyu/gorsel-3.png",
+            "/images/projects/beykoz-gumussuyu/gorsel-4.png",
+          ],
+        },
+        {
+          title: "Beykoz Örnekköy Lüks Villa",
+          location: "İstanbul, Beykoz",
+          category: "Üstyapı / Konut",
+          status: "Başlama Aşamasında",
+          images: [
+            "/images/projects/beykoz-ornekkoy/gorsel-1.png",
+            "/images/projects/beykoz-ornekkoy/gorsel-2.png",
+            "/images/projects/beykoz-ornekkoy/gorsel-3.png",
+            "/images/projects/beykoz-ornekkoy/gorsel-4.png",
+            "/images/projects/beykoz-ornekkoy/gorsel-5.png",
+          ],
+        },
+        {
+          title: "Halise ve Mehmet Karakaya Anaokulu",
+          location: "Erzincan",
+          category: "Kamu Binası",
+          status: "Devam Ediyor",
+          images: [
+            "/images/projects/erzincan-anaokulu/3d-tasarim-1.jpg",
+            "/images/projects/erzincan-anaokulu/3d-tasarim-2.jpg",
+            "/images/projects/erzincan-anaokulu/3d-tasarim-3.jpg",
+          ],
+        },
       ],
     },
     geography: {
@@ -135,8 +214,8 @@ export const dictionaries = {
       heading: "Türkiye'nin dört bir yanında kalıcı yapılar inşa ediyoruz.",
       regions: [
         { name: "İzmir", count: "2 Proje", focus: "Atık Su / Altyapı" },
-        { name: "İstanbul", count: "3 Proje", focus: "Üstyapı / Kurumsal" },
-        { name: "Erzincan", count: "1 Proje", focus: "Kamu Binası" },
+        { name: "İstanbul", count: "5 Proje", focus: "Üstyapı / Kurumsal" },
+        { name: "Erzincan", count: "2 Proje", focus: "Kamu Binası" },
       ],
     },
     sustainability: {
@@ -328,8 +407,29 @@ export const dictionaries = {
         location: "İstanbul, Beykoz",
       },
       items: [
-        { title: "İzmir Dikili WWTP", location: "İzmir, Dikili", category: "Wastewater", status: "Ongoing" },
-        { title: "Aliağa Sakran WWTP", location: "İzmir, Aliağa", category: "Wastewater", status: "Ongoing" },
+        {
+          title: "İzmir Dikili WWTP",
+          location: "İzmir, Dikili",
+          category: "Wastewater",
+          status: "Ongoing",
+          images: [
+            "/images/projects/izmir-dikili-aat/3d-tasarim.jpg",
+            "/images/projects/izmir-dikili-aat/saha-1.jpg",
+            "/images/projects/izmir-dikili-aat/saha-2.jpg",
+            "/images/projects/izmir-dikili-aat/saha-3.jpg",
+          ],
+        },
+        {
+          title: "Aliağa Sakran WWTP",
+          location: "İzmir, Aliağa",
+          category: "Wastewater",
+          status: "Ongoing",
+          images: [
+            "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.png",
+            "/images/projects/aliaga-yenisakran-aat/3d-tasarim-2.png",
+            "/images/projects/aliaga-yenisakran-aat/saha-1.png",
+          ],
+        },
         {
           title: "Erzincan Camii Kebir",
           location: "Erzincan",
@@ -344,8 +444,66 @@ export const dictionaries = {
             "/images/projects/erzincan-cami-kebir/konferans-salonu.jpg",
           ],
         },
-        { title: "İTO Head Office", location: "İstanbul", category: "Corporate", status: "Ongoing" },
-        { title: "İTO Maltepe Service Building", location: "İstanbul, Maltepe", category: "Corporate", status: "Ongoing" },
+        {
+          title: "İTO Head Office",
+          location: "İstanbul, Eminönü",
+          category: "Corporate",
+          status: "Ongoing",
+          images: [
+            "/images/projects/ito-eminonu/3d-tasarim-1.png",
+            "/images/projects/ito-eminonu/3d-tasarim-2.png",
+            "/images/projects/ito-eminonu/saha-1.jpg",
+            "/images/projects/ito-eminonu/saha-2.jpg",
+          ],
+        },
+        {
+          title: "İTO Maltepe Service Building",
+          location: "İstanbul, Maltepe",
+          category: "Corporate",
+          status: "Ongoing",
+          images: [
+            "/images/projects/ito-maltepe/3d-tasarim-1.png",
+            "/images/projects/ito-maltepe/3d-tasarim-2.png",
+            "/images/projects/ito-maltepe/3d-tasarim-3.png",
+            "/images/projects/ito-maltepe/3d-tasarim-4.png",
+          ],
+        },
+        {
+          title: "Beykoz Gümüşsuyu Luxury Residences",
+          location: "İstanbul, Beykoz",
+          category: "Superstructure / Residential",
+          status: "Upcoming",
+          images: [
+            "/images/projects/beykoz-gumussuyu/gorsel-1.png",
+            "/images/projects/beykoz-gumussuyu/gorsel-2.png",
+            "/images/projects/beykoz-gumussuyu/gorsel-3.png",
+            "/images/projects/beykoz-gumussuyu/gorsel-4.png",
+          ],
+        },
+        {
+          title: "Beykoz Örnekköy Luxury Villas",
+          location: "İstanbul, Beykoz",
+          category: "Superstructure / Residential",
+          status: "Starting Soon",
+          images: [
+            "/images/projects/beykoz-ornekkoy/gorsel-1.png",
+            "/images/projects/beykoz-ornekkoy/gorsel-2.png",
+            "/images/projects/beykoz-ornekkoy/gorsel-3.png",
+            "/images/projects/beykoz-ornekkoy/gorsel-4.png",
+            "/images/projects/beykoz-ornekkoy/gorsel-5.png",
+          ],
+        },
+        {
+          title: "Halise & Mehmet Karakaya Preschool",
+          location: "Erzincan",
+          category: "Public Building",
+          status: "Ongoing",
+          images: [
+            "/images/projects/erzincan-anaokulu/3d-tasarim-1.jpg",
+            "/images/projects/erzincan-anaokulu/3d-tasarim-2.jpg",
+            "/images/projects/erzincan-anaokulu/3d-tasarim-3.jpg",
+          ],
+        },
       ],
     },
     geography: {
@@ -353,8 +511,8 @@ export const dictionaries = {
       heading: "Building lasting structures across every corner of Türkiye.",
       regions: [
         { name: "İzmir", count: "2 Projects", focus: "Wastewater / Infrastructure" },
-        { name: "İstanbul", count: "3 Projects", focus: "Superstructure / Corporate" },
-        { name: "Erzincan", count: "1 Project", focus: "Public Building" },
+        { name: "İstanbul", count: "5 Projects", focus: "Superstructure / Corporate" },
+        { name: "Erzincan", count: "2 Projects", focus: "Public Building" },
       ],
     },
     sustainability: {
