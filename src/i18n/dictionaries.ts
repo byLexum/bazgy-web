@@ -47,7 +47,7 @@ export const dictionaries = {
           city: "İzmir, Aliağa",
           title: "Aliağa'nın suyuna yeni bir altyapı",
           copy: "Yenişakran Atıksu Arıtma Tesisi İkmal İnşaatı, bölgenin atıksu yükünü karşılayacak modern bir altyapı oluşturuyor.",
-          image: "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.png",
+          image: "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.jpg",
         },
         {
           id: "erzincan-cami-kebir",
@@ -56,7 +56,7 @@ export const dictionaries = {
           city: "Erzincan",
           title: "İbadete adanan bir eser",
           copy: "Erzincan Camii Kebir inşaatında, geleneksel form çağdaş mühendislikle bir araya geliyor.",
-          image: "/images/projects/erzincan-cami-kebir/ana-ibadet-salonu-mihrap.jpg",
+          image: "/images/projects/erzincan-cami-kebir/3d-tasarim-4.jpg",
         },
         {
           id: "ito-eminonu",
@@ -65,7 +65,7 @@ export const dictionaries = {
           city: "İstanbul, Eminönü",
           title: "Kurumsal yapılarda kalıcı değer",
           copy: "İstanbul İTO Merkez Binası, kurumsal kimliği güçlü, uzun ömürlü bir hizmet binasına dönüşüyor.",
-          image: "/images/projects/ito-eminonu/3d-tasarim-1.png",
+          image: "/images/projects/ito-eminonu/3d-tasarim-1.jpg",
         },
         {
           id: "ito-maltepe",
@@ -74,7 +74,7 @@ export const dictionaries = {
           city: "İstanbul, Maltepe",
           title: "Anadolu Yakası'na yeni bir temsilcilik",
           copy: "İTO Anadolu Yakası Bölge Temsilciliği, Maltepe'de çağdaş bir kurumsal hizmet merkezine dönüşüyor.",
-          image: "/images/projects/ito-maltepe/3d-tasarim-1.png",
+          image: "/images/projects/ito-maltepe/3d-tasarim-1.jpg",
         },
         {
           id: "beykoz-gumussuyu",
@@ -83,7 +83,7 @@ export const dictionaries = {
           city: "İstanbul, Beykoz",
           title: "Boğaz'a açılan ayrıcalıklı bir yaşam",
           copy: "Beykoz Gümüşsuyu'nda, üç köprüyü aynı anda gören panoramik Boğaz manzaralı 13 özel konuttan oluşan bir proje.",
-          image: "/images/projects/beykoz-gumussuyu/cephe-bogaz-manzarasi.png",
+          image: "/images/projects/beykoz-gumussuyu/villa-cephe-bahce.jpg",
         },
         {
           id: "beykoz-ornekkoy",
@@ -92,7 +92,7 @@ export const dictionaries = {
           city: "İstanbul, Beykoz",
           title: "Doğayla bütünleşik, ayrıcalıklı bir villa yaşamı",
           copy: "Beykoz Örnekköy'de, yalnızca 44 bağımsız bölümden oluşan düşük yoğunluklu bir lüks villa projesi.",
-          image: "/images/projects/beykoz-ornekkoy/villa-cephe-havuz.png",
+          image: "/images/projects/beykoz-ornekkoy/villa-cephe-havuz.jpg",
         },
         {
           id: "erzincan-anaokulu",
@@ -202,9 +202,9 @@ export const dictionaries = {
           category: "Atık Su",
           status: "Devam Ediyor",
           images: [
-            "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.png",
-            "/images/projects/aliaga-yenisakran-aat/3d-tasarim-2.png",
-            "/images/projects/aliaga-yenisakran-aat/saha-1.png",
+            "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.jpg",
+            "/images/projects/aliaga-yenisakran-aat/3d-tasarim-2.jpg",
+            "/images/projects/aliaga-yenisakran-aat/saha-1.jpg",
           ],
           detail: {
             employerLabel: "İşveren",
@@ -233,6 +233,10 @@ export const dictionaries = {
           category: "Kamu Binası",
           status: "Devam Ediyor",
           images: [
+            "/images/projects/erzincan-cami-kebir/3d-tasarim-1.jpg",
+            "/images/projects/erzincan-cami-kebir/3d-tasarim-2.jpg",
+            "/images/projects/erzincan-cami-kebir/3d-tasarim-3.jpg",
+            "/images/projects/erzincan-cami-kebir/3d-tasarim-4.jpg",
             "/images/projects/erzincan-cami-kebir/cover.jpg",
             "/images/projects/erzincan-cami-kebir/ana-ibadet-salonu-mihrap.jpg",
             "/images/projects/erzincan-cami-kebir/ana-ibadet-salonu-tavan.jpg",
@@ -266,8 +270,8 @@ export const dictionaries = {
           category: "Kurumsal",
           status: "Devam Ediyor",
           images: [
-            "/images/projects/ito-eminonu/3d-tasarim-1.png",
-            "/images/projects/ito-eminonu/3d-tasarim-2.png",
+            "/images/projects/ito-eminonu/3d-tasarim-1.jpg",
+            "/images/projects/ito-eminonu/3d-tasarim-2.jpg",
             "/images/projects/ito-eminonu/saha-1.jpg",
             "/images/projects/ito-eminonu/saha-2.jpg",
           ],
@@ -297,10 +301,10 @@ export const dictionaries = {
           category: "Kurumsal",
           status: "Devam Ediyor",
           images: [
-            "/images/projects/ito-maltepe/3d-tasarim-1.png",
-            "/images/projects/ito-maltepe/3d-tasarim-2.png",
-            "/images/projects/ito-maltepe/3d-tasarim-3.png",
-            "/images/projects/ito-maltepe/3d-tasarim-4.png",
+            "/images/projects/ito-maltepe/3d-tasarim-1.jpg",
+            "/images/projects/ito-maltepe/3d-tasarim-2.jpg",
+            "/images/projects/ito-maltepe/3d-tasarim-3.jpg",
+            "/images/projects/ito-maltepe/3d-tasarim-4.jpg",
           ],
           detail: {
             employerLabel: "İşveren",
@@ -327,10 +331,9 @@ export const dictionaries = {
           category: "Üstyapı / Konut",
           status: "Başlayacak",
           images: [
-            "/images/projects/beykoz-gumussuyu/cephe-bogaz-manzarasi.png",
-            "/images/projects/beykoz-gumussuyu/kus-bakisi-genel-gorunum.png",
-            "/images/projects/beykoz-gumussuyu/cati-bahcesi-havuz-detay.png",
-            "/images/projects/beykoz-gumussuyu/teras-oturma-alani-manzara.png",
+            "/images/projects/beykoz-gumussuyu/villa-cephe-bahce.jpg",
+            "/images/projects/beykoz-gumussuyu/villa-ahsap-cephe-detay.jpg",
+            "/images/projects/beykoz-gumussuyu/site-ici-yaya-aksi.jpg",
           ],
           detail: {
             employerLabel: "Yatırımcı",
@@ -357,11 +360,11 @@ export const dictionaries = {
           category: "Üstyapı / Konut",
           status: "Başlama Aşamasında",
           images: [
-            "/images/projects/beykoz-ornekkoy/villa-cephe-havuz.png",
-            "/images/projects/beykoz-ornekkoy/villa-cephe-sokak.png",
-            "/images/projects/beykoz-ornekkoy/villa-teras-oturma-alani.png",
-            "/images/projects/beykoz-ornekkoy/yerlesim-vaziyet-plani-kus-bakisi.png",
-            "/images/projects/beykoz-ornekkoy/genel-yerlesim-kus-bakisi.png",
+            "/images/projects/beykoz-ornekkoy/villa-cephe-havuz.jpg",
+            "/images/projects/beykoz-ornekkoy/villa-cephe-sokak.jpg",
+            "/images/projects/beykoz-ornekkoy/villa-teras-oturma-alani.jpg",
+            "/images/projects/beykoz-ornekkoy/yerlesim-vaziyet-plani-kus-bakisi.jpg",
+            "/images/projects/beykoz-ornekkoy/genel-yerlesim-kus-bakisi.jpg",
           ],
           detail: {
             employerLabel: "Yatırımcı",
@@ -433,7 +436,7 @@ export const dictionaries = {
       ],
     },
     career: {
-      photoLabel: "Saha ekibi fotoğrafı",
+      photoLabel: "BAZ saha ve proje ekibi",
       heading: "Geleceğin yapılarını birlikte inşa edelim.",
       copy: "BAZ ekibine katılın, Türkiye'nin büyük mühendislik projelerinde yer alın.",
       cta: "Açık Pozisyonları Gör",
@@ -510,6 +513,129 @@ export const dictionaries = {
       contact: "İletişim",
       career: "Kariyer",
     },
+    legalPages: {
+      eyebrow: "YASAL BİLGİLENDİRME",
+      backLink: "Ana Sayfaya Dön",
+      contactNote:
+        "Bu metinle ilgili sorularınız için info@bazgy.com adresinden bizimle iletişime geçebilirsiniz.",
+      kvkk: {
+        title: "Kişisel Verilerin Korunmasına İlişkin Aydınlatma Metni",
+        intro:
+          "Bu aydınlatma metni, BAZ Yatırım ve İnşaat A.Ş. tarafından işletilen www.bazgy.com internet sitesi üzerinden elde edilen kişisel verilerin 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında nasıl işlendiği konusunda ziyaretçilerimizi bilgilendirmek amacıyla hazırlanmıştır.",
+        sections: [
+          {
+            heading: "1. Veri Sorumlusu",
+            body: [
+              "6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) kapsamında, www.bazgy.com internet sitesi üzerinden elde edilen kişisel verileriniz, veri sorumlusu sıfatıyla BAZ Yatırım ve İnşaat A.Ş. tarafından işlenebilmektedir.",
+            ],
+            list: [],
+          },
+          {
+            heading: "2. Kişisel Verilerin Toplanması",
+            body: [
+              "Kişisel verileriniz; internet sitemizde yer alan iletişim, teklif talebi ve kariyer formları, e-posta iletişimi ve çerezler (cookies) aracılığıyla elektronik ortamda toplanabilmektedir.",
+            ],
+            list: [],
+          },
+          {
+            heading: "3. Kişisel Verilerin İşlenme Amaçları",
+            body: ["Toplanan kişisel verileriniz;"],
+            list: [
+              "Bilgi, teklif ve iletişim taleplerinin değerlendirilmesi,",
+              "Müşteri, iş ortağı, tedarikçi ve alt yüklenici ilişkilerinin yürütülmesi,",
+              "Mühendislik, taahhüt ve proje yönetimi faaliyetlerinin gerçekleştirilmesi,",
+              "İnsan kaynakları ve işe alım süreçlerinin yürütülmesi,",
+              "İnternet sitesi performansının ve kullanıcı deneyiminin geliştirilmesi,",
+              "Yasal yükümlülüklerin yerine getirilmesi",
+            ],
+          },
+          {
+            heading: "4. Kişisel Verilerin Aktarılması",
+            body: [
+              "Kişisel verileriniz, yasal yükümlülüklerin yerine getirilmesi ve iş süreçlerinin yürütülmesi amacıyla, ilgili mevzuat kapsamında yetkili kamu kurumları, iş ortakları, danışmanlar, tedarikçiler ve hizmet sağlayıcılarla paylaşılabilmektedir.",
+            ],
+            list: [],
+          },
+          {
+            heading: "5. Haklarınız",
+            body: [
+              "KVKK'nın 11. maddesi kapsamında; kişisel verilerinizin işlenip işlenmediğini öğrenme, düzeltilmesini veya silinmesini talep etme ve diğer yasal haklarınızı kullanma hakkına sahipsiniz.",
+              "Kişisel verilerinizle ilgili taleplerinizi, BAZ Yatırım ve İnşaat A.Ş.'nin resmi iletişim kanalları üzerinden iletebilirsiniz.",
+            ],
+            list: [],
+          },
+        ],
+      },
+      cerez: {
+        title: "Çerez Politikası",
+        intro:
+          "Bu Çerez Politikası, BAZ Yatırım ve İnşaat A.Ş. tarafından işletilen www.bazgy.com internet sitesinde kullanılan çerezler hakkında ziyaretçileri bilgilendirmek amacıyla hazırlanmıştır.",
+        sections: [
+          {
+            heading: "Çerez Nedir?",
+            body: [
+              "Çerezler, internet sitesinin güvenli ve verimli şekilde çalışmasını sağlayan, kullanıcı tercihlerini hatırlayan ve site performansının analiz edilmesine yardımcı olan küçük veri dosyalarıdır.",
+            ],
+            list: [],
+          },
+          {
+            heading: "Çerezlerin Kullanım Amaçları",
+            body: ["www.bazgy.com üzerinde kullanılan çerezler;"],
+            list: [
+              "İnternet sitesinin temel işlevlerinin çalıştırılması,",
+              "Kullanıcı deneyiminin geliştirilmesi,",
+              "Site performansının ölçülmesi ve iyileştirilmesi,",
+              "Güvenlik ve teknik kontrollerin sağlanması",
+            ],
+          },
+          {
+            heading: "Çerez Tercihlerinizin Yönetimi",
+            body: [
+              "Tarayıcı ayarlarınızı değiştirerek çerezleri kabul edebilir, sınırlandırabilir veya silebilirsiniz. Ancak bazı çerezlerin devre dışı bırakılması, internet sitesinin belirli işlevlerinin düzgün çalışmasını etkileyebilir.",
+              "Çerezler hakkında detaylı bilgi almak için bizimle iletişime geçebilirsiniz.",
+            ],
+            list: [],
+          },
+        ],
+      },
+      gizlilik: {
+        title: "Gizlilik Politikası",
+        intro:
+          "BAZ Yatırım ve İnşaat A.Ş. olarak, www.bazgy.com internet sitesini ziyaret eden kullanıcılarımızın gizliliğine ve kişisel verilerinin korunmasına önem veriyoruz.",
+        sections: [
+          {
+            heading: "Kişisel Verilerin İşlenmesi",
+            body: [
+              "İnternet sitemiz üzerinden iletilen kişisel veriler; yürürlükteki mevzuat, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve ilgili düzenlemelere uygun olarak işlenmekte ve korunmaktadır.",
+              "Ziyaretçiler tarafından iletişim, teklif talebi, iş başvurusu veya benzeri formlar aracılığıyla paylaşılan bilgiler; yalnızca talep edilen hizmetlerin sunulması, iletişim süreçlerinin yürütülmesi, iş ilişkilerinin geliştirilmesi ve yasal yükümlülüklerin yerine getirilmesi amacıyla kullanılmaktadır.",
+            ],
+            list: [],
+          },
+          {
+            heading: "Veri Güvenliği",
+            body: [
+              "BAZ Yatırım ve İnşaat A.Ş., kişisel verilerin yetkisiz erişime, kayba, değiştirilmesine veya hukuka aykırı kullanıma karşı korunması için gerekli teknik ve idari tedbirleri uygulamaktadır.",
+            ],
+            list: [],
+          },
+          {
+            heading: "Üçüncü Taraf Bağlantıları",
+            body: [
+              "İnternet sitemiz, üçüncü taraf internet sitelerine yönlendiren bağlantılar içerebilir. Bu sitelerin gizlilik uygulamalarından BAZ Yatırım ve İnşaat A.Ş. sorumlu değildir.",
+            ],
+            list: [],
+          },
+          {
+            heading: "Politikanın Güncellenmesi",
+            body: [
+              "Şirketimiz, işbu Gizlilik Politikası'nı mevzuat değişiklikleri veya operasyonel ihtiyaçlar doğrultusunda güncelleme hakkını saklı tutar.",
+              "Gizlilik politikamız hakkında sorularınız için bizimle www.bazgy.com üzerinden iletişime geçebilirsiniz.",
+            ],
+            list: [],
+          },
+        ],
+      },
+    },
   },
   en: {
     comingSoon: {
@@ -549,7 +675,7 @@ export const dictionaries = {
           city: "İzmir, Aliağa",
           title: "A new infrastructure for Aliağa's water",
           copy: "The Yenişakran Wastewater Treatment Plant Completion Project builds a modern infrastructure to meet the region's wastewater load.",
-          image: "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.png",
+          image: "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.jpg",
         },
         {
           id: "erzincan-cami-kebir",
@@ -558,7 +684,7 @@ export const dictionaries = {
           city: "Erzincan",
           title: "A work devoted to worship",
           copy: "In the construction of the Erzincan Camii Kebir, traditional form meets contemporary engineering.",
-          image: "/images/projects/erzincan-cami-kebir/ana-ibadet-salonu-mihrap.jpg",
+          image: "/images/projects/erzincan-cami-kebir/3d-tasarim-4.jpg",
         },
         {
           id: "ito-eminonu",
@@ -567,7 +693,7 @@ export const dictionaries = {
           city: "İstanbul, Eminönü",
           title: "Lasting value in corporate buildings",
           copy: "The İTO Head Office in İstanbul is transforming into a long-lasting service building with a strong corporate identity.",
-          image: "/images/projects/ito-eminonu/3d-tasarim-1.png",
+          image: "/images/projects/ito-eminonu/3d-tasarim-1.jpg",
         },
         {
           id: "ito-maltepe",
@@ -576,7 +702,7 @@ export const dictionaries = {
           city: "İstanbul, Maltepe",
           title: "A new regional office for the Anatolian Side",
           copy: "The İTO Anatolian Side Regional Office is becoming a modern corporate service center in Maltepe.",
-          image: "/images/projects/ito-maltepe/3d-tasarim-1.png",
+          image: "/images/projects/ito-maltepe/3d-tasarim-1.jpg",
         },
         {
           id: "beykoz-gumussuyu",
@@ -585,7 +711,7 @@ export const dictionaries = {
           city: "İstanbul, Beykoz",
           title: "An exclusive life opening onto the Bosphorus",
           copy: "In Beykoz Gümüşsuyu, 13 private residences with a panoramic Bosphorus view taking in all three bridges at once.",
-          image: "/images/projects/beykoz-gumussuyu/cephe-bogaz-manzarasi.png",
+          image: "/images/projects/beykoz-gumussuyu/villa-cephe-bahce.jpg",
         },
         {
           id: "beykoz-ornekkoy",
@@ -594,7 +720,7 @@ export const dictionaries = {
           city: "İstanbul, Beykoz",
           title: "An exclusive villa life woven into nature",
           copy: "In Beykoz Örnekköy, a low-density luxury villa project comprising just 44 residences.",
-          image: "/images/projects/beykoz-ornekkoy/villa-cephe-havuz.png",
+          image: "/images/projects/beykoz-ornekkoy/villa-cephe-havuz.jpg",
         },
         {
           id: "erzincan-anaokulu",
@@ -704,9 +830,9 @@ export const dictionaries = {
           category: "Wastewater",
           status: "Ongoing",
           images: [
-            "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.png",
-            "/images/projects/aliaga-yenisakran-aat/3d-tasarim-2.png",
-            "/images/projects/aliaga-yenisakran-aat/saha-1.png",
+            "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.jpg",
+            "/images/projects/aliaga-yenisakran-aat/3d-tasarim-2.jpg",
+            "/images/projects/aliaga-yenisakran-aat/saha-1.jpg",
           ],
           detail: {
             employerLabel: "Client",
@@ -735,6 +861,10 @@ export const dictionaries = {
           category: "Public Building",
           status: "Ongoing",
           images: [
+            "/images/projects/erzincan-cami-kebir/3d-tasarim-1.jpg",
+            "/images/projects/erzincan-cami-kebir/3d-tasarim-2.jpg",
+            "/images/projects/erzincan-cami-kebir/3d-tasarim-3.jpg",
+            "/images/projects/erzincan-cami-kebir/3d-tasarim-4.jpg",
             "/images/projects/erzincan-cami-kebir/cover.jpg",
             "/images/projects/erzincan-cami-kebir/ana-ibadet-salonu-mihrap.jpg",
             "/images/projects/erzincan-cami-kebir/ana-ibadet-salonu-tavan.jpg",
@@ -768,8 +898,8 @@ export const dictionaries = {
           category: "Corporate",
           status: "Ongoing",
           images: [
-            "/images/projects/ito-eminonu/3d-tasarim-1.png",
-            "/images/projects/ito-eminonu/3d-tasarim-2.png",
+            "/images/projects/ito-eminonu/3d-tasarim-1.jpg",
+            "/images/projects/ito-eminonu/3d-tasarim-2.jpg",
             "/images/projects/ito-eminonu/saha-1.jpg",
             "/images/projects/ito-eminonu/saha-2.jpg",
           ],
@@ -799,10 +929,10 @@ export const dictionaries = {
           category: "Corporate",
           status: "Ongoing",
           images: [
-            "/images/projects/ito-maltepe/3d-tasarim-1.png",
-            "/images/projects/ito-maltepe/3d-tasarim-2.png",
-            "/images/projects/ito-maltepe/3d-tasarim-3.png",
-            "/images/projects/ito-maltepe/3d-tasarim-4.png",
+            "/images/projects/ito-maltepe/3d-tasarim-1.jpg",
+            "/images/projects/ito-maltepe/3d-tasarim-2.jpg",
+            "/images/projects/ito-maltepe/3d-tasarim-3.jpg",
+            "/images/projects/ito-maltepe/3d-tasarim-4.jpg",
           ],
           detail: {
             employerLabel: "Client",
@@ -829,10 +959,9 @@ export const dictionaries = {
           category: "Superstructure / Residential",
           status: "Upcoming",
           images: [
-            "/images/projects/beykoz-gumussuyu/cephe-bogaz-manzarasi.png",
-            "/images/projects/beykoz-gumussuyu/kus-bakisi-genel-gorunum.png",
-            "/images/projects/beykoz-gumussuyu/cati-bahcesi-havuz-detay.png",
-            "/images/projects/beykoz-gumussuyu/teras-oturma-alani-manzara.png",
+            "/images/projects/beykoz-gumussuyu/villa-cephe-bahce.jpg",
+            "/images/projects/beykoz-gumussuyu/villa-ahsap-cephe-detay.jpg",
+            "/images/projects/beykoz-gumussuyu/site-ici-yaya-aksi.jpg",
           ],
           detail: {
             employerLabel: "Developer",
@@ -859,11 +988,11 @@ export const dictionaries = {
           category: "Superstructure / Residential",
           status: "Starting Soon",
           images: [
-            "/images/projects/beykoz-ornekkoy/villa-cephe-havuz.png",
-            "/images/projects/beykoz-ornekkoy/villa-cephe-sokak.png",
-            "/images/projects/beykoz-ornekkoy/villa-teras-oturma-alani.png",
-            "/images/projects/beykoz-ornekkoy/yerlesim-vaziyet-plani-kus-bakisi.png",
-            "/images/projects/beykoz-ornekkoy/genel-yerlesim-kus-bakisi.png",
+            "/images/projects/beykoz-ornekkoy/villa-cephe-havuz.jpg",
+            "/images/projects/beykoz-ornekkoy/villa-cephe-sokak.jpg",
+            "/images/projects/beykoz-ornekkoy/villa-teras-oturma-alani.jpg",
+            "/images/projects/beykoz-ornekkoy/yerlesim-vaziyet-plani-kus-bakisi.jpg",
+            "/images/projects/beykoz-ornekkoy/genel-yerlesim-kus-bakisi.jpg",
           ],
           detail: {
             employerLabel: "Developer",
@@ -935,7 +1064,7 @@ export const dictionaries = {
       ],
     },
     career: {
-      photoLabel: "Field team photo",
+      photoLabel: "The BAZ site and project team",
       heading: "Let's build the structures of the future, together.",
       copy: "Join the BAZ team and take part in Türkiye's major engineering projects.",
       cta: "See Open Positions",
@@ -1011,6 +1140,129 @@ export const dictionaries = {
     pageLabels: {
       contact: "Contact",
       career: "Career",
+    },
+    legalPages: {
+      eyebrow: "LEGAL NOTICE",
+      backLink: "Back to Home",
+      contactNote:
+        "For any questions about this notice, you can reach us at info@bazgy.com.",
+      kvkk: {
+        title: "Personal Data Protection Notice",
+        intro:
+          "This notice has been prepared to inform visitors how personal data obtained through the www.bazgy.com website operated by BAZ Yatırım ve İnşaat A.Ş. is processed under Turkish Personal Data Protection Law No. 6698.",
+        sections: [
+          {
+            heading: "1. Data Controller",
+            body: [
+              "Under Turkish Personal Data Protection Law No. 6698 (“KVKK”), personal data obtained through the www.bazgy.com website may be processed by BAZ Yatırım ve İnşaat A.Ş. in its capacity as data controller.",
+            ],
+            list: [],
+          },
+          {
+            heading: "2. Collection of Personal Data",
+            body: [
+              "Your personal data may be collected electronically through the contact, quotation request and career forms on our website, through email correspondence, and through cookies.",
+            ],
+            list: [],
+          },
+          {
+            heading: "3. Purposes of Processing",
+            body: ["The personal data collected is processed in accordance with the KVKK for the purposes of:"],
+            list: [
+              "Evaluating information, quotation and contact requests,",
+              "Managing relationships with clients, business partners, suppliers and subcontractors,",
+              "Carrying out engineering, contracting and project management activities,",
+              "Conducting human resources and recruitment processes,",
+              "Improving website performance and user experience,",
+              "Fulfilling legal obligations",
+            ],
+          },
+          {
+            heading: "4. Transfer of Personal Data",
+            body: [
+              "In order to fulfil legal obligations and carry out business processes, your personal data may be shared with authorised public institutions, business partners, consultants, suppliers and service providers within the scope of the applicable legislation.",
+            ],
+            list: [],
+          },
+          {
+            heading: "5. Your Rights",
+            body: [
+              "Under Article 11 of the KVKK, you have the right to learn whether your personal data is being processed, to request its correction or deletion, and to exercise your other statutory rights.",
+              "You may submit requests regarding your personal data through the official contact channels of BAZ Yatırım ve İnşaat A.Ş.",
+            ],
+            list: [],
+          },
+        ],
+      },
+      cerez: {
+        title: "Cookie Policy",
+        intro:
+          "This Cookie Policy has been prepared to inform visitors about the cookies used on the www.bazgy.com website operated by BAZ Yatırım ve İnşaat A.Ş.",
+        sections: [
+          {
+            heading: "What Are Cookies?",
+            body: [
+              "Cookies are small data files that allow a website to operate securely and efficiently, remember user preferences and help analyse site performance.",
+            ],
+            list: [],
+          },
+          {
+            heading: "Purposes of Cookie Use",
+            body: ["Cookies used on www.bazgy.com serve the following purposes:"],
+            list: [
+              "Running the core functions of the website,",
+              "Improving the user experience,",
+              "Measuring and improving site performance,",
+              "Providing security and technical controls",
+            ],
+          },
+          {
+            heading: "Managing Your Cookie Preferences",
+            body: [
+              "By changing your browser settings you can accept, limit or delete cookies. However, disabling certain cookies may affect the proper functioning of some features of the website.",
+              "Please contact us for detailed information about cookies.",
+            ],
+            list: [],
+          },
+        ],
+      },
+      gizlilik: {
+        title: "Privacy Policy",
+        intro:
+          "At BAZ Yatırım ve İnşaat A.Ş., we value the privacy and the protection of the personal data of users visiting the www.bazgy.com website.",
+        sections: [
+          {
+            heading: "Processing of Personal Data",
+            body: [
+              "Personal data submitted through our website is processed and protected in accordance with the applicable legislation, Personal Data Protection Law No. 6698 (KVKK) and related regulations.",
+              "Information shared by visitors through contact, quotation request, job application or similar forms is used solely for providing the requested services, managing communication processes, developing business relationships and fulfilling legal obligations.",
+            ],
+            list: [],
+          },
+          {
+            heading: "Data Security",
+            body: [
+              "BAZ Yatırım ve İnşaat A.Ş. implements the necessary technical and administrative measures to protect personal data against unauthorised access, loss, alteration or unlawful use.",
+            ],
+            list: [],
+          },
+          {
+            heading: "Third-Party Links",
+            body: [
+              "Our website may contain links directing to third-party websites. BAZ Yatırım ve İnşaat A.Ş. is not responsible for the privacy practices of those websites.",
+            ],
+            list: [],
+          },
+          {
+            heading: "Updates to This Policy",
+            body: [
+              "Our company reserves the right to update this Privacy Policy in line with changes in legislation or operational needs.",
+              "For questions about our privacy policy, you can contact us via www.bazgy.com.",
+            ],
+            list: [],
+          },
+        ],
+      },
     },
   },
 };

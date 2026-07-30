@@ -22,8 +22,9 @@ npm run dev
 
 ## Notlar
 
-- Bazı bölümlerde (Dikili tesisi, İTO binası, Erzincan camii, Faaliyet Alanları kartları, kariyer fotoğrafı) gerçek fotoğraf yerine placeholder kullanılıyor — gerçek fotoğraflar geldiğinde `public/images` içine eklenip ilgili bileşenlerde `PlaceholderPhoto` yerine `next/image` ile değiştirilmeli.
-- Site şu an tek dilli (Türkçe). İngilizce içerik gerekirse `src/data/content.ts` genişletilip bir dil anahtarı eklenebilir.
+- Proje görselleri `public/images/projects/<proje>/` altında, kaynak HD dosyalardan üretilmiş 1920px genişliğinde JPEG (q92) olarak tutuluyor. Yeni görsel eklerken aynı boyut/format düzenine uyulmalı.
+- Yasal metinler (`/kvkk`, `/cerez-politikasi`, `/gizlilik-politikasi`) tek bir `LegalPageContent` bileşeni üzerinden, içerikleri `src/i18n/dictionaries.ts` içindeki `legalPages` anahtarından render ediliyor.
+- Site iki dilli (TR/EN); tüm metinler `src/i18n/dictionaries.ts` içinde tutulur ve `en` bloğu `tr` ile yapısal olarak birebir aynı olmak zorundadır (`Dictionary = typeof dictionaries.tr`).
 
 ## Deploy
 

@@ -1,6 +1,6 @@
 "use client";
 
-import PlaceholderPhoto from "./PlaceholderPhoto";
+import Image from "next/image";
 import CtaButton from "./CtaButton";
 import Reveal from "./Reveal";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -11,7 +11,13 @@ export default function CareerSection() {
   return (
     <section id="kariyer" className="grid grid-cols-1 md:grid-cols-2">
       <div className="relative h-64 overflow-hidden md:h-[440px]">
-        <PlaceholderPhoto label={c.photoLabel} />
+        <Image
+          src="/images/team/baz-ekip.jpg"
+          alt={c.photoLabel}
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="photo-bw object-cover object-top"
+        />
       </div>
       <div className="flex flex-col justify-center bg-[#F5F5F5] px-6 py-16 md:px-16">
         <Reveal>

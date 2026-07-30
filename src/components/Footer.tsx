@@ -71,9 +71,15 @@ export default function Footer() {
             {c.copyright}
           </div>
           <div className="flex flex-wrap items-center gap-6 font-sans text-xs text-white/40">
-            <a href="#">{c.legal.kvkk}</a>
-            <a href="#">{c.legal.cerez}</a>
-            <a href="#">{c.legal.gizlilik}</a>
+            <a href="/kvkk" className="hover:text-white/70">
+              {c.legal.kvkk}
+            </a>
+            <a href="/cerez-politikasi" className="hover:text-white/70">
+              {c.legal.cerez}
+            </a>
+            <a href="/gizlilik-politikasi" className="hover:text-white/70">
+              {c.legal.gizlilik}
+            </a>
             <a
               href="https://www.zt1projects.com/tr/"
               target="_blank"

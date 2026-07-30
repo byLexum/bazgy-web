@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Header from "./Header";
 import Footer from "./Footer";
 import Reveal from "./Reveal";
@@ -25,6 +26,16 @@ export default function CareerPageContent() {
           <p className="max-w-[600px] font-sans text-base leading-relaxed text-[#555555] md:text-[17px]">
             {c.intro}
           </p>
+        </Reveal>
+        <Reveal delay={0.12} className="relative mt-12 h-64 overflow-hidden md:mt-16 md:h-[480px]">
+          <Image
+            src="/images/team/baz-ekip.jpg"
+            alt={t.career.photoLabel}
+            fill
+            priority
+            sizes="(min-width: 1280px) 1280px, 100vw"
+            className="photo-bw object-cover object-top"
+          />
         </Reveal>
       </section>
 
