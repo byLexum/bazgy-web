@@ -1,14 +1,29 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
+
+const SEEN_KEY = "baz-coming-soon-seen";
 
 export default function ComingSoonModal() {
   const { t } = useLanguage();
   const c = t.comingSoon;
-  const [open, setOpen] = useState(true);
+  // Sayfalar statik üretildiği için başlangıçta kapalı: sessionStorage'a
+  // ancak mount sonrası bakılabiliyor. Sekme kapanana kadar bir kez gösterilir,
+  // site içi gezinmede tekrar açılmaz.
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (sessionStorage.getItem(SEEN_KEY)) return;
+    setOpen(true);
+  }, []);
+
+  const dismiss = () => {
+    sessionStorage.setItem(SEEN_KEY, "1");
+    setOpen(false);
+  };
 
   if (!open) return null;
 
@@ -17,7 +32,7 @@ export default function ComingSoonModal() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 px-6 backdrop-blur-md"
-      onClick={() => setOpen(false)}
+      onClick={dismiss}
     >
       <motion.div
         initial={{ opacity: 0, y: 20, scale: 0.97 }}
@@ -30,7 +45,7 @@ export default function ComingSoonModal() {
 
         <button
           type="button"
-          onClick={() => setOpen(false)}
+          onClick={dismiss}
           aria-label="Kapat"
           className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full text-white/50 transition hover:bg-white/10 hover:text-white"
         >
@@ -76,7 +91,7 @@ export default function ComingSoonModal() {
 
           <button
             type="button"
-            onClick={() => setOpen(false)}
+            onClick={dismiss}
             className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-sans text-sm font-semibold text-black transition hover:scale-[1.03] hover:bg-white/90"
           >
             {c.close}
