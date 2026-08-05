@@ -39,7 +39,7 @@ export const dictionaries = {
           title: "Şehirlerin geleceğine akan mühendislik",
           copy: "İzmir Dikili Atık Su Arıtma Tesisi, bölgeye sürdürülebilir bir arıtma altyapısı kazandırıyor.",
           image: "/images/projects/izmir-dikili-aat/3d-tasarim.jpg",
-          color: "#5e6752",
+          color: "#61664a",
         },
         {
           id: "aliaga-sakran-aat",
@@ -698,7 +698,7 @@ export const dictionaries = {
           title: "Engineering that flows into the future of cities",
           copy: "The İzmir Dikili Wastewater Treatment Plant brings a sustainable treatment infrastructure to the region.",
           image: "/images/projects/izmir-dikili-aat/3d-tasarim.jpg",
-          color: "#5e6752",
+          color: "#61664a",
         },
         {
           id: "aliaga-sakran-aat",
