@@ -45,6 +45,7 @@ export default function AboutSection() {
             src="/images/karlitepe-about-large.png"
             alt="Beykoz Karlıtepe"
             fill
+            quality={100}
             sizes="(min-width: 768px) 60vw, 100vw"
             className="photo-bw object-cover"
           />
@@ -54,6 +55,7 @@ export default function AboutSection() {
             src="/images/karlitepe-about-detail.png"
             alt="Beykoz Karlıtepe"
             fill
+            quality={100}
             sizes="(min-width: 768px) 40vw, 100vw"
             className="photo-bw object-cover"
           />

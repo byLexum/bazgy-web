@@ -16,6 +16,7 @@ export default function SustainabilitySection() {
         src="/images/karlitepe-sustainability.png"
         alt=""
         fill
+        quality={100}
         sizes="100vw"
         className="photo-bw object-cover"
       />

@@ -148,6 +148,29 @@ export const dictionaries = {
         eyebrow: "ÜSTYAPI / KONUT · DEVAM EDİYOR",
         title: "Beykoz Karlıtepe",
         location: "İstanbul, Beykoz",
+        category: "Üstyapı / Konut",
+        status: "Devam Ediyor",
+        images: [
+          "/images/karlitepe-project.png",
+          "/images/karlitepe-about-large.png",
+          "/images/karlitepe-about-detail.png",
+          "/images/karlitepe-sustainability.png",
+        ],
+        detail: {
+          employerLabel: "Yatırımcı",
+          employer: "BAZ Yatırım ve İnşaat A.Ş.",
+          projectType: "Lüks Konut Geliştirme Projesi",
+          description: [
+            "Beykoz Karlıtepe'de geliştirilen proje, İstanbul Boğazı'nın yeşil dokusuyla bütünleşen konumu ve çağdaş mimari yaklaşımıyla bölgenin öne çıkan konut yatırımları arasında yer almaktadır.",
+            "Doğal topografyaya saygılı yerleşim kurgusu, geniş yaşam alanları ve modern mühendislik standartlarıyla sakinlerine konforlu ve sürdürülebilir bir yaşam deneyimi sunmayı hedeflemektedir.",
+          ],
+          scope: [
+            "Yapısal İşler",
+            "Mimari Uygulamalar ve İç Mekan İşleri",
+            "Elektrik ve Mekanik Sistemler",
+            "Çevre Düzenleme ve Peyzaj İşleri",
+          ],
+        },
       },
       detailLabels: {
         location: "Lokasyon",
@@ -776,6 +799,29 @@ export const dictionaries = {
         eyebrow: "SUPERSTRUCTURE / RESIDENTIAL · ONGOING",
         title: "Beykoz Karlıtepe",
         location: "İstanbul, Beykoz",
+        category: "Superstructure / Residential",
+        status: "Ongoing",
+        images: [
+          "/images/karlitepe-project.png",
+          "/images/karlitepe-about-large.png",
+          "/images/karlitepe-about-detail.png",
+          "/images/karlitepe-sustainability.png",
+        ],
+        detail: {
+          employerLabel: "Investor",
+          employer: "BAZ Yatırım ve İnşaat A.Ş.",
+          projectType: "Luxury Residential Development Project",
+          description: [
+            "Developed in Beykoz Karlıtepe, the project stands out among the region's residential investments thanks to its location integrated with the Bosphorus' green fabric and its contemporary architectural approach.",
+            "A site layout respectful of the natural topography, generous living spaces, and modern engineering standards aim to offer residents a comfortable and sustainable living experience.",
+          ],
+          scope: [
+            "Structural Works",
+            "Architectural Applications and Interior Works",
+            "Electrical and Mechanical Systems",
+            "Landscaping and Site Development",
+          ],
+        },
       },
       detailLabels: {
         location: "Location",

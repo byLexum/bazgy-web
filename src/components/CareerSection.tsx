@@ -15,6 +15,7 @@ export default function CareerSection() {
           src="/images/team/baz-ekip.jpg"
           alt={c.photoLabel}
           fill
+          quality={100}
           sizes="(min-width: 768px) 50vw, 100vw"
           className="photo-bw object-cover object-top"
         />

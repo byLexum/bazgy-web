@@ -33,6 +33,7 @@ export default function CareerPageContent() {
             alt={t.career.photoLabel}
             fill
             priority
+            quality={100}
             sizes="(min-width: 1280px) 1280px, 100vw"
             className="photo-bw object-cover object-top"
           />

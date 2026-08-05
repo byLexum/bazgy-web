@@ -116,6 +116,7 @@ export default function ProjectDetailModal({
                   src={src}
                   alt={project.title}
                   fill
+                  quality={100}
                   sizes="(min-width: 860px) 860px, 100vw"
                   className="photo-bw object-cover transition-opacity duration-500 ease-in-out"
                   style={{ opacity: i === active ? 1 : 0 }}

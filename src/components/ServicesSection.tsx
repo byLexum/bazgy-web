@@ -64,6 +64,7 @@ export default function ServicesSection() {
                   src={imageMap[svc.icon]}
                   alt={svc.name}
                   fill
+                  quality={100}
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                   className="photo-bw object-cover"
                 />

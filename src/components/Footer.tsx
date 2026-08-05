@@ -13,6 +13,7 @@ export default function Footer() {
         src="/images/karlitepe-project.png"
         alt=""
         fill
+        quality={100}
         sizes="100vw"
         className="object-cover"
         style={{ filter: "grayscale(1) brightness(.4)" }}

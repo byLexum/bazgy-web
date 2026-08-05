@@ -96,13 +96,26 @@ export default function HeroSlider() {
             zIndex: i === active ? 2 : 1,
           }}
         >
+          <div className="absolute inset-0 overflow-hidden">
+            <Image
+              src={slide.image}
+              alt=""
+              aria-hidden="true"
+              fill
+              priority={i === 0}
+              sizes="100vw"
+              quality={100}
+              className="photo-bw scale-110 object-cover object-center blur-2xl brightness-[0.55] saturate-[1.15]"
+            />
+          </div>
           <Image
             src={slide.image}
             alt={slide.title}
             fill
             priority={i === 0}
             sizes="100vw"
-            className="photo-bw scale-[1.03] object-cover"
+            quality={100}
+            className="photo-bw object-contain object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/45 to-black/15" />
 

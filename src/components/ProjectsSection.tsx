@@ -32,6 +32,7 @@ function ProjectPhoto({ title, images }: { title: string; images?: string[] }) {
           src={src}
           alt={title}
           fill
+          quality={100}
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="photo-bw object-cover transition-opacity duration-700 ease-in-out"
           style={{ opacity: i === active ? 1 : 0 }}
@@ -45,7 +46,16 @@ export default function ProjectsSection() {
   const { t } = useLanguage();
   const c = t.projects;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [flagshipOpen, setFlagshipOpen] = useState(false);
   const openProject = openIndex !== null ? c.items[openIndex] : null;
+  const flagshipProject = {
+    title: c.flagship.title,
+    location: c.flagship.location,
+    category: c.flagship.category,
+    status: c.flagship.status,
+    images: c.flagship.images,
+    detail: c.flagship.detail,
+  };
 
   return (
     <section
@@ -70,28 +80,37 @@ export default function ProjectsSection() {
       </Reveal>
 
       <Reveal className="relative mb-6 h-72 overflow-hidden md:h-[520px]">
-        <Image
-          src="/images/karlitepe-project.png"
-          alt={c.flagship.title}
-          fill
-          sizes="100vw"
-          className="photo-bw object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />
-        <div className="absolute inset-x-6 bottom-6 flex items-end justify-between md:inset-x-9 md:bottom-8">
-          <div>
-            <div className="mb-2 font-mono text-[11px] font-semibold tracking-[0.1em] text-white/80">
-              {c.flagship.eyebrow}
+        <button
+          type="button"
+          onClick={() => setFlagshipOpen(true)}
+          className="group block h-full w-full text-left"
+        >
+          <Image
+            src="/images/karlitepe-project.png"
+            alt={c.flagship.title}
+            fill
+            sizes="100vw"
+            quality={100}
+            className="photo-bw object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />
+          <div className="absolute inset-x-6 bottom-6 flex items-end justify-between md:inset-x-9 md:bottom-8">
+            <div>
+              <div className="mb-2 font-mono text-[11px] font-semibold tracking-[0.1em] text-white/80">
+                {c.flagship.eyebrow}
+              </div>
+              <div className="font-sans text-2xl font-bold text-[#F5F4F0] md:text-[30px]">
+                {c.flagship.title}
+              </div>
+              <div className="mt-1 font-sans text-sm text-white/65">
+                {c.flagship.location}
+              </div>
             </div>
-            <div className="font-sans text-2xl font-bold text-[#F5F4F0] md:text-[30px]">
-              {c.flagship.title}
-            </div>
-            <div className="mt-1 font-sans text-sm text-white/65">
-              {c.flagship.location}
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-lg font-bold text-[#111111] shadow-lg transition-transform duration-300 group-hover:translate-x-1">
+              →
             </div>
           </div>
-          <div className="font-sans text-2xl font-bold text-[#F5F4F0]">→</div>
-        </div>
+        </button>
       </Reveal>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -139,6 +158,13 @@ export default function ProjectsSection() {
             project={openProject}
             labels={c.detailLabels}
             onClose={() => setOpenIndex(null)}
+          />
+        )}
+        {flagshipOpen && (
+          <ProjectDetailModal
+            project={flagshipProject}
+            labels={c.detailLabels}
+            onClose={() => setFlagshipOpen(false)}
           />
         )}
       </AnimatePresence>
