@@ -105,8 +105,9 @@ export default function HeroSlider() {
               priority={i === 0}
               sizes="100vw"
               quality={100}
-              className="photo-bw scale-110 object-cover object-center blur-2xl brightness-[0.55] saturate-[1.15]"
+              className="scale-125 object-cover object-center blur-[90px] brightness-[0.4] saturate-[1.2]"
             />
+            <div className="absolute inset-0 bg-black/25" />
           </div>
           <Image
             src={slide.image}
