@@ -39,6 +39,7 @@ export const dictionaries = {
           title: "Şehirlerin geleceğine akan mühendislik",
           copy: "İzmir Dikili Atık Su Arıtma Tesisi, bölgeye sürdürülebilir bir arıtma altyapısı kazandırıyor.",
           image: "/images/projects/izmir-dikili-aat/3d-tasarim.jpg",
+          color: "#5e6752",
         },
         {
           id: "aliaga-sakran-aat",
@@ -48,6 +49,7 @@ export const dictionaries = {
           title: "Aliağa'nın suyuna yeni bir altyapı",
           copy: "Yenişakran Atıksu Arıtma Tesisi İkmal İnşaatı, bölgenin atıksu yükünü karşılayacak modern bir altyapı oluşturuyor.",
           image: "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.jpg",
+          color: "#575e54",
         },
         {
           id: "erzincan-cami-kebir",
@@ -57,6 +59,7 @@ export const dictionaries = {
           title: "İbadete adanan bir eser",
           copy: "Erzincan Camii Kebir inşaatında, geleneksel form çağdaş mühendislikle bir araya geliyor.",
           image: "/images/projects/erzincan-cami-kebir/3d-tasarim-4.jpg",
+          color: "#847b73",
         },
         {
           id: "ito-eminonu",
@@ -66,6 +69,7 @@ export const dictionaries = {
           title: "Kurumsal yapılarda kalıcı değer",
           copy: "İstanbul İTO Merkez Binası, kurumsal kimliği güçlü, uzun ömürlü bir hizmet binasına dönüşüyor.",
           image: "/images/projects/ito-eminonu/3d-tasarim-1.jpg",
+          color: "#343c44",
         },
         {
           id: "ito-maltepe",
@@ -75,6 +79,7 @@ export const dictionaries = {
           title: "Anadolu Yakası'na yeni bir temsilcilik",
           copy: "İTO Anadolu Yakası Bölge Temsilciliği, Maltepe'de çağdaş bir kurumsal hizmet merkezine dönüşüyor.",
           image: "/images/projects/ito-maltepe/3d-tasarim-1.jpg",
+          color: "#859ca4",
         },
         {
           id: "beykoz-gumussuyu",
@@ -84,6 +89,7 @@ export const dictionaries = {
           title: "Boğaz'a açılan ayrıcalıklı bir yaşam",
           copy: "Beykoz Gümüşsuyu'nda, üç köprüyü aynı anda gören panoramik Boğaz manzaralı 13 özel konuttan oluşan bir proje.",
           image: "/images/projects/beykoz-gumussuyu/villa-cephe-bahce.jpg",
+          color: "#646c73",
         },
         {
           id: "beykoz-ornekkoy",
@@ -93,6 +99,7 @@ export const dictionaries = {
           title: "Doğayla bütünleşik, ayrıcalıklı bir villa yaşamı",
           copy: "Beykoz Örnekköy'de, yalnızca 44 bağımsız bölümden oluşan düşük yoğunluklu bir lüks villa projesi.",
           image: "/images/projects/beykoz-ornekkoy/villa-cephe-havuz.jpg",
+          color: "#899198",
         },
         {
           id: "erzincan-anaokulu",
@@ -102,6 +109,7 @@ export const dictionaries = {
           title: "Geleceğin nesillerine adanan bir eğitim yuvası",
           copy: "Halise ve Mehmet Karakaya Anaokulu, Erzincan'ın eğitim altyapısını güçlendiren önemli bir sosyal yatırım.",
           image: "/images/projects/erzincan-anaokulu/3d-tasarim-1.jpg",
+          color: "#7e7c7b",
         },
       ],
     },
@@ -690,6 +698,7 @@ export const dictionaries = {
           title: "Engineering that flows into the future of cities",
           copy: "The İzmir Dikili Wastewater Treatment Plant brings a sustainable treatment infrastructure to the region.",
           image: "/images/projects/izmir-dikili-aat/3d-tasarim.jpg",
+          color: "#5e6752",
         },
         {
           id: "aliaga-sakran-aat",
@@ -699,6 +708,7 @@ export const dictionaries = {
           title: "A new infrastructure for Aliağa's water",
           copy: "The Yenişakran Wastewater Treatment Plant Completion Project builds a modern infrastructure to meet the region's wastewater load.",
           image: "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.jpg",
+          color: "#575e54",
         },
         {
           id: "erzincan-cami-kebir",
@@ -708,6 +718,7 @@ export const dictionaries = {
           title: "A work devoted to worship",
           copy: "In the construction of the Erzincan Camii Kebir, traditional form meets contemporary engineering.",
           image: "/images/projects/erzincan-cami-kebir/3d-tasarim-4.jpg",
+          color: "#847b73",
         },
         {
           id: "ito-eminonu",
@@ -717,6 +728,7 @@ export const dictionaries = {
           title: "Lasting value in corporate buildings",
           copy: "The İTO Head Office in İstanbul is transforming into a long-lasting service building with a strong corporate identity.",
           image: "/images/projects/ito-eminonu/3d-tasarim-1.jpg",
+          color: "#343c44",
         },
         {
           id: "ito-maltepe",
@@ -726,6 +738,7 @@ export const dictionaries = {
           title: "A new regional office for the Anatolian Side",
           copy: "The İTO Anatolian Side Regional Office is becoming a modern corporate service center in Maltepe.",
           image: "/images/projects/ito-maltepe/3d-tasarim-1.jpg",
+          color: "#859ca4",
         },
         {
           id: "beykoz-gumussuyu",
@@ -735,6 +748,7 @@ export const dictionaries = {
           title: "An exclusive life opening onto the Bosphorus",
           copy: "In Beykoz Gümüşsuyu, 13 private residences with a panoramic Bosphorus view taking in all three bridges at once.",
           image: "/images/projects/beykoz-gumussuyu/villa-cephe-bahce.jpg",
+          color: "#646c73",
         },
         {
           id: "beykoz-ornekkoy",
@@ -744,6 +758,7 @@ export const dictionaries = {
           title: "An exclusive villa life woven into nature",
           copy: "In Beykoz Örnekköy, a low-density luxury villa project comprising just 44 residences.",
           image: "/images/projects/beykoz-ornekkoy/villa-cephe-havuz.jpg",
+          color: "#899198",
         },
         {
           id: "erzincan-anaokulu",
@@ -753,6 +768,7 @@ export const dictionaries = {
           title: "A home for education, devoted to the next generation",
           copy: "The Halise and Mehmet Karakaya Preschool is a major social investment strengthening Erzincan's education infrastructure.",
           image: "/images/projects/erzincan-anaokulu/3d-tasarim-1.jpg",
+          color: "#7e7c7b",
         },
       ],
     },

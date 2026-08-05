@@ -96,7 +96,10 @@ export default function HeroSlider() {
             zIndex: i === active ? 2 : 1,
           }}
         >
-          <div className="absolute inset-0 overflow-hidden">
+          <div
+            className="absolute inset-0 overflow-hidden"
+            style={{ backgroundColor: slide.color }}
+          >
             <Image
               src={slide.image}
               alt=""
@@ -105,9 +108,15 @@ export default function HeroSlider() {
               priority={i === 0}
               sizes="100vw"
               quality={100}
-              className="scale-125 object-cover object-center blur-[90px] brightness-[0.4] saturate-[1.2]"
+              className="scale-125 object-cover object-center blur-[45px] brightness-[0.5] saturate-[1.2]"
             />
-            <div className="absolute inset-0 bg-black/25" />
+            <div
+              className="absolute inset-0 mix-blend-multiply"
+              style={{
+                background: `linear-gradient(135deg, ${slide.color}, transparent 65%)`,
+              }}
+            />
+            <div className="absolute inset-0 bg-black/20" />
           </div>
           <Image
             src={slide.image}
