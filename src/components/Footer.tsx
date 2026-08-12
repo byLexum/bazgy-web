@@ -38,7 +38,7 @@ export default function Footer() {
               {c.kurumsalLabel}
             </div>
             <div className="flex flex-col gap-3 font-sans text-sm text-white/75">
-              <a href="#kurumsal">{c.links.hakkimizda}</a>
+              <a href="/hakkimizda">{c.links.hakkimizda}</a>
               <a href="#surdurulebilirlik">{c.links.surdurulebilirlik}</a>
               <a href="/career">{c.links.kariyer}</a>
               <a href="/contact">{c.links.iletisim}</a>

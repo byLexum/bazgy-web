@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ContactPageContent from "@/components/ContactPageContent";
 
 export const metadata: Metadata = {
-  title: "İletişim | BAZ Mühendislik ve Yapı A.Ş.",
+  title: "İletişim | BAZ Yatırım ve İnşaat Anonim Şirketi",
   description:
-    "BAZ Mühendislik ve Yapı ile iletişime geçin — proje teklifleri, sorularınız ve iş birlikleri için bize ulaşın.",
+    "BAZ Yatırım ve İnşaat Anonim Şirketi ile iletişime geçin — proje teklifleri, sorularınız ve iş birlikleri için bize ulaşın.",
 };
 
 export default function ContactPage() {

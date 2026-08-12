@@ -29,7 +29,7 @@ export default function AboutSection() {
             {c.p2}
           </p>
           <a
-            href="#projeler"
+            href="/hakkimizda"
             className="w-fit border-b border-[#111111] font-sans text-sm font-semibold text-[#111111]"
           >
             {c.link}

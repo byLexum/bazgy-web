@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import LegalPageContent from "@/components/LegalPageContent";
 
 export const metadata: Metadata = {
-  title: "KVKK Aydınlatma Metni | BAZ Mühendislik ve Yapı A.Ş.",
+  title: "KVKK Aydınlatma Metni | BAZ Yatırım ve İnşaat Anonim Şirketi",
   description:
-    "BAZ Yatırım ve İnşaat A.Ş. kişisel verilerin korunmasına ilişkin aydınlatma metni — 6698 sayılı KVKK kapsamında veri işleme amaçları ve haklarınız.",
+    "BAZ Yatırım ve İnşaat Anonim Şirketi kişisel verilerin korunmasına ilişkin aydınlatma metni — 6698 sayılı KVKK kapsamında veri işleme amaçları ve haklarınız.",
 };
 
 export default function KvkkPage() {

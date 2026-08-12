@@ -16,9 +16,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BAZ Mühendislik ve Yapı A.Ş.",
+  title: "BAZ Yatırım ve İnşaat Anonim Şirketi",
   description:
-    "BAZ Mühendislik ve Yapı; su arıtma altyapısından kamu ve kurumsal binalara uzanan geniş bir yelpazede mühendislik ve yapım hizmeti sunar.",
+    "BAZ Yatırım ve İnşaat Anonim Şirketi; su arıtma altyapısından kamu ve kurumsal binalara uzanan geniş bir yelpazede mühendislik ve yapım hizmeti sunar.",
 };
 
 export default function RootLayout({

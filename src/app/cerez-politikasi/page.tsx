@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LegalPageContent from "@/components/LegalPageContent";
 
 export const metadata: Metadata = {
-  title: "Çerez Politikası | BAZ Mühendislik ve Yapı A.Ş.",
+  title: "Çerez Politikası | BAZ Yatırım ve İnşaat Anonim Şirketi",
   description:
     "www.bazgy.com üzerinde kullanılan çerezler, kullanım amaçları ve çerez tercihlerinizi nasıl yönetebileceğiniz hakkında bilgilendirme.",
 };

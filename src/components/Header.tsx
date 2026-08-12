@@ -7,7 +7,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import CtaButton from "./CtaButton";
 
 const NAV_KEYS = [
-  ["kurumsal", "/#kurumsal"],
+  ["kurumsal", "/hakkimizda"],
   ["hizmetler", "/#hizmetler"],
   ["projeler", "/#projeler"],
   ["surdurulebilirlik", "/#surdurulebilirlik"],
@@ -47,7 +47,7 @@ export default function Header() {
           <a href="/" className="block">
             <Image
               src="/images/baz-logo.svg"
-              alt="BAZ Mühendislik ve Yapı"
+              alt="BAZ Yatırım ve İnşaat Anonim Şirketi"
               height={32}
               width={134}
               className="h-7 w-auto md:h-8"

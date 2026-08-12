@@ -111,6 +111,95 @@ export const dictionaries = {
       p2: "Deneyimimiz, teknik uzmanlığımız ve kalite odaklı yaklaşımımızla projelerinizi güvenilir ve sürdürülebilir şekilde hayata geçiririz.",
       link: "BAZ'ı Tanıyın →",
     },
+    aboutPage: {
+      eyebrow: "BAZ HAKKINDA",
+      heading: "Hakkımızda",
+      intro:
+        "BAZ Yatırım ve İnşaat Anonim Şirketi, mühendislik, proje yönetimi, taahhüt ve yatırım geliştirme alanlarında faaliyet gösteren, yüksek teknik uzmanlığa sahip bir mühendislik ve inşaat şirketidir.",
+      sections: [
+        {
+          heading: "Kurumsal Profil",
+          body: [
+            "Şirketimiz; atıksu arıtma tesisleri, çevre altyapı projeleri, enerji altyapıları, endüstriyel tesisler, üstyapı projeleri ve nitelikli yaşam alanları başta olmak üzere farklı sektörlerde, planlama aşamasından devreye alma sürecine kadar tüm proje yaşam döngüsünü bütüncül bir yaklaşımla yönetmektedir.",
+            "Mühendislik disiplinlerini stratejik proje yönetimi anlayışıyla birleştiren BAZ Yatırım ve İnşaat Anonim Şirketi, her projeyi yalnızca bir yapı üretim süreci olarak değil; ekonomik, çevresel ve toplumsal değer yaratan sürdürülebilir bir yatırım olarak değerlendirmektedir.",
+            "Özellikle su ve çevre altyapıları alanında gerçekleştirdiğimiz atıksu arıtma tesisleri, terfi merkezleri, enerji temin sistemleri ve çevre mühendisliği projeleriyle doğal kaynakların korunmasına, çevresel sürdürülebilirliğe ve yaşam kalitesinin artırılmasına katkı sağlamaktayız.",
+            "Güçlü teknik kadromuz, çözüm odaklı yönetim anlayışımız ve kalite odaklı uygulama kültürümüz sayesinde kamu kurumları, özel sektör yatırımcıları ve uluslararası iş ortakları için güvenilir bir çözüm ortağı olarak faaliyetlerimizi sürdürmekteyiz.",
+            "Bugün BAZ Yatırım ve İnşaat Anonim Şirketi, altyapıdan üstyapıya, enerjiden çevre yatırımlarına kadar geniş bir yelpazede gerçekleştirdiği projelerle ülkemizin kalkınmasına katkı sağlamakta; insanı, çevreyi ve sürdürülebilir geleceği merkeze alan yatırımlar geliştirmeye devam etmektedir.",
+          ],
+          list: [],
+        },
+        {
+          heading: "Vizyonumuz",
+          body: [
+            "Mühendislik, proje yönetimi ve yatırım geliştirme alanlarında ulusal ve uluslararası ölçekte referans gösterilen; altyapı, enerji, çevre ve üstyapı yatırımlarında sürdürülebilir çözümler üreten lider bir şirket olmak.",
+            "Teknolojiyi, mühendislik mükemmeliyetini ve çevresel sorumluluğu iş süreçlerimizin merkezine yerleştirerek; doğal kaynakların korunmasına, yaşam kalitesinin yükseltilmesine ve gelecek nesillere değer bırakacak projelerin geliştirilmesine öncülük etmek.",
+          ],
+          list: [],
+        },
+        {
+          heading: "Misyonumuz",
+          body: [
+            "Mühendislik bilgi birikimimizi, proje yönetimi uzmanlığımızı ve uygulama tecrübemizi kullanarak müşterilerimize güvenilir, yenilikçi ve sürdürülebilir çözümler sunmak.",
+            "Kalite, iş sağlığı ve güvenliği, çevresel sorumluluk, maliyet etkinliği ve zaman yönetimi ilkelerinden taviz vermeden; çalışanlarımız, müşterilerimiz, iş ortaklarımız ve toplum için uzun vadeli değer yaratmak temel misyonumuzdur.",
+            "Gerçekleştirdiğimiz her projede insan sağlığını, çevrenin korunmasını ve doğal kaynakların sürdürülebilir kullanımını gözeterek ülkemizin kalkınmasına katkı sağlamayı hedefliyoruz.",
+          ],
+          list: [],
+        },
+        {
+          heading: "Kurumsal Değerlerimiz",
+          body: [],
+          list: [
+            "Güvenilirlik ve Şeffaflık",
+            "Mühendislik Mükemmeliyeti",
+            "İnsan Odaklı Yaklaşım",
+            "Çevre ve Doğaya Saygı",
+            "Sürdürülebilirlik",
+            "İş Sağlığı ve Güvenliği",
+            "Yenilikçilik ve Teknoloji Odaklılık",
+            "Etik Yönetim Anlayışı",
+            "Paydaş Memnuniyeti",
+            "Sürekli Gelişim ve Kurumsal Öğrenme",
+          ],
+        },
+        {
+          heading: "Neden BAZ?",
+          body: [
+            "BAZ Yatırım ve İnşaat Anonim Şirketi, yatırım süreçlerinin her aşamasında mühendislik uzmanlığını, proje yönetimi disiplinini ve saha uygulama tecrübesini bir araya getirerek bütünleşik çözümler sunmaktadır.",
+            "Su çözümleri, atıksu arıtma tesisleri, çevre altyapıları, enerji altyapıları, endüstriyel tesisler, eğitim yapıları, ticari yapılar ve nitelikli konut projelerinde edindiğimiz çok disiplinli deneyim sayesinde projeleri planlama aşamasından işletmeye alma sürecine kadar etkin şekilde yönetiyoruz.",
+            "Teknik yetkinliğimiz, güçlü organizasyon yapımız ve sonuç odaklı yaklaşımımız sayesinde yatırımcılarımız için sürdürülebilir değer üretirken; çevresel etkileri gözeten, kaynak verimliliğini artıran ve toplumsal fayda sağlayan projeler geliştirmeyi önceliklendiriyoruz.",
+          ],
+          list: [],
+        },
+        {
+          heading: "Sürdürülebilirlik Yaklaşımımız",
+          body: [
+            "BAZ Yatırım ve İnşaat Anonim Şirketi, sürdürülebilirliği yalnızca çevresel bir sorumluluk olarak değil, kurumsal yönetim anlayışının ayrılmaz bir parçası olarak değerlendirmektedir.",
+            "Projelerimizin planlama, tasarım ve uygulama süreçlerinde doğal kaynakların korunmasını, enerji verimliliğinin artırılmasını, karbon ayak izinin azaltılmasını ve çevresel etkilerin en aza indirilmesini hedefliyoruz.",
+            "Özellikle atıksu arıtma tesisleri ve çevre altyapısı projelerinde elde ettiğimiz deneyimle, su kaynaklarının korunmasına ve çevresel sürdürülebilirliğin güçlendirilmesine katkı sağlıyoruz.",
+            "Çevreye duyarlı, insan odaklı ve ekonomik açıdan sürdürülebilir projeler geliştirerek gelecek nesillere daha yaşanabilir bir dünya bırakmayı temel sorumluluğumuz olarak görüyoruz.",
+          ],
+          list: [],
+        },
+        {
+          heading: "Kalite Politikamız",
+          body: [
+            "Kaliteyi tüm iş süreçlerimizin temel unsuru olarak kabul ediyor; ulusal ve uluslararası standartlara uygun, güvenilir, sürdürülebilir ve yüksek performanslı çözümler üretmeyi hedefliyoruz.",
+            "Sürekli iyileştirme yaklaşımıyla hareket ederek müşteri beklentilerini aşan hizmet sunmayı, çalışanlarımızın yetkinliklerini geliştirmeyi ve tüm projelerimizde yüksek kalite standartlarını korumayı taahhüt ediyoruz.",
+          ],
+          list: [],
+        },
+        {
+          heading: "İş Sağlığı ve Güvenliği Politikamız",
+          body: [
+            "İnsan hayatı ve çalışan güvenliği tüm faaliyetlerimizin merkezinde yer almaktadır.",
+            "Sıfır iş kazası hedefi doğrultusunda hareket eden şirketimiz; riskleri önceden belirleyen, gerekli önlemleri alan ve güvenli çalışma kültürünü tüm organizasyona yayan bir yönetim anlayışını benimsemektedir.",
+            "Çalışanlarımızın sağlığına, güvenliğine ve gelişimine verdiğimiz önem, kurumsal sürdürülebilirlik anlayışımızın temel unsurlarından biridir.",
+          ],
+          list: [],
+        },
+      ],
+      slogan: "“Mühendislikten Güç Alan, İnsan ve Doğa İçin Değer Üreten Projeler.”",
+    },
     services: {
       eyebrow: "FAALİYET ALANLARIMIZ",
       heading1: "Farklı Faaliyet Alanlarında",
@@ -157,7 +246,7 @@ export const dictionaries = {
         ],
         detail: {
           employerLabel: "Yatırımcı",
-          employer: "BAZ Yatırım ve İnşaat A.Ş.",
+          employer: "BAZ Yatırım ve İnşaat Anonim Şirketi",
           projectType: "Lüks Konut Geliştirme Projesi",
           description: [
             "Beykoz Karlıtepe'de geliştirilen proje, İstanbul Boğazı'nın yeşil dokusuyla bütünleşen konumu ve çağdaş mimari yaklaşımıyla bölgenin öne çıkan konut yatırımları arasında yer almaktadır.",
@@ -356,10 +445,14 @@ export const dictionaries = {
             "/images/projects/beykoz-gumussuyu/villa-cephe-bahce.jpg",
             "/images/projects/beykoz-gumussuyu/villa-ahsap-cephe-detay.jpg",
             "/images/projects/beykoz-gumussuyu/site-ici-yaya-aksi.jpg",
+            "/images/projects/beykoz-gumussuyu/cephe-bogaz-manzarasi.jpg",
+            "/images/projects/beykoz-gumussuyu/kus-bakisi-genel-gorunum.jpg",
+            "/images/projects/beykoz-gumussuyu/teras-peyzaj-havuz-detay.jpg",
+            "/images/projects/beykoz-gumussuyu/teras-oturma-alani-manzara.jpg",
           ],
           detail: {
             employerLabel: "Yatırımcı",
-            employer: "BAZ Yatırım ve İnşaat A.Ş.",
+            employer: "BAZ Yatırım ve İnşaat Anonim Şirketi",
             projectType: "Lüks Konut Geliştirme Projesi",
             constructionArea: "5.000 m²",
             duration: "12 Ay",
@@ -390,7 +483,7 @@ export const dictionaries = {
           ],
           detail: {
             employerLabel: "Yatırımcı",
-            employer: "BAZ Yatırım ve İnşaat A.Ş.",
+            employer: "BAZ Yatırım ve İnşaat Anonim Şirketi",
             projectType: "Lüks Villa Geliştirme Projesi",
             constructionArea: "14.000 m²",
             duration: "18 Ay",
@@ -480,7 +573,7 @@ export const dictionaries = {
       iletisimLabel: "İLETİŞİM",
       addressPlaceholder: "Kavacık Mah. Ertürk Sk. No: 1/1 Beykoz, İstanbul",
       phonePlaceholder: "+90 216 693 03 52",
-      copyright: "© 2026 BAZ Mühendislik ve Yapı A.Ş. Tüm hakları saklıdır.",
+      copyright: "© 2026 BAZ Yatırım ve İnşaat Anonim Şirketi Tüm hakları saklıdır.",
       legal: {
         kvkk: "KVKK Aydınlatma Metni",
         cerez: "Çerez Politikası",
@@ -543,12 +636,12 @@ export const dictionaries = {
       kvkk: {
         title: "Kişisel Verilerin Korunmasına İlişkin Aydınlatma Metni",
         intro:
-          "Bu aydınlatma metni, BAZ Yatırım ve İnşaat A.Ş. tarafından işletilen www.bazgy.com internet sitesi üzerinden elde edilen kişisel verilerin 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında nasıl işlendiği konusunda ziyaretçilerimizi bilgilendirmek amacıyla hazırlanmıştır.",
+          "Bu aydınlatma metni, BAZ Yatırım ve İnşaat Anonim Şirketi tarafından işletilen www.bazgy.com internet sitesi üzerinden elde edilen kişisel verilerin 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında nasıl işlendiği konusunda ziyaretçilerimizi bilgilendirmek amacıyla hazırlanmıştır.",
         sections: [
           {
             heading: "1. Veri Sorumlusu",
             body: [
-              "6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) kapsamında, www.bazgy.com internet sitesi üzerinden elde edilen kişisel verileriniz, veri sorumlusu sıfatıyla BAZ Yatırım ve İnşaat A.Ş. tarafından işlenebilmektedir.",
+              "6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) kapsamında, www.bazgy.com internet sitesi üzerinden elde edilen kişisel verileriniz, veri sorumlusu sıfatıyla BAZ Yatırım ve İnşaat Anonim Şirketi tarafından işlenebilmektedir.",
             ],
             list: [],
           },
@@ -582,7 +675,7 @@ export const dictionaries = {
             heading: "5. Haklarınız",
             body: [
               "KVKK'nın 11. maddesi kapsamında; kişisel verilerinizin işlenip işlenmediğini öğrenme, düzeltilmesini veya silinmesini talep etme ve diğer yasal haklarınızı kullanma hakkına sahipsiniz.",
-              "Kişisel verilerinizle ilgili taleplerinizi, BAZ Yatırım ve İnşaat A.Ş.'nin resmi iletişim kanalları üzerinden iletebilirsiniz.",
+              "Kişisel verilerinizle ilgili taleplerinizi, BAZ Yatırım ve İnşaat Anonim Şirketi'nin resmi iletişim kanalları üzerinden iletebilirsiniz.",
             ],
             list: [],
           },
@@ -591,7 +684,7 @@ export const dictionaries = {
       cerez: {
         title: "Çerez Politikası",
         intro:
-          "Bu Çerez Politikası, BAZ Yatırım ve İnşaat A.Ş. tarafından işletilen www.bazgy.com internet sitesinde kullanılan çerezler hakkında ziyaretçileri bilgilendirmek amacıyla hazırlanmıştır.",
+          "Bu Çerez Politikası, BAZ Yatırım ve İnşaat Anonim Şirketi tarafından işletilen www.bazgy.com internet sitesinde kullanılan çerezler hakkında ziyaretçileri bilgilendirmek amacıyla hazırlanmıştır.",
         sections: [
           {
             heading: "Çerez Nedir?",
@@ -623,7 +716,7 @@ export const dictionaries = {
       gizlilik: {
         title: "Gizlilik Politikası",
         intro:
-          "BAZ Yatırım ve İnşaat A.Ş. olarak, www.bazgy.com internet sitesini ziyaret eden kullanıcılarımızın gizliliğine ve kişisel verilerinin korunmasına önem veriyoruz.",
+          "BAZ Yatırım ve İnşaat Anonim Şirketi olarak, www.bazgy.com internet sitesini ziyaret eden kullanıcılarımızın gizliliğine ve kişisel verilerinin korunmasına önem veriyoruz.",
         sections: [
           {
             heading: "Kişisel Verilerin İşlenmesi",
@@ -636,14 +729,14 @@ export const dictionaries = {
           {
             heading: "Veri Güvenliği",
             body: [
-              "BAZ Yatırım ve İnşaat A.Ş., kişisel verilerin yetkisiz erişime, kayba, değiştirilmesine veya hukuka aykırı kullanıma karşı korunması için gerekli teknik ve idari tedbirleri uygulamaktadır.",
+              "BAZ Yatırım ve İnşaat Anonim Şirketi, kişisel verilerin yetkisiz erişime, kayba, değiştirilmesine veya hukuka aykırı kullanıma karşı korunması için gerekli teknik ve idari tedbirleri uygulamaktadır.",
             ],
             list: [],
           },
           {
             heading: "Üçüncü Taraf Bağlantıları",
             body: [
-              "İnternet sitemiz, üçüncü taraf internet sitelerine yönlendiren bağlantılar içerebilir. Bu sitelerin gizlilik uygulamalarından BAZ Yatırım ve İnşaat A.Ş. sorumlu değildir.",
+              "İnternet sitemiz, üçüncü taraf internet sitelerine yönlendiren bağlantılar içerebilir. Bu sitelerin gizlilik uygulamalarından BAZ Yatırım ve İnşaat Anonim Şirketi sorumlu değildir.",
             ],
             list: [],
           },
@@ -761,6 +854,95 @@ export const dictionaries = {
       p2: "With our experience, technical expertise, and quality-driven approach, we bring your projects to life reliably and sustainably.",
       link: "Get to know BAZ →",
     },
+    aboutPage: {
+      eyebrow: "ABOUT BAZ",
+      heading: "About Us",
+      intro:
+        "BAZ Yatırım ve İnşaat Anonim Şirketi is an engineering and construction company with deep technical expertise, active in engineering, project management, contracting and investment development.",
+      sections: [
+        {
+          heading: "Corporate Profile",
+          body: [
+            "Our company manages the entire project lifecycle — from planning through commissioning — with an integrated approach across a range of sectors, chiefly wastewater treatment plants, environmental infrastructure projects, energy infrastructure, industrial facilities, superstructure projects and high-quality living spaces.",
+            "By combining engineering disciplines with a strategic project management mindset, BAZ Yatırım ve İnşaat Anonim Şirketi treats every project not merely as a construction process, but as a sustainable investment that creates economic, environmental and social value.",
+            "Through the wastewater treatment plants, pumping stations, energy supply systems and environmental engineering projects we have delivered, particularly in the water and environmental infrastructure field, we contribute to the protection of natural resources, environmental sustainability and improved quality of life.",
+            "Thanks to our strong technical staff, solution-oriented management approach and quality-driven implementation culture, we continue to operate as a trusted solution partner for public institutions, private sector investors and international business partners.",
+            "Today, through the projects it carries out across a broad spectrum — from infrastructure to superstructure, and from energy to environmental investments — BAZ Yatırım ve İnşaat Anonim Şirketi contributes to our country's development, continuing to develop investments that place people, the environment and a sustainable future at their center.",
+          ],
+          list: [],
+        },
+        {
+          heading: "Our Vision",
+          body: [
+            "To be a leading company recognised as a national and international reference in engineering, project management and investment development, producing sustainable solutions in infrastructure, energy, environmental and superstructure investments.",
+            "To place technology, engineering excellence and environmental responsibility at the centre of our business processes, leading the way in protecting natural resources, raising quality of life and developing projects that leave value for future generations.",
+          ],
+          list: [],
+        },
+        {
+          heading: "Our Mission",
+          body: [
+            "To offer our clients reliable, innovative and sustainable solutions by drawing on our engineering knowledge, project management expertise and hands-on implementation experience.",
+            "Our core mission is to create long-term value for our employees, clients, business partners and society, without compromising on quality, occupational health and safety, environmental responsibility, cost efficiency and time management.",
+            "In every project we undertake, we aim to contribute to our country's development while safeguarding human health, protecting the environment and ensuring the sustainable use of natural resources.",
+          ],
+          list: [],
+        },
+        {
+          heading: "Our Corporate Values",
+          body: [],
+          list: [
+            "Reliability and Transparency",
+            "Engineering Excellence",
+            "People-Centred Approach",
+            "Respect for the Environment and Nature",
+            "Sustainability",
+            "Occupational Health and Safety",
+            "Innovation and Technology Focus",
+            "Ethical Management Approach",
+            "Stakeholder Satisfaction",
+            "Continuous Improvement and Corporate Learning",
+          ],
+        },
+        {
+          heading: "Why BAZ?",
+          body: [
+            "BAZ Yatırım ve İnşaat Anonim Şirketi delivers integrated solutions at every stage of the investment process by bringing together engineering expertise, project management discipline and field implementation experience.",
+            "Thanks to the multidisciplinary experience we have gained in water solutions, wastewater treatment plants, environmental infrastructure, energy infrastructure, industrial facilities, educational buildings, commercial buildings and high-quality residential projects, we manage projects effectively from the planning stage through to operation.",
+            "Through our technical competence, strong organisational structure and results-oriented approach, we prioritise developing projects that generate sustainable value for our investors while safeguarding environmental impact, improving resource efficiency and delivering social benefit.",
+          ],
+          list: [],
+        },
+        {
+          heading: "Our Approach to Sustainability",
+          body: [
+            "BAZ Yatırım ve İnşaat Anonim Şirketi regards sustainability not merely as an environmental responsibility, but as an inseparable part of its corporate governance approach.",
+            "In the planning, design and implementation stages of our projects, we aim to protect natural resources, increase energy efficiency, reduce our carbon footprint and minimise environmental impact.",
+            "Drawing on the experience we have gained particularly in wastewater treatment plants and environmental infrastructure projects, we contribute to protecting water resources and strengthening environmental sustainability.",
+            "We regard it as our fundamental responsibility to leave a more liveable world for future generations by developing environmentally conscious, people-centred and economically sustainable projects.",
+          ],
+          list: [],
+        },
+        {
+          heading: "Our Quality Policy",
+          body: [
+            "We regard quality as a core element of all our business processes, aiming to deliver reliable, sustainable and high-performing solutions in line with national and international standards.",
+            "Acting with a continuous improvement approach, we are committed to delivering service that exceeds client expectations, developing the competencies of our employees and maintaining high quality standards across all our projects.",
+          ],
+          list: [],
+        },
+        {
+          heading: "Our Occupational Health and Safety Policy",
+          body: [
+            "Human life and employee safety lie at the centre of all our activities.",
+            "Acting in line with a zero-workplace-accident target, our company adopts a management approach that identifies risks in advance, takes the necessary precautions and spreads a culture of safe working across the entire organisation.",
+            "The importance we place on the health, safety and development of our employees is one of the core elements of our corporate sustainability approach.",
+          ],
+          list: [],
+        },
+      ],
+      slogan: "“Projects That Draw Their Strength from Engineering, Creating Value for People and Nature.”",
+    },
     services: {
       eyebrow: "OUR FIELDS OF ACTIVITY",
       heading1: "Different Fields of Activity,",
@@ -807,7 +989,7 @@ export const dictionaries = {
         ],
         detail: {
           employerLabel: "Investor",
-          employer: "BAZ Yatırım ve İnşaat A.Ş.",
+          employer: "BAZ Yatırım ve İnşaat Anonim Şirketi",
           projectType: "Luxury Residential Development Project",
           description: [
             "Developed in Beykoz Karlıtepe, the project stands out among the region's residential investments thanks to its location integrated with the Bosphorus' green fabric and its contemporary architectural approach.",
@@ -1006,10 +1188,14 @@ export const dictionaries = {
             "/images/projects/beykoz-gumussuyu/villa-cephe-bahce.jpg",
             "/images/projects/beykoz-gumussuyu/villa-ahsap-cephe-detay.jpg",
             "/images/projects/beykoz-gumussuyu/site-ici-yaya-aksi.jpg",
+            "/images/projects/beykoz-gumussuyu/cephe-bogaz-manzarasi.jpg",
+            "/images/projects/beykoz-gumussuyu/kus-bakisi-genel-gorunum.jpg",
+            "/images/projects/beykoz-gumussuyu/teras-peyzaj-havuz-detay.jpg",
+            "/images/projects/beykoz-gumussuyu/teras-oturma-alani-manzara.jpg",
           ],
           detail: {
             employerLabel: "Developer",
-            employer: "BAZ Yatırım ve İnşaat A.Ş.",
+            employer: "BAZ Yatırım ve İnşaat Anonim Şirketi",
             projectType: "Luxury Residential Development",
             constructionArea: "5,000 m²",
             duration: "12 Months",
@@ -1040,7 +1226,7 @@ export const dictionaries = {
           ],
           detail: {
             employerLabel: "Developer",
-            employer: "BAZ Yatırım ve İnşaat A.Ş.",
+            employer: "BAZ Yatırım ve İnşaat Anonim Şirketi",
             projectType: "Luxury Villa Development",
             constructionArea: "14,000 m²",
             duration: "18 Months",
@@ -1130,7 +1316,7 @@ export const dictionaries = {
       iletisimLabel: "CONTACT",
       addressPlaceholder: "Kavacık Mah. Ertürk Sk. No: 1/1 Beykoz, İstanbul",
       phonePlaceholder: "+90 216 693 03 52",
-      copyright: "© 2026 BAZ Mühendislik ve Yapı A.Ş. All rights reserved.",
+      copyright: "© 2026 BAZ Yatırım ve İnşaat Anonim Şirketi All rights reserved.",
       legal: {
         kvkk: "Data Protection Notice",
         cerez: "Cookie Policy",
@@ -1193,12 +1379,12 @@ export const dictionaries = {
       kvkk: {
         title: "Personal Data Protection Notice",
         intro:
-          "This notice has been prepared to inform visitors how personal data obtained through the www.bazgy.com website operated by BAZ Yatırım ve İnşaat A.Ş. is processed under Turkish Personal Data Protection Law No. 6698.",
+          "This notice has been prepared to inform visitors how personal data obtained through the www.bazgy.com website operated by BAZ Yatırım ve İnşaat Anonim Şirketi is processed under Turkish Personal Data Protection Law No. 6698.",
         sections: [
           {
             heading: "1. Data Controller",
             body: [
-              "Under Turkish Personal Data Protection Law No. 6698 (“KVKK”), personal data obtained through the www.bazgy.com website may be processed by BAZ Yatırım ve İnşaat A.Ş. in its capacity as data controller.",
+              "Under Turkish Personal Data Protection Law No. 6698 (“KVKK”), personal data obtained through the www.bazgy.com website may be processed by BAZ Yatırım ve İnşaat Anonim Şirketi in its capacity as data controller.",
             ],
             list: [],
           },
@@ -1232,7 +1418,7 @@ export const dictionaries = {
             heading: "5. Your Rights",
             body: [
               "Under Article 11 of the KVKK, you have the right to learn whether your personal data is being processed, to request its correction or deletion, and to exercise your other statutory rights.",
-              "You may submit requests regarding your personal data through the official contact channels of BAZ Yatırım ve İnşaat A.Ş.",
+              "You may submit requests regarding your personal data through the official contact channels of BAZ Yatırım ve İnşaat Anonim Şirketi",
             ],
             list: [],
           },
@@ -1241,7 +1427,7 @@ export const dictionaries = {
       cerez: {
         title: "Cookie Policy",
         intro:
-          "This Cookie Policy has been prepared to inform visitors about the cookies used on the www.bazgy.com website operated by BAZ Yatırım ve İnşaat A.Ş.",
+          "This Cookie Policy has been prepared to inform visitors about the cookies used on the www.bazgy.com website operated by BAZ Yatırım ve İnşaat Anonim Şirketi",
         sections: [
           {
             heading: "What Are Cookies?",
@@ -1273,7 +1459,7 @@ export const dictionaries = {
       gizlilik: {
         title: "Privacy Policy",
         intro:
-          "At BAZ Yatırım ve İnşaat A.Ş., we value the privacy and the protection of the personal data of users visiting the www.bazgy.com website.",
+          "At BAZ Yatırım ve İnşaat Anonim Şirketi, we value the privacy and the protection of the personal data of users visiting the www.bazgy.com website.",
         sections: [
           {
             heading: "Processing of Personal Data",
@@ -1286,14 +1472,14 @@ export const dictionaries = {
           {
             heading: "Data Security",
             body: [
-              "BAZ Yatırım ve İnşaat A.Ş. implements the necessary technical and administrative measures to protect personal data against unauthorised access, loss, alteration or unlawful use.",
+              "BAZ Yatırım ve İnşaat Anonim Şirketi implements the necessary technical and administrative measures to protect personal data against unauthorised access, loss, alteration or unlawful use.",
             ],
             list: [],
           },
           {
             heading: "Third-Party Links",
             body: [
-              "Our website may contain links directing to third-party websites. BAZ Yatırım ve İnşaat A.Ş. is not responsible for the privacy practices of those websites.",
+              "Our website may contain links directing to third-party websites. BAZ Yatırım ve İnşaat Anonim Şirketi is not responsible for the privacy practices of those websites.",
             ],
             list: [],
           },
