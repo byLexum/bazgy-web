@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 import CtaButton from "./CtaButton";
@@ -18,6 +19,9 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { language, toggleLanguage, t } = useLanguage();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const dark = scrolled || menuOpen || isHome;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -35,7 +39,9 @@ export default function Header() {
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled || menuOpen
           ? "border-b border-white/10 bg-black/95 backdrop-blur-md"
-          : "border-b border-transparent bg-gradient-to-b from-black/55 via-black/15 to-transparent"
+          : isHome
+            ? "border-b border-transparent bg-gradient-to-b from-black/55 via-black/15 to-transparent"
+            : "border-b border-black/5 bg-transparent"
       }`}
     >
       <div
@@ -50,16 +56,20 @@ export default function Header() {
               alt="BAZ Yatırım ve İnşaat Anonim Şirketi"
               height={32}
               width={134}
-              className="h-7 w-auto md:h-8"
+              className={`h-7 w-auto transition-all duration-300 md:h-8 ${dark ? "" : "invert"}`}
               priority
             />
           </a>
-          <span className="hidden h-5 w-px bg-white/20 sm:block" />
+          <span
+            className={`hidden h-5 w-px sm:block ${dark ? "bg-white/20" : "bg-black/15"}`}
+          />
           <button
             type="button"
             onClick={toggleLanguage}
             aria-label="Dil değiştir / Switch language"
-            className="hidden items-center gap-1.5 font-mono text-[13px] font-semibold tracking-wide text-white/60 transition-colors hover:text-white sm:flex"
+            className={`hidden items-center gap-1.5 font-mono text-[13px] font-semibold tracking-wide transition-colors sm:flex ${
+              dark ? "text-white/60 hover:text-white" : "text-black/60 hover:text-black"
+            }`}
           >
             <svg
               aria-hidden="true"
@@ -81,14 +91,16 @@ export default function Header() {
             <a
               key={key}
               href={href}
-              className="whitespace-nowrap font-sans text-sm font-medium text-[#F5F4F0]"
+              className={`whitespace-nowrap font-sans text-sm font-medium transition-colors duration-300 ${
+                dark ? "text-[#F5F4F0]" : "text-[#111111]"
+              }`}
             >
               {t.nav[key]}
             </a>
           ))}
           <CtaButton
             href="/contact"
-            variant="outline"
+            variant={dark ? "outline" : "outlineDark"}
             size="sm"
             className="whitespace-nowrap"
           >
@@ -105,15 +117,15 @@ export default function Header() {
         >
           <motion.span
             animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 6 : 0 }}
-            className="h-px w-5 bg-white"
+            className={`h-px w-5 transition-colors duration-300 ${dark ? "bg-white" : "bg-[#111111]"}`}
           />
           <motion.span
             animate={{ opacity: menuOpen ? 0 : 1 }}
-            className="h-px w-5 bg-white"
+            className={`h-px w-5 transition-colors duration-300 ${dark ? "bg-white" : "bg-[#111111]"}`}
           />
           <motion.span
             animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -6 : 0 }}
-            className="h-px w-5 bg-white"
+            className={`h-px w-5 transition-colors duration-300 ${dark ? "bg-white" : "bg-[#111111]"}`}
           />
         </button>
       </div>

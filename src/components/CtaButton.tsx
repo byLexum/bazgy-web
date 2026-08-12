@@ -13,22 +13,27 @@ export default function CtaButton({
 }: {
   href: string;
   children: ReactNode;
-  variant?: "light" | "dark" | "outline";
+  variant?: "light" | "dark" | "outline" | "outlineDark";
   size?: "md" | "sm";
   onClick?: () => void;
   className?: string;
 }) {
   const isLight = variant === "light";
-  const isOutline = variant === "outline";
+  const isOutline = variant === "outline" || variant === "outlineDark";
+  const isOutlineDark = variant === "outlineDark";
 
   const padding = size === "sm" ? "px-5 py-2.5" : "px-8 py-[17px]";
   const textSize = size === "sm" ? "text-[13px]" : "text-[15px]";
 
   const baseBg = isOutline ? "bg-transparent" : isLight ? "bg-white" : "bg-[#111111]";
-  const baseText = isOutline || !isLight ? "text-[#F5F4F0]" : "text-black";
+  const baseText = isOutlineDark ? "text-[#111111]" : isOutline || !isLight ? "text-[#F5F4F0]" : "text-black";
   const fillColor = isOutline || isLight ? "bg-white" : "bg-white";
   const hoverText = "group-hover:text-black";
-  const border = isOutline ? "border border-white/40 group-hover:border-white" : "";
+  const border = isOutlineDark
+    ? "border border-black/25 group-hover:border-black"
+    : isOutline
+      ? "border border-white/40 group-hover:border-white"
+      : "";
 
   return (
     <motion.a
