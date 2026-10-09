@@ -28,7 +28,7 @@ npm run dev
 
 ## Deploy
 
-Canlı site Hostinger'da Node.js uygulaması olarak çalışıyor (standart `next build` + `next start`). Sunucunun Node.js 20.9 veya üstünü desteklemesi gerekir; iletişim ve kariyer formları sunucu tarafında çalıştığı için yalnızca statik/PHP barındırma yeterli değildir.
+Canlı site Hostinger'da Node.js uygulaması olarak çalışıyor (`npm run build` + `next start`). Üretim derlemesi `next build --webpack` ile yapılır: Turbopack'in CSS/PostCSS için açtığı yardımcı Node süreçleri Hostinger'ın derleme ortamında başlatılamayıp derlemeyi çökertiyordu. Geliştirme sunucusu (`npm run dev`) Turbopack ile çalışmaya devam eder. Sunucunun Node.js 20.9 veya üstünü desteklemesi gerekir; iletişim ve kariyer formları sunucu tarafında çalıştığı için yalnızca statik/PHP barındırma yeterli değildir.
 
 ## Formlar (iletişim ve kariyer)
 
