@@ -1,129 +1,118 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Reveal from "./Reveal";
-import CtaButton from "./CtaButton";
+import PageIntro from "./PageIntro";
+import CareerApplicationForm, { positionLabel } from "./CareerApplicationForm";
+import { ArrowRightIcon } from "./icons";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { motion } from "framer-motion";
 
 export default function CareerPageContent() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const c = t.careerPage;
+  const [position, setPosition] = useState<string | null>(null);
+  // Labels change with the language, so an earlier pick may no longer exist;
+  // fall back to "general application" in whichever language is active.
+  const options = [...c.positions.map(positionLabel), c.form.general];
+  const selected = position && options.includes(position) ? position : c.form.general;
+
+  const applyFor = (label: string) => {
+    setPosition(label);
+    document.getElementById("basvuru")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <div className="bg-[#F5F5F5] text-[#111111]">
       <Header />
-      <section className="mx-auto max-w-[1280px] px-6 pb-20 pt-40 md:px-12 md:pb-24 md:pt-48">
-        <Reveal>
-          <div className="mb-5 font-mono text-xs font-semibold tracking-[0.12em] text-neutral-500">
-            {c.eyebrow}
-          </div>
-          <h1 className="mb-6 max-w-[640px] font-sans text-4xl font-extrabold leading-[1.1] text-[#111111] md:text-[52px]">
-            {c.heading}
-          </h1>
-          <p className="max-w-[600px] font-sans text-base leading-relaxed text-[#555555] md:text-[17px]">
-            {c.intro}
-          </p>
-        </Reveal>
-        <Reveal delay={0.12} className="relative mt-12 h-64 overflow-hidden md:mt-16 md:h-[480px]">
+      <PageIntro title={c.heading} intro={c.intro}>
+        <Reveal delay={0.12} className="relative mt-12 h-64 overflow-hidden md:mt-16 md:h-[520px]">
           <Image
             src="/images/team/baz-ekip.jpg"
             alt={t.career.photoLabel}
             fill
             priority
             quality={100}
-            sizes="(min-width: 1280px) 1280px, 100vw"
+            sizes="(min-width: 1280px) 1184px, 100vw"
             className="photo-bw object-cover object-top"
           />
         </Reveal>
-      </section>
+      </PageIntro>
 
-      <section className="bg-black px-6 py-20 md:px-12 md:py-24">
-        <div className="mx-auto max-w-[1280px]">
+      <section className="bg-[#111111] px-6 py-20 md:px-12 md:py-28">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 md:grid-cols-[1fr_1.6fr] md:gap-20">
           <Reveal>
-            <h2 className="mb-12 max-w-[560px] font-sans text-2xl font-extrabold leading-tight text-[#F5F4F0] md:mb-14 md:text-[32px]">
+            <h2 className="max-w-[420px] font-sans text-[30px] font-extrabold leading-[1.1] text-[#F5F4F0] md:text-[40px]">
               {c.valuesHeading}
             </h2>
           </Reveal>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 md:gap-10">
-            {c.values.map((v, i) => (
-              <motion.div
+          <Reveal delay={0.1} className="border-t border-white/20">
+            {c.values.map((v) => (
+              <div
                 key={v.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{
-                  duration: 0.6,
-                  delay: i * 0.1,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="border-t border-white/15 pt-6"
+                className="grid grid-cols-1 gap-2 border-b border-white/20 py-6 sm:grid-cols-[minmax(0,14rem)_1fr] sm:gap-8 md:py-7"
               >
-                <div className="mb-2.5 font-mono text-xs font-semibold text-white/40">
-                  0{i + 1}
-                </div>
-                <div className="mb-2.5 font-sans text-base font-bold text-[#F5F4F0]">
-                  {v.title}
-                </div>
-                <div className="font-sans text-sm leading-relaxed text-white/65">
-                  {v.desc}
-                </div>
-              </motion.div>
+                <h3 className="font-sans text-[17px] font-bold text-[#F5F4F0]">{v.title}</h3>
+                <p className="font-sans text-[15px] leading-relaxed text-white/65">{v.desc}</p>
+              </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1280px] px-6 py-20 md:px-12 md:py-24">
+      <section className="mx-auto max-w-[1280px] px-6 py-20 md:px-12 md:py-28">
         <Reveal>
-          <h2 className="mb-10 font-sans text-2xl font-extrabold leading-tight text-[#111111] md:mb-14 md:text-[32px]">
+          <h2 className="mb-10 font-sans text-[30px] font-extrabold leading-tight text-[#111111] md:mb-14 md:text-[40px]">
             {c.openPositionsHeading}
           </h2>
         </Reveal>
-        <div className="flex flex-col">
-          {c.positions.map((pos, i) => (
-            <motion.div
+        <Reveal delay={0.08} className="border-t border-[#111111]/15">
+          {c.positions.map((pos) => (
+            <div
               key={pos.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{
-                duration: 0.5,
-                delay: i * 0.06,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="flex flex-wrap items-center justify-between gap-4 border-b border-[#111111]/10 py-6"
+              className="group flex flex-wrap items-center justify-between gap-4 border-b border-[#111111]/15 py-6"
             >
               <div>
-                <div className="font-sans text-lg font-semibold text-[#111111]">
-                  {pos.title}
-                </div>
+                <div className="font-sans text-[19px] font-bold text-[#111111]">{pos.title}</div>
                 <div className="mt-1 font-sans text-sm text-[#666666]">
                   {pos.location} · {pos.type}
                 </div>
               </div>
-              <CtaButton href="/contact" variant="dark" size="sm">
+              <button
+                type="button"
+                onClick={() => applyFor(positionLabel(pos))}
+                className="inline-flex items-center gap-2 border border-[#111111] px-5 py-2.5 font-sans text-[13px] font-semibold text-[#111111] transition-colors hover:bg-[#111111] hover:text-white"
+              >
                 {c.applyCta}
-              </CtaButton>
-            </motion.div>
+                <ArrowRightIcon className="h-4 w-4" />
+              </button>
+            </div>
           ))}
-        </div>
+        </Reveal>
       </section>
 
-      <section className="bg-black px-6 py-20 text-center md:px-12 md:py-28">
-        <Reveal className="mx-auto flex max-w-[600px] flex-col items-center">
-          <h2 className="mb-4 font-sans text-2xl font-extrabold leading-tight text-[#F5F4F0] md:text-[32px]">
-            {c.noPositionHeading}
-          </h2>
-          <p className="mb-8 font-sans text-sm leading-relaxed text-white/65 md:text-[15px]">
-            {c.noPositionCopy}
-          </p>
-          <CtaButton href="mailto:info@bazgy.com" variant="light">
-            {c.noPositionCta}
-          </CtaButton>
-        </Reveal>
+      <section id="basvuru" className="scroll-mt-24 border-t border-[#111111]/10 bg-white px-6 py-20 md:px-12 md:py-28">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 md:grid-cols-[1fr_1.4fr] md:gap-20">
+          <Reveal>
+            <div className="md:sticky md:top-32">
+              <h2 className="mb-5 font-sans text-[30px] font-extrabold leading-[1.1] text-[#111111] md:text-[40px]">
+                {c.applyHeading}
+              </h2>
+              <p className="max-w-[420px] font-sans text-[15px] leading-relaxed text-[#555555] md:text-base">
+                {c.applyIntro}
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <CareerApplicationForm
+              key={language}
+              position={selected}
+              onPositionChange={setPosition}
+            />
+          </Reveal>
+        </div>
       </section>
 
       <Footer />

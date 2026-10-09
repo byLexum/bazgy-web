@@ -37,3 +37,53 @@ export function RoadIcon({ className = "" }: { className?: string }) {
     </svg>
   );
 }
+
+export function ArrowRightIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" className={className}>
+      <path d="M4 12h15M13.5 6.5 19 12l-5.5 5.5" strokeLinecap="square" />
+    </svg>
+  );
+}
+
+export function ArrowLeftIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" className={className}>
+      <path d="M20 12H5M10.5 6.5 5 12l5.5 5.5" strokeLinecap="square" />
+    </svg>
+  );
+}
+
+export function CloseIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" className={className}>
+      <path d="M6 6l12 12M18 6 6 18" strokeLinecap="square" />
+    </svg>
+  );
+}
+
+export function ChevronDownIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" className={className}>
+      <path d="m7 10 5 5 5-5" strokeLinecap="square" />
+    </svg>
+  );
+}
+
+export function CheckIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true" className={className}>
+      <path d="m5 12.5 4.5 4.5L19 7.5" strokeLinecap="square" />
+    </svg>
+  );
+}
+
+export function ImagesIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" className={className}>
+      <rect x="3" y="6" width="14" height="14" />
+      <path d="M7 3h14v14" />
+      <path d="m3 16 4-4 4 4 2-2 4 4" />
+    </svg>
+  );
+}

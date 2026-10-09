@@ -6,11 +6,12 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 import CtaButton from "./CtaButton";
+import { ChevronDownIcon } from "./icons";
 
 const NAV_KEYS = [
   ["kurumsal", "/hakkimizda"],
   ["hizmetler", "/#hizmetler"],
-  ["projeler", "/#projeler"],
+  ["projeler", "/projeler"],
   ["surdurulebilirlik", "/#surdurulebilirlik"],
   ["kariyer", "/career"],
 ] as const;
@@ -67,7 +68,7 @@ export default function Header() {
             type="button"
             onClick={toggleLanguage}
             aria-label="Dil değiştir / Switch language"
-            className={`hidden items-center gap-1.5 font-mono text-[13px] font-semibold tracking-wide transition-colors sm:flex ${
+            className={`hidden items-center gap-1.5 font-sans text-[13px] font-semibold tracking-wide transition-colors sm:flex ${
               dark ? "text-white/60 hover:text-white" : "text-black/60 hover:text-black"
             }`}
           >
@@ -82,7 +83,8 @@ export default function Header() {
               <circle cx="12" cy="12" r="9" />
               <path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9s1.3-6.4 3.8-9Z" />
             </svg>
-            {language.toUpperCase()} ⌄
+            {language.toUpperCase()}
+            <ChevronDownIcon className="h-3.5 w-3.5 opacity-70" />
           </button>
         </div>
 
@@ -153,7 +155,7 @@ export default function Header() {
               <button
                 type="button"
                 onClick={toggleLanguage}
-                className="flex items-center gap-1.5 py-4 font-mono text-[13px] font-semibold tracking-wide text-white/60"
+                className="flex items-center gap-1.5 py-4 font-sans text-[13px] font-semibold tracking-wide text-white/60"
               >
                 {language === "tr" ? "EN" : "TR"} diline geç / switch language
               </button>

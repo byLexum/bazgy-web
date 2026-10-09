@@ -23,10 +23,7 @@ export default function SustainabilitySection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-black/70" />
       <div className="relative mx-auto max-w-[1280px]">
         <Reveal>
-          <div className="mb-5 font-mono text-xs font-semibold tracking-[0.12em] text-white/70">
-            {c.eyebrow}
-          </div>
-          <h2 className="mb-12 max-w-[640px] font-sans text-3xl font-extrabold leading-tight text-[#F5F4F0] md:mb-14 md:text-[38px]">
+          <h2 className="mb-12 max-w-[640px] font-sans text-[32px] font-extrabold leading-[1.08] text-[#F5F4F0] md:mb-16 md:text-[48px]">
             {c.heading}
           </h2>
         </Reveal>
@@ -35,8 +32,8 @@ export default function SustainabilitySection() {
           className="grid max-w-[900px] grid-cols-1 gap-8 sm:grid-cols-3 md:gap-10"
         >
           {c.items.map((item) => (
-            <div key={item.title}>
-              <div className="mb-2.5 font-sans text-base font-bold text-[#F5F4F0]">
+            <div key={item.title} className="border-t border-white/30 pt-5">
+              <div className="mb-2.5 font-sans text-[17px] font-bold text-[#F5F4F0]">
                 {item.title}
               </div>
               <div className="font-sans text-sm leading-relaxed text-white/70">

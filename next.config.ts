@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2560, 3200, 3840],
     qualities: [75, 90, 100],
   },
+  experimental: {
+    serverActions: {
+      // Kariyer formundaki en fazla 4 MB'lık CV yüklemesi + form alanları.
+      bodySizeLimit: "5mb",
+    },
+  },
 };
 
 export default nextConfig;

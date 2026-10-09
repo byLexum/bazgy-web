@@ -1,24 +1,42 @@
 import type { Metadata } from "next";
-import { Manrope, IBM_Plex_Mono } from "next/font/google";
+import { Manrope } from "next/font/google";
 import { LanguageProvider } from "@/i18n/LanguageContext";
+import { COMPANY_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const manrope = Manrope({
   variable: "--font-manrope",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
+const description =
+  "BAZ Yatırım ve İnşaat Anonim Şirketi; atık su arıtma tesislerinden kamu, kurumsal ve konut yapılarına uzanan geniş bir yelpazede mühendislik ve yapım hizmeti sunar.";
 
 export const metadata: Metadata = {
-  title: "BAZ Yatırım ve İnşaat Anonim Şirketi",
-  description:
-    "BAZ Yatırım ve İnşaat Anonim Şirketi; su arıtma altyapısından kamu ve kurumsal binalara uzanan geniş bir yelpazede mühendislik ve yapım hizmeti sunar.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: COMPANY_NAME,
+    template: `%s | ${COMPANY_NAME}`,
+  },
+  description,
+  applicationName: "BAZ",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: COMPANY_NAME,
+    locale: "tr_TR",
+    alternateLocale: ["en_US"],
+    url: "/",
+    title: COMPANY_NAME,
+    description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: COMPANY_NAME,
+    description,
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -27,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" className={`${manrope.variable} ${plexMono.variable}`}>
+    <html lang="tr" className={manrope.variable}>
       <body className="antialiased bg-[#F5F5F5] text-[#111111]">
         <LanguageProvider>{children}</LanguageProvider>
       </body>

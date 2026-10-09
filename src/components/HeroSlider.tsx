@@ -4,10 +4,19 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import ProjectDetailModal from "./ProjectDetailModal";
+import { ArrowLeftIcon, ArrowRightIcon } from "./icons";
 import { useLanguage } from "@/i18n/LanguageContext";
 
+// Slide categories are stored in caps for the old label style; read them as
+// a sentence instead, with Turkish-aware casing (İ/ı).
+function sentenceCase(text: string, locale: string) {
+  const lower = text.toLocaleLowerCase(locale);
+  return lower.charAt(0).toLocaleUpperCase(locale) + lower.slice(1);
+}
+
 export default function HeroSlider() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const locale = language === "tr" ? "tr-TR" : "en-US";
   const slides = t.hero.slides;
   const projectItems = t.projects.items;
   const detailLabels = t.projects.detailLabels;
@@ -82,7 +91,7 @@ export default function HeroSlider() {
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
       className="relative w-full overflow-hidden bg-black outline-none"
-      style={{ minHeight: "max(640px, 88vh)" }}
+      style={{ minHeight: "max(600px, 88svh)" }}
     >
       {slides.map((slide, i) => (
         <div
@@ -125,20 +134,20 @@ export default function HeroSlider() {
             priority={i === 0}
             sizes="100vw"
             quality={100}
-            className="photo-bw object-contain object-center"
+            className="photo-bw object-cover object-center md:object-contain"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/45 to-black/15" />
+          {/* Phones fill the frame with the photo, so the copy needs a bottom-up scrim */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10 md:bg-gradient-to-r md:from-black/90 md:via-black/45 md:to-black/15" />
 
           <div className="absolute inset-x-6 bottom-24 mx-auto max-w-[1280px] md:inset-x-12 md:bottom-28">
-            <div className="mb-3 font-mono text-xs font-semibold tracking-[0.12em] text-white/70">
-              {slide.eyebrow} · {slide.city}
+            <div className="mb-4 font-sans text-[13px] font-medium text-white/75">
+              {slide.city}
+              <span className="mx-2 text-white/35">/</span>
+              <span className="text-white/55">{sentenceCase(slide.eyebrow, locale)}</span>
             </div>
-            <div className="mb-4 flex items-center gap-3">
-              <span className="h-2 w-2 shrink-0 bg-white" />
-              <h1 className="max-w-[780px] font-sans text-2xl font-bold leading-[1.15] text-[#F5F4F0] md:text-[32px]">
-                {slide.title}
-              </h1>
-            </div>
+            <h1 className="mb-6 max-w-[820px] font-sans text-[30px] font-extrabold leading-[1.08] text-[#F5F4F0] md:text-[52px]">
+              {slide.title}
+            </h1>
             <div className="mb-5 h-px w-full bg-white/25" />
             <div className="flex flex-wrap items-end justify-between gap-4">
               <p className="max-w-[560px] font-sans text-sm leading-relaxed text-white/70 md:text-[15px]">
@@ -153,9 +162,7 @@ export default function HeroSlider() {
                 className="group inline-flex shrink-0 items-center gap-2 border-b border-white/50 pb-1 font-sans text-sm font-semibold text-[#F5F4F0] transition-colors hover:border-white"
               >
                 {t.hero.daha}
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRightIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>
@@ -163,8 +170,9 @@ export default function HeroSlider() {
       ))}
 
       <div className="absolute inset-x-6 bottom-8 z-10 mx-auto flex max-w-[1280px] items-center justify-between md:inset-x-12">
-        <div className="font-mono text-[13px] font-semibold tracking-wide text-white/70">
-          {idx} / {total}
+        <div className="font-sans text-[13px] font-semibold tabular-nums tracking-wide text-white">
+          {idx}
+          <span className="text-white/45"> / {total}</span>
         </div>
         <div role="tablist" aria-label="Slaytlar" className="flex gap-2">
           {slides.map((s, i) => (
@@ -188,9 +196,9 @@ export default function HeroSlider() {
           setPaused(true);
         }}
         aria-label="Önceki slayt"
-        className="absolute left-3 top-1/2 z-10 h-12 w-12 -translate-y-1/2 rounded-full border border-white/35 bg-black/35 text-xl text-[#F5F4F0] md:left-5"
+        className="absolute left-3 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center border border-white/30 bg-black/25 text-[#F5F4F0] backdrop-blur-sm transition-colors hover:border-white hover:bg-white hover:text-black sm:flex md:left-6"
       >
-        ←
+        <ArrowLeftIcon className="h-5 w-5" />
       </button>
       <button
         onClick={() => {
@@ -198,9 +206,9 @@ export default function HeroSlider() {
           setPaused(true);
         }}
         aria-label="Sonraki slayt"
-        className="absolute right-3 top-1/2 z-10 h-12 w-12 -translate-y-1/2 rounded-full border border-white/35 bg-black/35 text-xl text-[#F5F4F0] md:right-5"
+        className="absolute right-3 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center border border-white/30 bg-black/25 text-[#F5F4F0] backdrop-blur-sm transition-colors hover:border-white hover:bg-white hover:text-black sm:flex md:right-6"
       >
-        →
+        <ArrowRightIcon className="h-5 w-5" />
       </button>
 
       <AnimatePresence>

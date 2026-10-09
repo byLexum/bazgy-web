@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <div className="mb-4 font-mono text-[11px] font-semibold tracking-[0.1em] text-white/40">
+            <div className="mb-4 font-sans text-[11px] font-semibold tracking-[0.1em] text-white/40">
               {c.kurumsalLabel}
             </div>
             <div className="flex flex-col gap-3 font-sans text-sm text-white/75">
@@ -45,7 +45,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <div className="mb-4 font-mono text-[11px] font-semibold tracking-[0.1em] text-white/40">
+            <div className="mb-4 font-sans text-[11px] font-semibold tracking-[0.1em] text-white/40">
               {c.faaliyetLabel}
             </div>
             <div className="flex flex-col gap-3 font-sans text-sm text-white/75">
@@ -57,7 +57,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <div className="mb-4 font-mono text-[11px] font-semibold tracking-[0.1em] text-white/40">
+            <div className="mb-4 font-sans text-[11px] font-semibold tracking-[0.1em] text-white/40">
               {c.iletisimLabel}
             </div>
             <div className="flex flex-col gap-3 font-sans text-sm text-white/75">

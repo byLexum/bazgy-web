@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
+import { ArrowRightIcon } from "./icons";
 
 export default function CtaButton({
   href,
@@ -76,7 +77,7 @@ export default function CtaButton({
               : hoverText
         }`}
       >
-        →
+        <ArrowRightIcon className="h-4 w-4" />
       </motion.span>
     </motion.a>
   );

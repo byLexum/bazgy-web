@@ -10,27 +10,24 @@ export default function GeographySection() {
     <section className="bg-black px-6 py-20 md:px-12 md:py-[120px]">
       <div className="mx-auto max-w-[1280px]">
         <Reveal>
-          <div className="mb-5 font-mono text-xs font-semibold tracking-[0.12em] text-white/60">
-            {c.eyebrow}
-          </div>
-          <h2 className="mb-12 max-w-[640px] font-sans text-[28px] font-extrabold leading-tight text-[#F5F4F0] md:mb-14 md:text-[34px]">
+          <h2 className="mb-12 max-w-[720px] font-sans text-[32px] font-extrabold leading-[1.08] text-[#F5F4F0] md:mb-16 md:text-[48px]">
             {c.heading}
           </h2>
         </Reveal>
-        <Reveal
-          delay={0.1}
-          className="grid grid-cols-1 gap-px bg-white/12 md:grid-cols-3"
-        >
+        <Reveal delay={0.1} className="border-t border-white/20">
           {c.regions.map((region) => (
-            <div key={region.name} className="bg-black p-8">
-              <div className="mb-2.5 font-sans text-[28px] font-bold text-[#F5F4F0]">
+            <div
+              key={region.name}
+              className="grid grid-cols-[1fr_auto] items-baseline gap-x-6 gap-y-1 border-b border-white/20 py-6 md:grid-cols-[1.2fr_1fr_auto] md:py-8"
+            >
+              <div className="font-sans text-[28px] font-bold tracking-[-0.02em] text-[#F5F4F0] md:text-[40px]">
                 {region.name}
               </div>
-              <div className="mb-1.5 font-mono text-[13px] font-semibold text-white/70">
-                {region.count}
-              </div>
-              <div className="font-sans text-[13px] text-white/55">
+              <div className="order-3 col-span-2 font-sans text-[15px] text-white/60 md:order-none md:col-span-1">
                 {region.focus}
+              </div>
+              <div className="font-sans text-[15px] font-semibold tabular-nums text-white">
+                {region.count}
               </div>
             </div>
           ))}

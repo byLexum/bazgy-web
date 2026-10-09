@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Reveal from "./Reveal";
+import { ArrowRightIcon } from "./icons";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function AboutSection() {
@@ -14,10 +15,7 @@ export default function AboutSection() {
     >
       <div className="mb-16 grid grid-cols-1 gap-10 md:mb-20 md:grid-cols-[1fr_1.1fr] md:gap-20">
         <Reveal>
-          <div className="mb-5 font-mono text-xs font-semibold tracking-[0.12em] text-neutral-500">
-            {c.eyebrow}
-          </div>
-          <h2 className="max-w-[420px] font-sans text-3xl font-extrabold leading-[1.15] text-[#111111] md:text-[44px]">
+          <h2 className="max-w-[460px] font-sans text-[32px] font-extrabold leading-[1.08] text-[#111111] md:text-[48px]">
             {c.heading}
           </h2>
         </Reveal>
@@ -30,9 +28,10 @@ export default function AboutSection() {
           </p>
           <a
             href="/hakkimizda"
-            className="w-fit border-b border-[#111111] font-sans text-sm font-semibold text-[#111111]"
+            className="group inline-flex w-fit items-center gap-2 border-b border-[#111111] pb-1 font-sans text-sm font-semibold text-[#111111]"
           >
             {c.link}
+            <ArrowRightIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
         </Reveal>
       </div>

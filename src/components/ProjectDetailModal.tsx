@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { ArrowLeftIcon, ArrowRightIcon, CloseIcon } from "./icons";
+import StatusBadge from "./StatusBadge";
+import type { StatusKey } from "@/i18n/dictionaries";
 
 interface ProjectDetail {
   employerLabel: string;
@@ -21,6 +24,7 @@ interface ProjectItem {
   location: string;
   category: string;
   status: string;
+  statusKey?: StatusKey;
   images?: string[];
   detail?: ProjectDetail;
 }
@@ -48,13 +52,20 @@ export default function ProjectDetailModal({
   onClose: () => void;
 }) {
   const images = project.images ?? [];
+  const count = images.length;
   const [active, setActive] = useState(0);
+  const touchX = useRef<number | null>(null);
+  const thumbsRef = useRef<HTMLDivElement>(null);
+
+  const step = (dir: 1 | -1) =>
+    setActive((a) => (count ? (a + dir + count) % count : 0));
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
-      if (e.key === "ArrowRight") setActive((a) => (a + 1) % Math.max(images.length, 1));
-      if (e.key === "ArrowLeft") setActive((a) => (a - 1 + images.length) % Math.max(images.length, 1));
+      if (!count) return;
+      if (e.key === "ArrowRight") setActive((a) => (a + 1) % count);
+      if (e.key === "ArrowLeft") setActive((a) => (a - 1 + count) % count);
     };
     document.addEventListener("keydown", onKey);
     const prevOverflow = document.body.style.overflow;
@@ -63,7 +74,17 @@ export default function ProjectDetailModal({
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = prevOverflow;
     };
-  }, [onClose, images.length]);
+  }, [onClose, count]);
+
+  useEffect(() => {
+    const strip = thumbsRef.current;
+    const thumb = strip?.children[active] as HTMLElement | undefined;
+    if (!strip || !thumb) return;
+    strip.scrollTo({
+      left: thumb.offsetLeft - strip.clientWidth / 2 + thumb.clientWidth / 2,
+      behavior: "smooth",
+    });
+  }, [active]);
 
   const d = project.detail;
 
@@ -79,146 +100,197 @@ export default function ProjectDetailModal({
           ...(d.startDate ? [{ label: labels.startDate, value: d.startDate }] : []),
         ]
       : []),
-    { label: labels.status, value: project.status },
   ];
+
+  const current = images[active];
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 p-4 backdrop-blur-md md:p-8"
+      transition={{ duration: 0.25 }}
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0b0b0b]/85 p-0 backdrop-blur-sm sm:p-4 md:p-8"
       onClick={onClose}
     >
       <motion.div
-        initial={{ opacity: 0, y: 20, scale: 0.97 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        exit={{ opacity: 0, y: 12, scale: 0.98 }}
-        transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className="relative flex w-full max-w-[860px] max-h-[92vh] flex-col overflow-hidden rounded-[18px] border border-white/10 bg-black text-[#F5F4F0] shadow-[0_30px_90px_-20px_rgba(0,0,0,0.8)]"
+        role="dialog"
+        aria-modal="true"
+        aria-label={project.title}
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 12 }}
+        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        className="relative grid h-full w-full max-w-[1180px] grid-cols-1 grid-rows-[auto_1fr] overflow-hidden bg-[#111111] text-[#F5F4F0] shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] sm:h-auto sm:max-h-[92vh] md:h-[min(760px,88vh)] md:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] md:grid-rows-1"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           type="button"
           onClick={onClose}
           aria-label={labels.close}
-          className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white/70 backdrop-blur transition hover:bg-white/10 hover:text-white"
+          className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center bg-black/55 text-white/80 backdrop-blur transition-colors hover:bg-white hover:text-black md:right-4 md:top-4"
         >
-          ✕
+          <CloseIcon className="h-5 w-5" />
         </button>
 
-        <div className="relative aspect-video w-full shrink-0 bg-neutral-900">
-          {images.length > 0 ? (
-            <>
-              {images.map((src, i) => (
+        {/* Gallery */}
+        <div className="flex min-h-0 min-w-0 flex-col bg-black">
+          <div
+            className="relative aspect-[4/3] w-full overflow-hidden sm:aspect-[16/10] md:aspect-auto md:min-h-0 md:flex-1"
+            onTouchStart={(e) => {
+              touchX.current = e.touches[0].clientX;
+            }}
+            onTouchEnd={(e) => {
+              if (touchX.current == null) return;
+              const dx = e.changedTouches[0].clientX - touchX.current;
+              if (dx > 40) step(-1);
+              else if (dx < -40) step(1);
+              touchX.current = null;
+            }}
+          >
+            {current ? (
+              <>
+                {/* Blurred fill so portrait site photos and landscape renders share one frame */}
                 <Image
-                  key={src}
-                  src={src}
-                  alt={project.title}
+                  key={`bg-${current}`}
+                  src={current}
+                  alt=""
+                  aria-hidden="true"
                   fill
-                  quality={100}
-                  sizes="(min-width: 860px) 860px, 100vw"
-                  className="photo-bw object-cover transition-opacity duration-500 ease-in-out"
-                  style={{ opacity: i === active ? 1 : 0 }}
-                  priority={i === 0}
+                  quality={75}
+                  sizes="40vw"
+                  className="scale-110 object-cover opacity-50 blur-2xl"
                 />
-              ))}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-10">
-                {images.length > 1 && (
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex gap-1.5">
-                      {images.map((src, i) => (
-                        <button
-                          key={src}
-                          type="button"
-                          aria-label={`${i + 1}`}
-                          onClick={() => setActive(i)}
-                          className={`h-1.5 rounded-full transition-all ${
-                            i === active ? "w-6 bg-white" : "w-1.5 bg-white/40 hover:bg-white/60"
-                          }`}
-                        />
-                      ))}
+                {images.map((src, i) => (
+                  <Image
+                    key={src}
+                    src={src}
+                    alt={`${project.title} — ${i + 1}`}
+                    fill
+                    quality={90}
+                    sizes="(min-width: 768px) 660px, 100vw"
+                    className="object-contain transition-opacity duration-500 ease-out"
+                    style={{ opacity: i === active ? 1 : 0 }}
+                    priority={i === 0}
+                    loading={i === 0 ? undefined : "lazy"}
+                  />
+                ))}
+
+                {count > 1 && (
+                  <>
+                    <button
+                      type="button"
+                      aria-label="Önceki görsel / Previous image"
+                      onClick={() => step(-1)}
+                      className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center bg-black/45 text-white backdrop-blur transition-colors hover:bg-white hover:text-black"
+                    >
+                      <ArrowLeftIcon className="h-5 w-5" />
+                    </button>
+                    <button
+                      type="button"
+                      aria-label="Sonraki görsel / Next image"
+                      onClick={() => step(1)}
+                      className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center bg-black/45 text-white backdrop-blur transition-colors hover:bg-white hover:text-black"
+                    >
+                      <ArrowRightIcon className="h-5 w-5" />
+                    </button>
+                    <div className="absolute bottom-3 left-3 bg-black/55 px-2.5 py-1 text-[12px] font-semibold tabular-nums tracking-wide text-white/85 backdrop-blur">
+                      {String(active + 1).padStart(2, "0")}
+                      <span className="text-white/40"> / {String(count).padStart(2, "0")}</span>
                     </div>
-                    <div className="flex gap-2">
-                      <button
-                        type="button"
-                        aria-label="Previous image"
-                        onClick={() => setActive((a) => (a - 1 + images.length) % images.length)}
-                        className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-                      >
-                        ←
-                      </button>
-                      <button
-                        type="button"
-                        aria-label="Next image"
-                        onClick={() => setActive((a) => (a + 1) % images.length)}
-                        className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-                      >
-                        →
-                      </button>
-                    </div>
-                  </div>
+                  </>
                 )}
+              </>
+            ) : (
+              <div className="flex h-full items-center justify-center text-xs uppercase tracking-wider text-white/40">
+                {project.title}
               </div>
-            </>
-          ) : (
-            <div className="flex h-full items-center justify-center font-mono text-xs uppercase tracking-wider text-white/40">
-              {project.title}
+            )}
+          </div>
+
+          {count > 1 && (
+            <div
+              ref={thumbsRef}
+              className="scrollbar-none flex shrink-0 gap-1.5 overflow-x-auto border-t border-white/10 bg-black p-2"
+            >
+              {images.map((src, i) => (
+                <button
+                  key={src}
+                  type="button"
+                  aria-label={`${i + 1}`}
+                  aria-current={i === active}
+                  onClick={() => setActive(i)}
+                  className={`relative h-12 w-16 shrink-0 overflow-hidden transition-opacity md:h-14 md:w-[72px] ${
+                    i === active
+                      ? "opacity-100 outline outline-2 -outline-offset-2 outline-white"
+                      : "opacity-45 hover:opacity-80"
+                  }`}
+                >
+                  <Image
+                    src={src}
+                    alt=""
+                    fill
+                    quality={75}
+                    sizes="80px"
+                    className="object-cover"
+                  />
+                </button>
+              ))}
             </div>
           )}
         </div>
 
-        <div className="flex min-h-0 flex-1 flex-col overflow-y-auto p-6 md:p-9">
-          <div className="mb-1 font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-white/50">
-            {project.category}
+        {/* Details */}
+        <div className="scrollbar-dark min-h-0 min-w-0 overflow-y-auto overscroll-contain px-6 pb-8 pt-7 md:px-10 md:pb-10 md:pt-12">
+          <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <StatusBadge completed={project.statusKey === "completed"} tone="dark">
+              {project.status}
+            </StatusBadge>
+            <span className="text-[12px] font-medium text-white/50">{project.category}</span>
           </div>
-          <h3 className="mb-5 font-sans text-2xl font-bold leading-tight text-[#F5F4F0] md:text-[28px]">
+          <h3 className="mb-7 pr-10 font-sans text-[26px] font-bold leading-[1.15] text-[#F5F4F0] md:text-[32px]">
             {project.title}
           </h3>
 
-          <dl className="mb-7 grid grid-cols-1 gap-x-6 gap-y-3 border-y border-white/10 py-5 sm:grid-cols-2">
+          <dl className="mb-9 border-t border-white/10">
             {rows.map((row) => (
-              <div key={row.label}>
-                <dt className="font-mono text-[10px] font-semibold uppercase tracking-[0.1em] text-white/40">
-                  {row.label}
-                </dt>
-                <dd className="mt-0.5 font-sans text-sm text-white/85">{row.value}</dd>
+              <div
+                key={row.label}
+                className="grid grid-cols-[minmax(0,9.5rem)_minmax(0,1fr)] gap-4 border-b border-white/10 py-3"
+              >
+                <dt className="text-[12px] font-medium leading-5 text-white/45">{row.label}</dt>
+                <dd className="text-[14px] leading-5 text-white/90">{row.value}</dd>
               </div>
             ))}
           </dl>
 
           {d && d.description.length > 0 && (
-            <div className="mb-7">
-              <div className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-white/50">
-                {labels.descriptionHeading}
-              </div>
+            <section className="mb-9">
+              <h4 className="mb-3 text-[13px] font-bold text-white">{labels.descriptionHeading}</h4>
               <div className="space-y-3">
                 {d.description.map((p, i) => (
-                  <p key={i} className="font-sans text-[14px] leading-relaxed text-white/70">
+                  <p key={i} className="max-w-[62ch] text-[14.5px] leading-[1.7] text-white/70">
                     {p}
                   </p>
                 ))}
               </div>
-            </div>
+            </section>
           )}
 
           {d && d.scope.length > 0 && (
-            <div>
-              <div className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-white/50">
-                {labels.scopeHeading}
-              </div>
-              <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+            <section>
+              <h4 className="mb-3 text-[13px] font-bold text-white">{labels.scopeHeading}</h4>
+              <ul className="border-t border-white/10">
                 {d.scope.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2 font-sans text-[13px] leading-snug text-white/70"
+                    className="border-b border-white/10 py-2.5 text-[13.5px] leading-snug text-white/75"
                   >
-                    <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-white/40" />
                     {item}
                   </li>
                 ))}
               </ul>
-            </div>
+            </section>
           )}
         </div>
       </motion.div>

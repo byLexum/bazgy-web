@@ -4,14 +4,12 @@
   --background: #f5f5f5;
   --foreground: #111111;
   --font-sans: var(--font-manrope);
-  --font-mono: var(--font-plex-mono);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-manrope);
-  --font-mono: var(--font-plex-mono);
 }
 
 @layer base {
@@ -29,6 +27,31 @@
     color: inherit;
     text-decoration: none;
   }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: #111111;
+    color: #f5f4f0;
+  }
+
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  html {
+    scrollbar-color: #9a9a9a #f5f5f5;
+  }
 }
 
 .photo-bw {
@@ -42,6 +65,32 @@
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+/* Thin, low-contrast scrollbar for panels on dark surfaces (project modal) */
+.scrollbar-dark {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(245, 244, 240, 0.22) transparent;
+}
+
+.scrollbar-dark::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-dark::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-dark::-webkit-scrollbar-thumb {
+  background: rgba(245, 244, 240, 0.22);
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
 
 html {

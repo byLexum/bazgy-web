@@ -2,6 +2,8 @@ export type Language = "tr" | "en";
 
 export type IconKey = "droplet" | "building" | "mosque" | "road";
 
+export type StatusKey = "completed" | "ongoing" | "upcoming";
+
 interface ServiceItem {
   name: string;
   desc: string;
@@ -68,7 +70,7 @@ export const dictionaries = {
           eyebrow: "ÜSTYAPI VE KURUMSAL",
           city: "İstanbul, Maltepe",
           title: "Anadolu Yakası'na yeni bir temsilcilik",
-          copy: "İTO Anadolu Yakası Bölge Temsilciliği, Maltepe'de çağdaş bir kurumsal hizmet merkezine dönüşüyor.",
+          copy: "İTO Anadolu Yakası Bölge Temsilciliği tamamlandı; Maltepe'de çağdaş bir kurumsal hizmet merkezi olarak kapılarını açtı.",
           image: "/images/projects/ito-maltepe/3d-tasarim-1.jpg",
           color: "#859ca4",
         },
@@ -105,14 +107,12 @@ export const dictionaries = {
       ],
     },
     about: {
-      eyebrow: "BAZ HAKKINDA",
       heading: "Yarının altyapısını bugünden inşa ediyoruz.",
       p1: "BAZ; su arıtma altyapısından kamu ve kurumsal binalara uzanan geniş bir yelpazede mühendislik ve yapım hizmeti sunar.",
       p2: "Deneyimimiz, teknik uzmanlığımız ve kalite odaklı yaklaşımımızla projelerinizi güvenilir ve sürdürülebilir şekilde hayata geçiririz.",
-      link: "BAZ'ı Tanıyın →",
+      link: "BAZ'ı Tanıyın",
     },
     aboutPage: {
-      eyebrow: "BAZ HAKKINDA",
       heading: "Hakkımızda",
       intro:
         "BAZ Yatırım ve İnşaat Anonim Şirketi, mühendislik, proje yönetimi, taahhüt ve yatırım geliştirme alanlarında faaliyet gösteren, yüksek teknik uzmanlığa sahip bir mühendislik ve inşaat şirketidir.",
@@ -199,9 +199,9 @@ export const dictionaries = {
         },
       ],
       slogan: "“Mühendislikten Güç Alan, İnsan ve Doğa İçin Değer Üreten Projeler.”",
+      navLabel: "Bu sayfada",
     },
     services: {
-      eyebrow: "FAALİYET ALANLARIMIZ",
       heading1: "Farklı Faaliyet Alanlarında",
       heading2: "Aynı Kusursuzluk Hedefi",
       subtext: "Bir projenin her aşamasında, tek ve güvenilir çözüm ortağı.",
@@ -229,15 +229,25 @@ export const dictionaries = {
       ] satisfies ServiceItem[] as ServiceItem[],
     },
     projects: {
-      eyebrow: "SEÇİLİ PROJELER",
       heading: "İmzamızı taşıyan yapılar.",
-      exploreLink: "Tüm Projeleri Keşfet →",
+      exploreLink: "Tüm Projeleri Keşfet",
+      page: {
+        heading: "Projelerimiz",
+        intro: "Atık su arıtma tesislerinden kamu ve kurumsal yapılara, eğitim yapılarından konut projelerine kadar üstlendiğimiz işler.",
+        categoryLabel: "Kategori",
+        statusLabel: "Durum",
+        all: "Tümü",
+        statuses: { completed: "Tamamlandı", ongoing: "Devam Ediyor", upcoming: "Başlayacak" },
+        count: "proje",
+        empty: "Bu filtrelere uyan proje yok.",
+        reset: "Filtreleri temizle",
+      },
       flagship: {
-        eyebrow: "ÜSTYAPI / KONUT · DEVAM EDİYOR",
         title: "Beykoz Karlıtepe",
         location: "İstanbul, Beykoz",
         category: "Üstyapı / Konut",
         status: "Devam Ediyor",
+        statusKey: "ongoing" as StatusKey,
         images: [
           "/images/karlitepe-project.png",
           "/images/karlitepe-about-large.png",
@@ -278,6 +288,7 @@ export const dictionaries = {
           location: "İzmir, Dikili",
           category: "Atık Su",
           status: "Devam Ediyor",
+          statusKey: "ongoing" as StatusKey,
           images: [
             "/images/projects/izmir-dikili-aat/3d-tasarim.jpg",
             "/images/projects/izmir-dikili-aat/saha-1.jpg",
@@ -312,6 +323,7 @@ export const dictionaries = {
           location: "İzmir, Aliağa",
           category: "Atık Su",
           status: "Devam Ediyor",
+          statusKey: "ongoing" as StatusKey,
           images: [
             "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.jpg",
             "/images/projects/aliaga-yenisakran-aat/3d-tasarim-2.jpg",
@@ -343,6 +355,7 @@ export const dictionaries = {
           location: "Erzincan",
           category: "Kamu Binası",
           status: "Devam Ediyor",
+          statusKey: "ongoing" as StatusKey,
           images: [
             "/images/projects/erzincan-cami-kebir/3d-tasarim-1.jpg",
             "/images/projects/erzincan-cami-kebir/3d-tasarim-2.jpg",
@@ -380,6 +393,7 @@ export const dictionaries = {
           location: "İstanbul, Eminönü",
           category: "Kurumsal",
           status: "Devam Ediyor",
+          statusKey: "ongoing" as StatusKey,
           images: [
             "/images/projects/ito-eminonu/3d-tasarim-1.jpg",
             "/images/projects/ito-eminonu/3d-tasarim-2.jpg",
@@ -410,8 +424,18 @@ export const dictionaries = {
           title: "İTO Maltepe Hizmet Binası",
           location: "İstanbul, Maltepe",
           category: "Kurumsal",
-          status: "Devam Ediyor",
+          status: "Tamamlandı",
+          statusKey: "completed" as StatusKey,
           images: [
+            "/images/projects/ito-maltepe/karsilama-bankosu.jpg",
+            "/images/projects/ito-maltepe/hizmet-bankolari.jpg",
+            "/images/projects/ito-maltepe/bekleme-salonu.jpg",
+            "/images/projects/ito-maltepe/hizmet-koridoru.jpg",
+            "/images/projects/ito-maltepe/giris-holu-yonlendirme.jpg",
+            "/images/projects/ito-maltepe/lobi-karsilama.jpg",
+            "/images/projects/ito-maltepe/dis-cephe-cam-panel.jpg",
+            "/images/projects/ito-maltepe/halili-salon-1.jpg",
+            "/images/projects/ito-maltepe/halili-salon-2.jpg",
             "/images/projects/ito-maltepe/3d-tasarim-1.jpg",
             "/images/projects/ito-maltepe/3d-tasarim-2.jpg",
             "/images/projects/ito-maltepe/3d-tasarim-3.jpg",
@@ -425,8 +449,8 @@ export const dictionaries = {
             duration: "120 Gün",
             startDate: "Mayıs 2026",
             description: [
-              "İstanbul Ticaret Odası tarafından Maltepe'de hayata geçirilen İTO Anadolu Yakası Bölge Temsilciliği Projesi, bölgenin kurumsal hizmet altyapısını güçlendirecek stratejik bir yatırım olarak gerçekleştirilmektedir.",
-              "Proje kapsamında, yapının tüm iç mekan uygulamaları çağdaş ofis ihtiyaçlarına cevap verecek şekilde tasarlanmış; fonksiyonel, verimli ve sürdürülebilir kullanım alanları oluşturulmaktadır.",
+              "İstanbul Ticaret Odası tarafından Maltepe'de hayata geçirilen İTO Anadolu Yakası Bölge Temsilciliği Projesi, bölgenin kurumsal hizmet altyapısını güçlendiren stratejik bir yatırım olarak tamamlanmıştır.",
+              "Proje kapsamında, yapının tüm iç mekan uygulamaları çağdaş ofis ihtiyaçlarına cevap verecek şekilde uygulanmış; karşılama ve hizmet bankolarından bekleme salonlarına kadar fonksiyonel, verimli ve sürdürülebilir kullanım alanları oluşturulmuştur.",
             ],
             scope: [
               "Mimari İç Mekan Uygulamaları",
@@ -441,6 +465,7 @@ export const dictionaries = {
           location: "İstanbul, Beykoz",
           category: "Üstyapı / Konut",
           status: "Başlayacak",
+          statusKey: "upcoming" as StatusKey,
           images: [
             "/images/projects/beykoz-gumussuyu/villa-cephe-bahce.jpg",
             "/images/projects/beykoz-gumussuyu/villa-ahsap-cephe-detay.jpg",
@@ -474,6 +499,7 @@ export const dictionaries = {
           location: "İstanbul, Beykoz",
           category: "Üstyapı / Konut",
           status: "Başlama Aşamasında",
+          statusKey: "upcoming" as StatusKey,
           images: [
             "/images/projects/beykoz-ornekkoy/villa-cephe-havuz.jpg",
             "/images/projects/beykoz-ornekkoy/villa-cephe-sokak.jpg",
@@ -505,6 +531,7 @@ export const dictionaries = {
           location: "Erzincan",
           category: "Kamu Binası",
           status: "Devam Ediyor",
+          statusKey: "ongoing" as StatusKey,
           images: [
             "/images/projects/erzincan-anaokulu/3d-tasarim-1.jpg",
             "/images/projects/erzincan-anaokulu/3d-tasarim-2.jpg",
@@ -533,7 +560,6 @@ export const dictionaries = {
       ],
     },
     geography: {
-      eyebrow: "PROJE COĞRAFYASI",
       heading: "Türkiye'nin dört bir yanında kalıcı yapılar inşa ediyoruz.",
       regions: [
         { name: "İzmir", count: "2 Proje", focus: "Atık Su / Altyapı" },
@@ -542,7 +568,6 @@ export const dictionaries = {
       ],
     },
     sustainability: {
-      eyebrow: "SÜRDÜRÜLEBİLİRLİK",
       heading: "Kalıcı yapılar, ölçülebilir bir gelecek.",
       items: [
         { title: "Su Kapasitesi", desc: "Arıtma tesislerimizde şehirlerin uzun vadeli su ihtiyacını gözeten kapasite planlaması." },
@@ -582,7 +607,6 @@ export const dictionaries = {
       credit: "ZT-1 Projects tarafından geliştirildi",
     },
     contactPage: {
-      eyebrow: "İLETİŞİM",
       heading: "Projenizi konuşalım.",
       intro: "Sorularınız, proje teklifleriniz ya da iş birliği önerileriniz için bize ulaşın. Ekibimiz en kısa sürede size dönüş yapacaktır.",
       formName: "Ad Soyad",
@@ -591,8 +615,28 @@ export const dictionaries = {
       formSubject: "Konu",
       formMessage: "Mesajınız",
       formSubmit: "Mesajı Gönder",
-      formNote: "Bu form şu an demo amaçlıdır — göndermek için lütfen doğrudan e-posta ile ulaşın.",
-      officeLabel: "OFİS",
+      formOptional: "isteğe bağlı",
+      formSending: "Gönderiliyor",
+      formKvkkBefore: "Formu göndererek ",
+      formKvkkLink: "KVKK Aydınlatma Metni",
+      formKvkkAfter: "'ni okuduğunuzu kabul etmiş olursunuz.",
+      formSuccessTitle: "Mesajınız bize ulaştı.",
+      formSuccessCopy: "Teşekkür ederiz. Ekibimiz en kısa sürede verdiğiniz e-posta adresinden size dönüş yapacak.",
+      formSendAnother: "Yeni bir mesaj yaz",
+      formFieldErrors: {
+        required: "Bu alanı doldurun.",
+        invalidEmail: "Geçerli bir e-posta adresi girin.",
+        invalidPhone: "Geçerli bir telefon numarası girin.",
+        tooLong: "Bu alan çok uzun.",
+        tooShort: "Biraz daha ayrıntı ekleyin.",
+      },
+      formErrors: {
+        validation: "Lütfen işaretli alanları kontrol edin.",
+        rateLimited: "Kısa sürede çok sayıda mesaj gönderildi. Birkaç dakika sonra tekrar deneyin.",
+        unavailable: "Mesajınız şu an gönderilemedi. Lütfen tekrar deneyin ya da doğrudan info@bazgy.com adresine yazın.",
+        failed: "Mesajınız şu an gönderilemedi. Lütfen tekrar deneyin ya da doğrudan info@bazgy.com adresine yazın.",
+      },
+      officeLabel: "Ofis",
       addressLabel: "Adres",
       address: "Kavacık Mah. Ertürk Sk. No: 1/1 Beykoz, İstanbul",
       phoneLabel: "Telefon",
@@ -603,7 +647,6 @@ export const dictionaries = {
       hours: "Pazartesi – Cuma, 09:00 – 18:00",
     },
     careerPage: {
-      eyebrow: "KARİYER",
       heading: "BAZ'da kariyerine yön ver.",
       intro: "Türkiye'nin büyük mühendislik ve yapım projelerinde yer almak, teknik uzmanlığını sahada geliştirmek isteyen yetenekli ekip arkadaşları arıyoruz.",
       valuesHeading: "Bizimle çalışmak nasıl bir şey?",
@@ -620,16 +663,31 @@ export const dictionaries = {
         { title: "Proje Planlama Uzmanı", location: "İstanbul, Merkez", type: "Tam Zamanlı" },
       ],
       applyCta: "Başvur",
-      noPositionHeading: "Aradığınız pozisyonu bulamadınız mı?",
-      noPositionCopy: "Özgeçmişinizi bize gönderin, uygun bir pozisyon açıldığında sizinle iletişime geçelim.",
-      noPositionCta: "Özgeçmiş Gönder — info@bazgy.com",
+      applyHeading: "Başvurunuzu gönderin",
+      applyIntro: "Açık pozisyonlardan birine ya da genel başvuru için formu doldurup özgeçmişinizi ekleyin. Aradığınız pozisyon listede yoksa genel başvuru yapın; uygun bir pozisyon açıldığında sizinle iletişime geçelim.",
+      form: {
+        position: "Pozisyon",
+        general: "Genel başvuru",
+        message: "Ön yazı",
+        cv: "Özgeçmiş (CV)",
+        cvHint: "PDF, DOC veya DOCX · en fazla 4 MB",
+        cvChoose: "Dosya seç",
+        cvNone: "Henüz dosya seçilmedi",
+        cvRequired: "Özgeçmişinizi ekleyin.",
+        cvType: "Yalnızca PDF, DOC veya DOCX dosyası yükleyebilirsiniz.",
+        cvSize: "Dosya 4 MB'tan büyük olamaz.",
+        cvReselect: "Güvenlik nedeniyle dosyayı yeniden seçmeniz gerekiyor.",
+        submit: "Başvuruyu Gönder",
+        successTitle: "Başvurunuz bize ulaştı.",
+        successCopy: "İlginiz için teşekkür ederiz. Başvurunuzu inceleyip uygun görülmesi halinde sizinle iletişime geçeceğiz.",
+        sendAnother: "Yeni bir başvuru yap",
+      },
     },
     pageLabels: {
       contact: "İletişim",
       career: "Kariyer",
     },
     legalPages: {
-      eyebrow: "YASAL BİLGİLENDİRME",
       backLink: "Ana Sayfaya Dön",
       contactNote:
         "Bu metinle ilgili sorularınız için info@bazgy.com adresinden bizimle iletişime geçebilirsiniz.",
@@ -811,7 +869,7 @@ export const dictionaries = {
           eyebrow: "SUPERSTRUCTURE & CORPORATE",
           city: "İstanbul, Maltepe",
           title: "A new regional office for the Anatolian Side",
-          copy: "The İTO Anatolian Side Regional Office is becoming a modern corporate service center in Maltepe.",
+          copy: "The İTO Anatolian Side Regional Office is complete, opening its doors in Maltepe as a modern corporate service center.",
           image: "/images/projects/ito-maltepe/3d-tasarim-1.jpg",
           color: "#859ca4",
         },
@@ -848,14 +906,12 @@ export const dictionaries = {
       ],
     },
     about: {
-      eyebrow: "ABOUT BAZ",
       heading: "Building tomorrow's infrastructure today.",
       p1: "BAZ delivers engineering and construction services across a wide range, from wastewater treatment infrastructure to public and corporate buildings.",
       p2: "With our experience, technical expertise, and quality-driven approach, we bring your projects to life reliably and sustainably.",
-      link: "Get to know BAZ →",
+      link: "Get to know BAZ",
     },
     aboutPage: {
-      eyebrow: "ABOUT BAZ",
       heading: "About Us",
       intro:
         "BAZ Yatırım ve İnşaat Anonim Şirketi is an engineering and construction company with deep technical expertise, active in engineering, project management, contracting and investment development.",
@@ -942,9 +998,9 @@ export const dictionaries = {
         },
       ],
       slogan: "“Projects That Draw Their Strength from Engineering, Creating Value for People and Nature.”",
+      navLabel: "On this page",
     },
     services: {
-      eyebrow: "OUR FIELDS OF ACTIVITY",
       heading1: "Different Fields of Activity,",
       heading2: "the Same Pursuit of Excellence",
       subtext: "A single, reliable solution partner at every stage of a project.",
@@ -972,15 +1028,25 @@ export const dictionaries = {
       ] satisfies ServiceItem[] as ServiceItem[],
     },
     projects: {
-      eyebrow: "FEATURED PROJECTS",
       heading: "Structures that bear our signature.",
-      exploreLink: "Explore All Projects →",
+      exploreLink: "Explore All Projects",
+      page: {
+        heading: "Our Projects",
+        intro: "The work we have taken on, from wastewater treatment plants to public and corporate buildings, and from schools to residential developments.",
+        categoryLabel: "Category",
+        statusLabel: "Status",
+        all: "All",
+        statuses: { completed: "Completed", ongoing: "Ongoing", upcoming: "Upcoming" },
+        count: "projects",
+        empty: "No projects match these filters.",
+        reset: "Clear filters",
+      },
       flagship: {
-        eyebrow: "SUPERSTRUCTURE / RESIDENTIAL · ONGOING",
         title: "Beykoz Karlıtepe",
         location: "İstanbul, Beykoz",
         category: "Superstructure / Residential",
         status: "Ongoing",
+        statusKey: "ongoing" as StatusKey,
         images: [
           "/images/karlitepe-project.png",
           "/images/karlitepe-about-large.png",
@@ -1021,6 +1087,7 @@ export const dictionaries = {
           location: "İzmir, Dikili",
           category: "Wastewater",
           status: "Ongoing",
+          statusKey: "ongoing" as StatusKey,
           images: [
             "/images/projects/izmir-dikili-aat/3d-tasarim.jpg",
             "/images/projects/izmir-dikili-aat/saha-1.jpg",
@@ -1055,6 +1122,7 @@ export const dictionaries = {
           location: "İzmir, Aliağa",
           category: "Wastewater",
           status: "Ongoing",
+          statusKey: "ongoing" as StatusKey,
           images: [
             "/images/projects/aliaga-yenisakran-aat/3d-tasarim-1.jpg",
             "/images/projects/aliaga-yenisakran-aat/3d-tasarim-2.jpg",
@@ -1086,6 +1154,7 @@ export const dictionaries = {
           location: "Erzincan",
           category: "Public Building",
           status: "Ongoing",
+          statusKey: "ongoing" as StatusKey,
           images: [
             "/images/projects/erzincan-cami-kebir/3d-tasarim-1.jpg",
             "/images/projects/erzincan-cami-kebir/3d-tasarim-2.jpg",
@@ -1123,6 +1192,7 @@ export const dictionaries = {
           location: "İstanbul, Eminönü",
           category: "Corporate",
           status: "Ongoing",
+          statusKey: "ongoing" as StatusKey,
           images: [
             "/images/projects/ito-eminonu/3d-tasarim-1.jpg",
             "/images/projects/ito-eminonu/3d-tasarim-2.jpg",
@@ -1153,8 +1223,18 @@ export const dictionaries = {
           title: "İTO Maltepe Service Building",
           location: "İstanbul, Maltepe",
           category: "Corporate",
-          status: "Ongoing",
+          status: "Completed",
+          statusKey: "completed" as StatusKey,
           images: [
+            "/images/projects/ito-maltepe/karsilama-bankosu.jpg",
+            "/images/projects/ito-maltepe/hizmet-bankolari.jpg",
+            "/images/projects/ito-maltepe/bekleme-salonu.jpg",
+            "/images/projects/ito-maltepe/hizmet-koridoru.jpg",
+            "/images/projects/ito-maltepe/giris-holu-yonlendirme.jpg",
+            "/images/projects/ito-maltepe/lobi-karsilama.jpg",
+            "/images/projects/ito-maltepe/dis-cephe-cam-panel.jpg",
+            "/images/projects/ito-maltepe/halili-salon-1.jpg",
+            "/images/projects/ito-maltepe/halili-salon-2.jpg",
             "/images/projects/ito-maltepe/3d-tasarim-1.jpg",
             "/images/projects/ito-maltepe/3d-tasarim-2.jpg",
             "/images/projects/ito-maltepe/3d-tasarim-3.jpg",
@@ -1168,8 +1248,8 @@ export const dictionaries = {
             duration: "120 Days",
             startDate: "May 2026",
             description: [
-              "Realized by the İstanbul Chamber of Commerce in Maltepe, the İTO Anatolian Side Regional Office Project is a strategic investment that will strengthen the region's corporate service infrastructure.",
-              "All interior works of the building are designed to meet contemporary office needs, creating functional, efficient and sustainable spaces.",
+              "Realized by the İstanbul Chamber of Commerce in Maltepe, the İTO Anatolian Side Regional Office Project has been completed as a strategic investment that strengthens the region's corporate service infrastructure.",
+              "All interior works of the building were delivered to meet contemporary office needs, creating functional, efficient and sustainable spaces, from the reception and service counters to the waiting lounges.",
             ],
             scope: [
               "Architectural Interior Works",
@@ -1184,6 +1264,7 @@ export const dictionaries = {
           location: "İstanbul, Beykoz",
           category: "Superstructure / Residential",
           status: "Upcoming",
+          statusKey: "upcoming" as StatusKey,
           images: [
             "/images/projects/beykoz-gumussuyu/villa-cephe-bahce.jpg",
             "/images/projects/beykoz-gumussuyu/villa-ahsap-cephe-detay.jpg",
@@ -1217,6 +1298,7 @@ export const dictionaries = {
           location: "İstanbul, Beykoz",
           category: "Superstructure / Residential",
           status: "Starting Soon",
+          statusKey: "upcoming" as StatusKey,
           images: [
             "/images/projects/beykoz-ornekkoy/villa-cephe-havuz.jpg",
             "/images/projects/beykoz-ornekkoy/villa-cephe-sokak.jpg",
@@ -1248,6 +1330,7 @@ export const dictionaries = {
           location: "Erzincan",
           category: "Public Building",
           status: "Ongoing",
+          statusKey: "ongoing" as StatusKey,
           images: [
             "/images/projects/erzincan-anaokulu/3d-tasarim-1.jpg",
             "/images/projects/erzincan-anaokulu/3d-tasarim-2.jpg",
@@ -1276,7 +1359,6 @@ export const dictionaries = {
       ],
     },
     geography: {
-      eyebrow: "PROJECT GEOGRAPHY",
       heading: "Building lasting structures across every corner of Türkiye.",
       regions: [
         { name: "İzmir", count: "2 Projects", focus: "Wastewater / Infrastructure" },
@@ -1285,7 +1367,6 @@ export const dictionaries = {
       ],
     },
     sustainability: {
-      eyebrow: "SUSTAINABILITY",
       heading: "Lasting structures, a measurable future.",
       items: [
         { title: "Water Capacity", desc: "Capacity planning at our treatment facilities that accounts for cities' long-term water needs." },
@@ -1325,7 +1406,6 @@ export const dictionaries = {
       credit: "Developed by ZT-1 Projects",
     },
     contactPage: {
-      eyebrow: "CONTACT",
       heading: "Let's talk about your project.",
       intro: "Reach out to us with your questions, project proposals, or partnership ideas. Our team will get back to you as soon as possible.",
       formName: "Full Name",
@@ -1334,8 +1414,28 @@ export const dictionaries = {
       formSubject: "Subject",
       formMessage: "Your Message",
       formSubmit: "Send Message",
-      formNote: "This form is currently a demo — please reach us directly by email to send a message.",
-      officeLabel: "OFFICE",
+      formOptional: "optional",
+      formSending: "Sending",
+      formKvkkBefore: "By sending this form you confirm you have read the ",
+      formKvkkLink: "KVKK Privacy Notice",
+      formKvkkAfter: ".",
+      formSuccessTitle: "Your message has reached us.",
+      formSuccessCopy: "Thank you. Our team will get back to you at the email address you provided as soon as possible.",
+      formSendAnother: "Write another message",
+      formFieldErrors: {
+        required: "Please fill in this field.",
+        invalidEmail: "Enter a valid email address.",
+        invalidPhone: "Enter a valid phone number.",
+        tooLong: "This field is too long.",
+        tooShort: "Please add a little more detail.",
+      },
+      formErrors: {
+        validation: "Please check the highlighted fields.",
+        rateLimited: "Too many messages in a short time. Please try again in a few minutes.",
+        unavailable: "Your message could not be sent right now. Please try again or write to info@bazgy.com directly.",
+        failed: "Your message could not be sent right now. Please try again or write to info@bazgy.com directly.",
+      },
+      officeLabel: "Office",
       addressLabel: "Address",
       address: "Kavacık Mah. Ertürk Sk. No: 1/1 Beykoz, İstanbul",
       phoneLabel: "Phone",
@@ -1346,7 +1446,6 @@ export const dictionaries = {
       hours: "Monday – Friday, 9:00 AM – 6:00 PM",
     },
     careerPage: {
-      eyebrow: "CAREER",
       heading: "Shape your career at BAZ.",
       intro: "We're looking for talented team members who want to take part in Türkiye's major engineering and construction projects and grow their technical expertise on site.",
       valuesHeading: "What's it like working with us?",
@@ -1363,16 +1462,31 @@ export const dictionaries = {
         { title: "Project Planning Specialist", location: "İstanbul, Central", type: "Full-Time" },
       ],
       applyCta: "Apply",
-      noPositionHeading: "Can't find the position you're looking for?",
-      noPositionCopy: "Send us your resume, and we'll reach out when a suitable position opens up.",
-      noPositionCta: "Send Resume — info@bazgy.com",
+      applyHeading: "Send your application",
+      applyIntro: "Fill in the form and attach your resume to apply for one of the open positions or to send a general application. If the role you want is not listed, choose general application and we will reach out when a suitable position opens up.",
+      form: {
+        position: "Position",
+        general: "General application",
+        message: "Cover letter",
+        cv: "Resume (CV)",
+        cvHint: "PDF, DOC or DOCX · up to 4 MB",
+        cvChoose: "Choose file",
+        cvNone: "No file selected yet",
+        cvRequired: "Please attach your resume.",
+        cvType: "Only PDF, DOC or DOCX files can be uploaded.",
+        cvSize: "The file cannot be larger than 4 MB.",
+        cvReselect: "For security reasons, please select the file again.",
+        submit: "Send Application",
+        successTitle: "Your application has reached us.",
+        successCopy: "Thank you for your interest. We will review your application and get in touch if there is a fit.",
+        sendAnother: "Send another application",
+      },
     },
     pageLabels: {
       contact: "Contact",
       career: "Career",
     },
     legalPages: {
-      eyebrow: "LEGAL NOTICE",
       backLink: "Back to Home",
       contactNote:
         "For any questions about this notice, you can reach us at info@bazgy.com.",

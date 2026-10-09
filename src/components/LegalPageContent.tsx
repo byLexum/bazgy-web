@@ -4,6 +4,7 @@ import Link from "next/link";
 import Header from "./Header";
 import Footer from "./Footer";
 import Reveal from "./Reveal";
+import PageIntro from "./PageIntro";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export type LegalDocKey = "kvkk" | "cerez" | "gizlilik";
@@ -16,19 +17,7 @@ export default function LegalPageContent({ doc }: { doc: LegalDocKey }) {
   return (
     <div className="bg-[#F5F5F5] text-[#111111]">
       <Header />
-      <section className="mx-auto max-w-[1280px] px-6 pb-16 pt-40 md:px-12 md:pb-20 md:pt-48">
-        <Reveal>
-          <div className="mb-5 font-mono text-xs font-semibold tracking-[0.12em] text-neutral-500">
-            {c.eyebrow}
-          </div>
-          <h1 className="mb-6 max-w-[760px] font-sans text-3xl font-extrabold leading-[1.15] text-[#111111] md:text-[44px]">
-            {d.title}
-          </h1>
-          <p className="max-w-[720px] font-sans text-base leading-relaxed text-[#555555] md:text-[17px]">
-            {d.intro}
-          </p>
-        </Reveal>
-      </section>
+      <PageIntro title={d.title} intro={d.intro} size="md" />
 
       <section className="mx-auto max-w-[1280px] px-6 pb-20 md:px-12 md:pb-28">
         <div className="max-w-[760px]">
