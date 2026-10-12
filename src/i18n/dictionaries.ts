@@ -530,8 +530,8 @@ export const dictionaries = {
           title: "Halise ve Mehmet Karakaya Anaokulu",
           location: "Erzincan",
           category: "Kamu Binası",
-          status: "Devam Ediyor",
-          statusKey: "ongoing" as StatusKey,
+          status: "Tamamlandı",
+          statusKey: "completed" as StatusKey,
           images: [
             "/images/projects/erzincan-anaokulu/3d-tasarim-1.jpg",
             "/images/projects/erzincan-anaokulu/3d-tasarim-2.jpg",
@@ -546,7 +546,7 @@ export const dictionaries = {
             startDate: "Ekim 2025",
             description: [
               "Halise ve Mehmet Karakaya Anaokulu Projesi, Erzincan'ın eğitim altyapısını güçlendirmeye yönelik hayata geçirilen önemli bir sosyal yatırım olarak öne çıkmaktadır. İş insanı İhsan Lütfi Karakaya ve eski Erzincan Milletvekili Tevhit Karakaya tarafından hayata geçirilmiştir.",
-              "Modern eğitim standartları doğrultusunda tasarlanan 8 derslikli anaokulu, yaklaşık 400 öğrenci kapasitesiyle çocukların güvenli, çağdaş ve donanımlı bir eğitim ortamında öğrenim görmelerine imkân sağlayacak şekilde planlanmıştır.",
+              "Modern eğitim standartları doğrultusunda tasarlanan 8 derslikli anaokulu, yaklaşık 400 öğrenci kapasitesiyle çocukların güvenli, çağdaş ve donanımlı bir eğitim ortamında öğrenim görmelerine imkân sağlayacak şekilde tamamlanmıştır.",
             ],
             scope: [
               "Mimari İşler",
@@ -1329,8 +1329,8 @@ export const dictionaries = {
           title: "Halise & Mehmet Karakaya Preschool",
           location: "Erzincan",
           category: "Public Building",
-          status: "Ongoing",
-          statusKey: "ongoing" as StatusKey,
+          status: "Completed",
+          statusKey: "completed" as StatusKey,
           images: [
             "/images/projects/erzincan-anaokulu/3d-tasarim-1.jpg",
             "/images/projects/erzincan-anaokulu/3d-tasarim-2.jpg",
@@ -1345,7 +1345,7 @@ export const dictionaries = {
             startDate: "October 2025",
             description: [
               "The Halise and Mehmet Karakaya Preschool Project stands out as a major social investment aimed at strengthening Erzincan's education infrastructure, realized by businessman İhsan Lütfi Karakaya and former Erzincan MP Tevhit Karakaya.",
-              "Designed to modern education standards, the 8-classroom preschool is planned to accommodate around 400 students in a safe, contemporary, and well-equipped learning environment.",
+              "Designed to modern education standards, the completed 8-classroom preschool accommodates around 400 students in a safe, contemporary, and well-equipped learning environment.",
             ],
             scope: [
               "Architectural Works",
