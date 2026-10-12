@@ -25,6 +25,16 @@ export const dictionaries = {
       daha: "Daha Fazla",
       slides: [
         {
+          id: "idtm-istanbul-fuar-merkezi",
+          projectIndex: 8,
+          eyebrow: "ÜSTYAPI VE TİCARİ",
+          city: "İstanbul, Yeşilköy",
+          title: "Fuarcılığın yeni adresinin taşıyıcı sistemi",
+          copy: "150.000 m² inşaat alanlı İDTM İstanbul Fuar Merkezi 1. Etap'ta, geniş açıklıklı fuar salonlarının betonarme kaba yapısını inşa ediyoruz.",
+          image: "/images/projects/idtm-istanbul-fuar-merkezi/saha-dunya-ticaret-merkezi.jpg",
+          color: "#6f6a5f",
+        },
+        {
           id: "izmir-dikili-aat",
           projectIndex: 0,
           eyebrow: "ATIK SU VE ALTYAPI",
@@ -557,13 +567,43 @@ export const dictionaries = {
             ],
           },
         },
+        {
+          title: "İDTM İstanbul Fuar Merkezi 1. Etap",
+          location: "İstanbul, Yeşilköy",
+          category: "Ticari Yapı",
+          status: "Devam Ediyor",
+          statusKey: "ongoing" as StatusKey,
+          images: [
+            "/images/projects/idtm-istanbul-fuar-merkezi/saha-genel-gorunum.jpg",
+            "/images/projects/idtm-istanbul-fuar-merkezi/saha-dunya-ticaret-merkezi.jpg",
+            "/images/projects/idtm-istanbul-fuar-merkezi/hafriyat-kus-bakisi.jpg",
+            "/images/projects/idtm-istanbul-fuar-merkezi/hafriyat-fuar-salonlari.jpg",
+            "/images/projects/idtm-istanbul-fuar-merkezi/hafriyat-otoyol-cephesi.jpg",
+          ],
+          detail: {
+            employerLabel: "İşveren",
+            employer: "İstanbul Dünya Ticaret Merkezi A.Ş.",
+            projectType: "Özel Yatırım — Fuar Merkezi Bina Projesi",
+            constructionArea: "150.000 m²",
+            duration: "360 Gün",
+            startDate: "Ekim 2026",
+            description: [
+              "Asırlardır Doğu ile Batı'yı buluşturan, ticaretin ve kültürlerin kesiştiği dünya şehri İstanbul'da hayata geçirilen İDTM İstanbul Fuar Merkezi 1. Etap Projesi, uluslararası fuarcılık ve ticaret hayatına uzun yıllar hizmet vermesi hedeflenen önemli bir yatırım projesidir.",
+              "Çağdaş fuarcılık ihtiyaçlarını modern mühendislik uygulamalarıyla buluşturan proje kapsamında, geniş açıklıklı fuar salonlarının taşıyıcı sistemi yüksek kalite standartlarında inşa edilmektedir.",
+            ],
+            scope: [
+              "Betonarme Taşıyıcı Sistem İmalatları",
+              "Kaba Yapının Anahtar Teslim Tamamlanması",
+            ],
+          },
+        },
       ],
     },
     geography: {
       heading: "Türkiye'nin dört bir yanında kalıcı yapılar inşa ediyoruz.",
       regions: [
         { name: "İzmir", count: "2 Proje", focus: "Atık Su / Altyapı" },
-        { name: "İstanbul", count: "5 Proje", focus: "Üstyapı / Kurumsal" },
+        { name: "İstanbul", count: "6 Proje", focus: "Üstyapı / Kurumsal / Ticari" },
         { name: "Erzincan", count: "2 Proje", focus: "Kamu Binası" },
       ],
     },
@@ -823,6 +863,16 @@ export const dictionaries = {
       ariaLabel: "Featured projects",
       daha: "Learn More",
       slides: [
+        {
+          id: "idtm-istanbul-fuar-merkezi",
+          projectIndex: 8,
+          eyebrow: "SUPERSTRUCTURE & COMMERCIAL",
+          city: "İstanbul, Yeşilköy",
+          title: "The structural backbone of a new home for trade fairs",
+          copy: "On the 150,000 m² İDTM Istanbul Expo Center Phase 1, we are building the reinforced concrete shell of the wide-span exhibition halls.",
+          image: "/images/projects/idtm-istanbul-fuar-merkezi/saha-dunya-ticaret-merkezi.jpg",
+          color: "#6f6a5f",
+        },
         {
           id: "izmir-dikili-aat",
           projectIndex: 0,
@@ -1356,13 +1406,43 @@ export const dictionaries = {
             ],
           },
         },
+        {
+          title: "İDTM Istanbul Expo Center Phase 1",
+          location: "İstanbul, Yeşilköy",
+          category: "Commercial Building",
+          status: "Ongoing",
+          statusKey: "ongoing" as StatusKey,
+          images: [
+            "/images/projects/idtm-istanbul-fuar-merkezi/saha-genel-gorunum.jpg",
+            "/images/projects/idtm-istanbul-fuar-merkezi/saha-dunya-ticaret-merkezi.jpg",
+            "/images/projects/idtm-istanbul-fuar-merkezi/hafriyat-kus-bakisi.jpg",
+            "/images/projects/idtm-istanbul-fuar-merkezi/hafriyat-fuar-salonlari.jpg",
+            "/images/projects/idtm-istanbul-fuar-merkezi/hafriyat-otoyol-cephesi.jpg",
+          ],
+          detail: {
+            employerLabel: "Client",
+            employer: "İstanbul Dünya Ticaret Merkezi A.Ş. (Istanbul World Trade Center)",
+            projectType: "Private Investment — Exhibition Center Building Project",
+            constructionArea: "150,000 m²",
+            duration: "360 Days",
+            startDate: "October 2026",
+            description: [
+              "Realized in İstanbul, the world city where trade and cultures have met for centuries at the crossroads of East and West, the İDTM Istanbul Expo Center Phase 1 Project is a major investment intended to serve international trade fairs and commerce for many years to come.",
+              "Bringing contemporary exhibition needs together with modern engineering practice, the project is building the structural system of the wide-span exhibition halls to high quality standards.",
+            ],
+            scope: [
+              "Reinforced Concrete Structural Works",
+              "Turnkey Completion of the Shell and Core",
+            ],
+          },
+        },
       ],
     },
     geography: {
       heading: "Building lasting structures across every corner of Türkiye.",
       regions: [
         { name: "İzmir", count: "2 Projects", focus: "Wastewater / Infrastructure" },
-        { name: "İstanbul", count: "5 Projects", focus: "Superstructure / Corporate" },
+        { name: "İstanbul", count: "6 Projects", focus: "Superstructure / Corporate / Commercial" },
         { name: "Erzincan", count: "2 Projects", focus: "Public Building" },
       ],
     },
