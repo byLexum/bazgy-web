@@ -17,9 +17,36 @@ type LanguageContextValue = {
   t: (typeof dictionaries)["tr"];
 };
 
+type SchedulableProject = {
+  detail?: {
+    employer?: string;
+    duration?: string;
+    startDate?: string;
+  };
+};
+
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 const STORAGE_KEY = "baz-language";
+const IDTM_EMPLOYER = "İstanbul Dünya Ticaret Merkezi A.Ş.";
+
+function applyIdtmSchedule(
+  projects: SchedulableProject[],
+  duration: string,
+  startDate: string
+) {
+  const idtm = projects.find((project) =>
+    project.detail?.employer?.startsWith(IDTM_EMPLOYER)
+  );
+
+  if (!idtm?.detail) return;
+
+  idtm.detail.duration = duration;
+  idtm.detail.startDate = startDate;
+}
+
+applyIdtmSchedule(dictionaries.tr.projects.items, "365 Gün", "Kasım 2026");
+applyIdtmSchedule(dictionaries.en.projects.items, "365 Days", "November 2026");
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>("tr");
